@@ -1,0 +1,33 @@
+{
+  "name": "dwc",
+  "version": "0.0.1",
+  "description": "A technology refresh of the Mountain View Day Worker website. Work in progress.",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-jwt": "^5.0.0",
+    "jsonwebtoken": "^7.1.9",
+    "mongoose": "^4.6.0",
+    "xss-filters": "^1.2.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdpenuliar/dwc.git"
+  },
+  "keywords": [
+    "DWC"
+  ],
+  "author": "JD Penuliar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jdpenuliar/dwc/issues"
+  },
+  "homepage": "https://github.com/jdpenuliar/dwc#readme"
+}
