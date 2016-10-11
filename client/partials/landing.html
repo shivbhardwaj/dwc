@@ -1,0 +1,64 @@
+<div ng-controller="LandingController">
+	<div class="container">
+		<div class="row">
+			<div class="col s12 m4 l4">
+				<form name="userLoginForm">
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="loginUserName" type="text" class="validate" name="loginUserName" ng-model="userLoginData.loginUserName" required>
+							<label for="loginUserName">Username</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="loginUserPassword" type="password" class="validate" name="loginPassword" ng-model="userLoginData.loginPassword" required>
+							<label for="loginUserPassword">Password</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<button class="btn waves-effect waves-light" ng-click="userLogin()" ng-disabled="userLoginForm.$invalid">Login</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<form name="userRegisterForm">
+				<div class="col s12 m4 l4">
+					<div class="input-field col s12">
+						<input id="registerUserName" class="validate" type="text" name="registerUserName" ng-model="userRegisterData.registerUserName" required></input>
+						<label for="registerUserName">Username</label>
+					</div>
+					<div class="input-field col s12">
+						<input id="registerEmailAddress" class="validate" type="text" name="registerEmailAddress" ng-model="userRegisterData.registerEmailAddress" required></input>
+						<label for="registerEmailAddress">Email address</label>
+					</div>
+					<div class="input-field col s12">
+						<input id="registerUserPassword" class="validate" type="password" name="registerUserPassword" ng-model="userRegisterData.registerUserPassword" required></input>
+						<label for="registerUserPassword">Password</label>
+					</div>
+					<div class="input-field col s12">
+						<input id="registerUserPasswordConfirm" class="validate" type="password" name="registerUserPasswordConfirm" ng-model="userRegisterData.registerUserPasswordConfirm" required></input>
+						<label for="registerUserPasswordConfirm">Confirm Password</label>
+					</div>
+				</div>
+				<div class="col s12 m4 l4">
+					<div class="input-field col s12">
+						<input id="registerUserFirstName" class="validate" type="text" name="registerUserFirstName" ng-model="userRegisterData.registerUserFirstName" required></input>
+						<label for="registerFirstName">First Name</label>
+					</div>
+					<div class="input-field col s12">
+						<input id="registerUserLastName" class="validate" type="text" name="registerUserLastName" ng-model="userRegisterData.registerUserLastName" required></input>
+						<label for="registerLastName">Last Name</label>
+					</div>
+					<div class="input-field col s12">
+						<input id="registerUserPhoneNumber" class="validate" type="number" name="registerUserPhoneNumber" ng-model="userRegisterData.registerUserPhoneNumber" required></input>
+						<label for="registerPhoneNumber">Phone number</label>
+					</div>
+					<div class="input-field col s12">
+						<button class="btn waves-effect waves-light" ng-click="userRegister()" ng-disabled="userRegisterForm.$invalid">Register</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

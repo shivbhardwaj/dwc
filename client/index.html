@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html ng-app="DWC">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+	<title>DWC</title>
+
+	<!-- Materialize CSS -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link type="text/css" rel="stylesheet" href="./css/materialize.css">
+	<link type="text/css" rel="stylesheet" href="./css/style.css">
+
+	<!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	<!-- ANGULAR -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
+
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
+	<script>
+		(function(){
+			var DWCAppModule = angular.module("DWC",["ngRoute","ngMessages","ui.materialize"]);
+
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//              			CONFIG START                               //
+			//				CONFIG INTENDED FOR ROUTES AND interceptors 		   //
+			//                                                                     //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+
+			DWCAppModule.config(["$httpProvider","$routeProvider", "$locationProvider", function($httpProvider,$routeProvider,$locationProvider) {  
+				// $httpProvider.interceptors.push("authInterceptorFactory");
+				$routeProvider
+				.when("/",{
+					templateUrl: "partials/main.html"
+				})
+				.otherwise({
+					redirectTo: "/"
+				});
+			}]);
+
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//              			CONFIG END                                 //
+			//				CONFIG INTENDED FOR ROUTES AND interceptors 		   //
+			//                                                                     //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//        						RUN START                              //
+			//        Angular run to monitor route changes intended for JWT        //
+			//                                                                     //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+
+			//Angular run to monitor route changes intended for JWT
+			// DWCAppModule.run(function($rootScope, $location, $route, authTokenFactory){
+			// 	$rootScope.$on("$routeChangeStart",function(event, next, current){
+			// 		console.log("route changed");
+			// 		if(!authTokenFactory.getToken()){
+			// 			$location.path("/");
+			// 		}
+			// 	});
+			// });
+
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//        						RUN END                                //
+			//        Angular run to monitor route changes intended for JWT        //
+			//                                                                     //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+			
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//                                                                     //
+			//        					FACTORIES START     				   	   //
+			//                                                                     //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//              				FACTORIES                              //
+			//				TOKEN FACTORIES FOR AUTHENTICATION JWT START       	   //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+
+			// DWCAppModule.factory("authInterceptorFactory",["$log","authTokenFactory",function($log,authTokenFactory){
+			// 	$log.debug("$log is authInterceptorFactory");
+			// 	var factory = {};
+			// 	factory.request = function(config){
+			// 		console.log("interceptor haha---------\n",authTokenFactory.getToken());
+			// 		// if(token){
+			// 		// 	config.headers = config.headers || {};
+			// 		// 	config.headers.Authorization = 'Bearer ' + token;
+			// 		// }
+			// 		// return config;
+					
+			// 		console.log("haha");
+			// 	}
+			// 	return factory;
+			// }]);
+
+			// DWCAppModule.factory("authTokenFactory",["$log","$window",function($log,$window,$location){
+			// 	$log.debug('$log and inject at authTokenFactory');
+			// 	var factory = {};
+			// 	var store = $window.localStorage;
+			// 	const key = "jkdhahsdfhjlkasdfhjkladfshkjl";
+			// 	factory.getToken = function(){
+			// 		return store.getItem(key);
+			// 	}
+			// 	factory.setToken = function(token){
+			// 		if(token != null){
+			// 			store.setItem(key,token.data.token);
+			// 		}else{
+			// 			store.removeItem(key);
+			// 		}
+			// 		console.log("------------authtokensettokenfactory\n",store);
+			// 	}
+			// 	return factory;
+			// }]);
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//              				FACTORIES                              //
+			//				TOKEN FACTORIES FOR AUTHENTICATION JWT END       	   //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//              				FACTORIES                              //
+			//				USER FACTORIES FOR AUTHENTICATION JWT END       	   //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+
+
+			// DWCAppModule.factory("usersFactory",function($http,$window,authTokenFactory){
+			// 	var factory = {};
+			// 	var users = [];
+			// 	factory.test = function(callback){
+			// 		$http.get("/haha").then(function(data){
+			// 			users = data;
+			// 			callback(users);
+			// 		});
+			// 	}
+			// 	factory.login = function(info, callback){
+			// 		$http.post("/login", info).then(function(data,err){
+			// 			console.log("factory\n",data)
+			// 			if(data.data != null){
+			// 				authTokenFactory.setToken(data);
+			// 				callback(data);
+			// 			}else if(data.data == null){
+			// 				authTokenFactory.setToken();
+			// 			}
+			// 		});
+			// 	}
+			// 	factory.register = function(info, callback){
+			// 		$http.post("/register", info).then(function(data){
+			// 			users = data;
+			// 			callback(users);
+			// 		});
+			// 	}
+			// 	factory.logout = function(info,callback){
+			// 		users = null
+			// 		authTokenFactory.setToken();
+			// 	}
+			// 	factory.getUser = function(){
+
+			// 	}
+			// 	return factory;
+			// });
+
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//              				FACTORIES                              //
+			//				USER FACTORIES FOR AUTHENTICATION JWT END       	   //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+			
+
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//                                                                     //
+			//        					FACTORIES END	     				   	   //
+			//                                                                     //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//                                                                     //
+			//        					CONTROLLERS START        				   //
+			//                                                                     //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//              			  CONTROLLERS                              //
+			//        				USER CONTROLLERS WITH JWT        			   //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+
+			// DWCAppModule.controller("LandingController",function($scope,$window,$location,usersFactory,authInterceptorFactory){
+			// 	$scope.userLogin = function(){
+			// 		console.log("login\n");
+			// 		usersFactory.login($scope.userLoginData,function(data){
+			// 			console.log("successful login\n",data);
+			// 			$location.url("/dashboard");
+			// 			$scope.userLoginData = {};
+			// 		});
+			// 	}
+			// 	$scope.userRegister = function(){
+			// 		console.log($scope.userRegisterData);
+			// 		usersFactory.register($scope.userRegisterData, function(data){
+			// 			$scope.userRegisterData = {}
+			// 		});
+			// 	}
+			// });
+
+			// DWCAppModule.controller("DashboardController",function($scope,$window,$location){
+			// 	console.log("scope-------------\n",$scope);
+			// });
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//              			  CONTROLLERS                              //
+			//        				USER CONTROLLERS WITH JWT        			   //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//                                                                     //
+			//        				 STATIC PAGE CONTROLLERS        			   //
+			//                                                                     //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//        				  		Controller        			   		   //
+			//        				  Index controller start        			   //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+
+			DWCAppModule.controller("MainPageController",function($scope){
+				console.log("index controller\n");
+			});
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//        				  		Controller        			   		   //
+			//        				  Index controller end          			   //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+			
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//                                                                     //
+			//        				 STATIC PAGE CONTROLLERS        			   //
+			//                                                                     //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+
+			/////////////////////////////////////////////////////////////////////////
+			//                                                                     //
+			//                                                                     //
+			//        					CONTROLLERS END	        				   //
+			//                                                                     //
+			//                                                                     //
+			/////////////////////////////////////////////////////////////////////////
+		})();
+
+</script>
+</head>
+<body>
+	<!-- Dropdown Structure for navbar below-->
+	<!-- <ul id="dropdown1" class="dropdown-content deep-orange darken-3">
+		<li><a href="#!" class="white-text">one</a></li>
+		<li><a href="#!" class="white-text">two</a></li>
+		<li class="divider" class="white-text"></li>
+		<li><a href="#!" class="white-text">three</a></li>
+	</ul> -->
+	<!-- Navbar -->
+	<nav>
+		<div class="nav-wrapper white-text deep-orange darken-3">
+			<a href="#!" class="brand-logo white-text">DWC</a>
+			<ul class="right hide-on-med-and-down white-text">
+				<li><a href="#/aboutUs" class="white-text waves-effect waves-light">About Us</a></li>
+				<li><a href="#/forEmployers" class="white-text waves-effect waves-light">For Employers</a></li>
+				<li><a href="#/forWorkers" class="white-text waves-effect waves-light">For Workers</a></li>
+				<li><a href="#/forWorkers" class="white-text waves-effect waves-light">For Workers</a></li>
+				<li><a href="#/forVolunteers" class="white-text waves-effect waves-light">For Volunteers</a></li>
+				<li><a href="#/forDonors" class="white-text waves-effect waves-light">For Donors</a></li>
+				<!-- Dropdown Trigger -->
+				<!-- <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li> -->
+			</ul>
+		</div>
+	</nav>
+
+	<div ng-view="">
+	</div>
+</body>
+</html>
