@@ -12,6 +12,8 @@
 
 	<!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	<script src="js/init.js"></script>
+
 	<!-- ANGULAR -->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
@@ -289,7 +291,7 @@
 		<li><a href="#!" class="white-text">three</a></li>
 	</ul> -->
 	<!-- Navbar -->
-	<nav>
+	<!-- <nav>
 		<div class="nav-wrapper white-text deep-orange darken-4">
 			<a href="#!" class="brand-logo white-text">DWC</a>
 			<ul class="right hide-on-med-and-down white-text">
@@ -298,13 +300,42 @@
 				<li><a href="#/forWorkers" class="white-text waves-effect waves-light">For Workers</a></li>
 				<li><a href="#/forVolunteers" class="white-text waves-effect waves-light">For Volunteers</a></li>
 				<li><a href="#/forDonors" class="white-text waves-effect waves-light">For Donors</a></li>
-				<!-- Dropdown Trigger -->
-				<!-- <li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li> -->
+				Dropdown Trigger
+				<li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+			</ul>
+		</div>
+	</nav> -->
+	<!-- This is navbar start -->
+	<nav>
+		<div class="nav-wrapper white-text deep-orange darken-4">
+			<a href="#!" class="brand-logo white-text">DWC</a>
+			<a href="#!" data-activates="mobile-nav" class="button-collapse"><i class="material-icons white-text">menu</i></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="#/aboutUs" class="white-text waves-effect waves-light">About Us</a></li>
+				<li><a href="#/forEmployers" class="white-text waves-effect waves-light">For Employers</a></li>
+				<li><a href="#/forWorkers" class="white-text waves-effect waves-light">For Workers</a></li>
+				<li><a href="#/forWorkers" class="white-text waves-effect waves-light">For Workers</a></li>
+				<li><a href="#/forVolunteers" class="white-text waves-effect waves-light">For Volunteers</a></li>
+				<li><a href="#/forDonors" class="white-text waves-effect waves-light">For Donors</a></li>
+			</ul>
+			<ul class="side-nav deep-orange darken-4" id="mobile-nav">
+				<li><a href="#/aboutUs" class="white-text waves-effect waves-light">About Us</a></li>
+				<li><a href="#/forEmployers" class="white-text waves-effect waves-light">For Employers</a></li>
+				<li><a href="#/forWorkers" class="white-text waves-effect waves-light">For Workers</a></li>
+				<li><a href="#/forWorkers" class="white-text waves-effect waves-light">For Workers</a></li>
+				<li><a href="#/forVolunteers" class="white-text waves-effect waves-light">For Volunteers</a></li>
+				<li><a href="#/forDonors" class="white-text waves-effect waves-light">For Donors</a></li>
 			</ul>
 		</div>
 	</nav>
-
+	<!-- This is navbar start -->
+	
+	<!-- partials div start -->
 	<div ng-view="">
 	</div>
+	<!-- partials div end -->
+	
+
+	</body>
 </body>
 </html>
