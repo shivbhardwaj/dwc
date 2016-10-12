@@ -37,6 +37,16 @@ p.dwc-img{
   height: 200px;
   width: 400px;
 }
+.career h4, .career h3 {
+  margin-top:10px;
+}
+.career p {
+  line-height: 1.5em;
+}
+.career ul li {
+  list-style: disc inside;
+  line-height: 1.8em;
+}
 nav ul a,
 nav .brand-logo {
   color: #444;
