@@ -1,12 +1,11 @@
 "use strict";
-/////////////////////////////////////////////////////////////////////////
-//                                                                     //
-//                                                                     //
-//      				Include main packages   	   				   //
-//      Include packages needed for sanitizing the input and jwt   	   //
-//                                                                     //
-//                                                                     //
-/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+//                                                 //
+//				Include main packages   		   //
+//	Include packages needed for sanitizing the 	   //
+//	input and jwt                                  //
+//                                                 //
+/////////////////////////////////////////////////////
 
 //Require mongoose to access the models for data manipulation
 var mongoose = require("mongoose");
