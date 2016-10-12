@@ -11,6 +11,9 @@ module.exports = function(app){
 	app.get("/haha",function(req,res){
 		users.index(req,res);
 	});
+	app.get("/aboutus",function(req,res){
+		
+	});
 
 	/////////////////////////////////////////////////////
 	//                                                 //
