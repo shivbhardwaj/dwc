@@ -107,7 +107,22 @@
 				{
 					templateUrl: "partials/moving.html"
 				})
-
+				.when('/workers', 
+				{
+					templateUrl: "partials/workers.html"
+				})
+				.when('/programs', 
+				{
+					templateUrl: "partials/programs.html"
+				})
+				.when('/workers/success_stories', 
+				{
+					templateUrl: "partials/workers_success_stories.html"
+				})
+				.when('/workers/faq', 
+				{
+					templateUrl: "partials/workers_faq.html"
+				})
 				.otherwise({
 					redirectTo: "/"
 				});
@@ -378,14 +393,14 @@
 			<ul class="right hide-on-med-and-down">
 				<li><a href="#/aboutus" class="white-text waves-effect waves-light">About Us</a></li>
 				<li><a href="#/employers" class="white-text waves-effect waves-light">For Employers</a></li>
-				<li><a href="#/forWorkers" class="white-text waves-effect waves-light">For Workers</a></li>
+				<li><a href="#/workers" class="white-text waves-effect waves-light">For Workers</a></li>
 				<li><a href="#/forVolunteers" class="white-text waves-effect waves-light">For Volunteers</a></li>
 				<li><a href="#/forDonors" class="white-text waves-effect waves-light">For Donors</a></li>
 			</ul>
 			<ul class="side-nav deep-orange darken-4" id="mobile-nav">
 				<li><a href="#/aboutus" class="white-text waves-effect waves-light">About Us</a></li>
 				<li><a href="#/employers" class="white-text waves-effect waves-light">For Employers</a></li>
-				<li><a href="#/forWorkers" class="white-text waves-effect waves-light">For Workers</a></li>
+				<li><a href="#/workers" class="white-text waves-effect waves-light">For Workers</a></li>
 				<li><a href="#/forVolunteers" class="white-text waves-effect waves-light">For Volunteers</a></li>
 				<li><a href="#/forDonors" class="white-text waves-effect waves-light">For Donors</a></li>
 			</ul>
