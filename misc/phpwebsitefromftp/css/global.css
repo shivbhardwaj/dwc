@@ -1,0 +1,858 @@
+/* CSS crunched with Crunch - http://crunchapp.net/ */
+/*------------------------------------------------------------------
+Day Worker Center / Global CSS
+Author:			Irina Goreva <igoreva@solutionset.com>
+Last Update: 	04/16/07
+--------------------------------------------------------------------*/
+/* GENERAL RULES
+--------------------------------------------------------------------*/
+* {
+  /*overwrite all default browser settings*/
+  margin: 0;
+  padding: 0;
+  /*global font settings*/
+  font-family: georgia, times, serif;
+  color: #7c755e;
+  /*Main text color*/
+}
+html {
+  /* Fix the shift Bug because of the vertical scrollbar*/
+  min-height: 100%;
+  margin-bottom: 1px;
+}
+body {
+  background: #c15127 url(../img/body_bgrd.gif);
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 12px;
+  min-width: 730px;
+  /*part 1 of centering hack*/
+  text-align: center;
+}
+/* Global Link Settings
+--------------------------------*/
+a:link,
+a:visited {
+  color: #7c755e;
+  text-decoration: underline;
+}
+a:hover,
+a:active,
+a:focus {
+  color: #C52446;
+  text-decoration: underline;
+}
+a.Link:link,
+a.Link:visited {
+  color: #7c755e;
+  text-decoration: none;
+}
+a.Link:hover,
+a.Link:focus {
+  color: #7c755e;
+  text-decoration: underline;
+}
+/* Global Typography Settings (be veery abstract here)
+--------------------------------*/
+p {
+  margin-bottom: 10px;
+}
+pmission {
+  font-size: 14px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+p.intro {
+  line-height: 18px;
+}
+.col-left p {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+.bold {
+  font-weight: bold;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.italic {
+  font-style: italic;
+}
+h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.h2center {
+  text-align: center;
+  font-size: 17px;
+  color: #6c8036;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+h2 {
+  font-size: 17px;
+  color: #6c8036;
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+h3 {
+  font-size: 13px;
+  margin-bottom: 5px;
+  _margin-bottom: 0px;
+}
+.col-right h3 {
+  font-size: 13px;
+  color: #6c8036;
+  margin-bottom: 3px;
+}
+h4 {
+  font-size: 11px;
+  color: #6c8036;
+  margin-bottom: 3px;
+}
+h4.title {
+  font-size: 10px;
+  color: #6c8036;
+  margin-bottom: 8px;
+}
+h4.title em {
+  font-size: 11px;
+  color: #6c8036;
+}
+address {
+  font-style: normal;
+}
+/* General Elements
+--------------------------------*/
+img {
+  /*display: 			block; to avoid IE 3px bug*/
+  border: 0;
+}
+img.border {
+  border: 6px solid #fff;
+  margin-right: 15px;
+}
+img.border.newsImg {
+  margin-bottom: 35px;
+}
+hr {
+  /* Mozilla & IE have different opinions about how <hr> should look - be careful about changing these. */
+  border: none;
+  border-top: 1px solid #c5c3a6;
+  height: 1px;
+  margin-bottom: 13px;
+  margin-top: 7px;
+}
+.col-right hr {
+  background: url(../img/hr.gif) repeat-x;
+}
+.leftBox hr {
+  margin-bottom: 7px;
+  margin-top: 0px;
+}
+/* Good to have global classes
+--------------------------------*/
+.floatright {
+  float: right;
+  display: inline;
+  /*to avoid IE double margin bug*/
+}
+.floatleft {
+  float: left;
+  display: inline;
+  /*to avoid IE double margin bug*/
+}
+.alignleft {
+  text-align: left;
+}
+.alignright {
+  text-align: right;
+}
+/*e.g. for accessibility quick links*/
+.hide {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+}
+/* Lists
+---------------------------------------------*/
+/* normal lists */
+ul {
+  list-style: none;
+  list-style-position: outside;
+}
+ul.bullet {
+  list-style-position: outside;
+  list-style-type: disc;
+  margin: 0.3em 0em 0.6em 0.8em;
+  padding-left: 1em;
+}
+ul.bullet ul {
+  list-style-position: outside;
+  list-style-type: circle;
+  margin: 0.3em 0em 0.6em 0.8em;
+  padding-left: 1em;
+}
+ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+  margin: 0em 0em 1em 1em;
+  padding-left: 1.5em;
+}
+ol li {
+  padding-bottom: 0.5em;
+}
+/* Form Elements
+--------------------------------*/
+fieldset {
+  border: none;
+}
+label {
+  font-weight: normal;
+  cursor: pointer;
+}
+select,
+input,
+textarea {
+  font-size: 12px;
+}
+.form input.type_textFF,
+.form textarea.type_textFF {
+  padding: 2px 0px 2px 3px;
+  margin: 0 0 0 0;
+  border: 1px solid #ccc;
+}
+.form input.type_text,
+.form textarea.type_text {
+  width: 270px;
+  padding: 2px 0px 2px 3px;
+  margin: 0 0 0 0;
+  border: 1px solid #ccc;
+}
+.form textarea.type_text {
+  height: 100px;
+}
+.form input.type_text_sm {
+  width: 110px;
+  padding: 2px 0px 2px 3px;
+  margin: 0 0 0 0;
+  border: 1px solid #ccc;
+}
+.form .select.type_text {
+  width: 280px;
+  border: 1px solid #ccc;
+}
+/* Form Layout */
+.form {
+  padding-top: 10px;
+}
+.form div {
+  padding-left: 155px;
+  margin-bottom: 10px;
+}
+.form div.iefix {
+  _height: 1%;
+  /*IE FIX*/
+  margin-bottom: 10px;
+}
+.form div div {
+  padding: 0;
+  margin: 0;
+}
+.form div label.labelFF {
+  display: inline;
+}
+.form div label {
+  float: left;
+  display: inline;
+  margin-left: -155px;
+  width: 155px;
+}
+.form div div label.labelFF {
+  display: inline;
+}
+.form div div label {
+  float: none;
+  display: block;
+  margin-left: 0;
+  margin-bottom: 4px;
+}
+.form div ul.checkbox li,
+.form div ul.radio li {
+  margin: 0px 10px 0px 0px;
+  padding: 0px;
+  margin-bottom: 3px;
+  display: inline;
+}
+.form div ul.checkbox li label,
+.form div ul.radio li label {
+  display: inline;
+  font-weight: normal;
+  width: auto;
+}
+/* Tables
+--------------------------------*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+  /* Default all tables to 100%; otherwise IE6 has a tendency to increase the size of the
+                    containing element (i.e., to make the content area wider than it should be. */
+}
+table td {
+  vertical-align: top;
+}
+/* MAIN CONTAINER
+--------------------------------------------------------------------*/
+#container {
+  width: 750px;
+  padding: 20px 25px 15px 25px;
+  background: #e2e1ba url(../img/copy_bgrd.gif) top left repeat-x;
+  border: solid 7px #8d261c;
+  /*part 2 of centering hack*/
+  text-align: left;
+  margin: 57px auto 0px auto;
+}
+/* Header
+--------------------------------*/
+#header {
+  width: 750px;
+  padding: 0px;
+  height: 63px;
+  position: relative;
+}
+#header h1 {
+  font-size: 33px;
+  margin: 0 0 0 10px;
+  width: 185px;
+  float: left;
+}
+#header h1 a {
+  display: block;
+  width: 185px;
+  height: 56px;
+  outline: none;
+  text-indent: -5000px;
+  text-decoration: none;
+  background: url(../img/logo.gif) top left no-repeat;
+}
+#language {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+  color: #868553;
+  font-family: verdana, arial, sans-serif;
+  font-size: 9px;
+}
+#language a,
+#language a:hover,
+#language a:visited {
+  color: #868553;
+  font-family: verdana, arial, sans-serif;
+  font-size: 9px;
+  text-decoration: none;
+  font-style: italic;
+}
+#language a:hover {
+  text-decoration: underline;
+}
+/* mainNav
+--------------------------------*/
+#mainNav {
+  height: 27px;
+  list-style-type: none;
+  position: absolute;
+  top: 37px;
+  right: 0px;
+}
+#mainNav li {
+  display: inline;
+}
+#mainNav li ul {
+  display: none;
+}
+#mainNav li.sub ul {
+  list-style-type: none;
+  display: block;
+  position: absolute;
+  top: 27px;
+  left: 0;
+  /* added for safari */
+  width: 506px;
+  background: #ffffff;
+}
+#home #mainNav li.sub ul {
+  display: none;
+}
+#mainNav li a {
+  float: left;
+  height: 24px;
+  line-height: 24px;
+  padding-top: 3px;
+  width: 103px;
+  text-align: center;
+  text-decoration: none;
+  color: #ad4625;
+  background: url(../img/nav_off.gif) 0px 3px no-repeat;
+}
+#mainNav li.first a {
+  background: url(../img/nav_first_off.gif) 0px 3px no-repeat;
+}
+#mainNav li.last a {
+  /* text-transform:		uppercase; */
+  color: #6b6656;
+  background: url(../img/nav_last_off.gif) 0px 3px no-repeat;
+  width: 101px;
+}
+#mainNav li a:hover,
+#mainNav li a:focus {
+  color: #6b6656;
+  text-decoration: none;
+}
+#mainNav li a.selected,
+#mainNav li a.selected:hover,
+#mainNav li a.selected:focus,
+#mainNav li a.selected:visited {
+  color: #247482;
+  text-decoration: none;
+  background: url(../img/nav_on.gif) 0px 0px no-repeat;
+}
+#mainNav li.last a.selected,
+#mainNav li.last a.selected:hover,
+#mainNav li.last a.selected:focus,
+#mainNav li.last a.selected:visited {
+  color: #247482;
+  text-decoration: none;
+  background: url(../img/nav_last_on.gif) 0px 0px no-repeat;
+}
+#mainNav ul {
+  margin: 0 0 0 5px;
+}
+#mainNav li li {
+  display: inline;
+  float: left;
+  font-size: 8px;
+  line-height: 23px;
+  color: #d4d0cc;
+  padding: 1px 0 0 0;
+}
+#mainNav li li a {
+  width: auto;
+  text-align: left;
+  background: none;
+  padding: 2px 5px 0 5px;
+  font-size: 11px;
+  height: 21px;
+  line-height: 20px;
+}
+#mainNav li.first li a {
+  background: none;
+}
+#mainNav li.last li a {
+  text-transform: none;
+  color: #6b6656;
+  background: none;
+  width: auto;
+}
+#mainNav li li a:hover,
+#mainNav li li a:focus {
+  color: #6b6656;
+  text-decoration: none;
+}
+#mainNav li li a.selected,
+#mainNav li li a.selected:hover,
+#mainNav li li a.selected:focus,
+#mainNav li li a.selected:visited {
+  color: #247482;
+  text-decoration: none;
+  background: none;
+}
+/* Banner Area
+--------------------------------*/
+#banner {
+  width: 734px;
+  /* 750 total */
+  padding: 7px;
+  _padding-bottom: 0px;
+  border: 1px solid #deddd7;
+  background-color: #fff;
+  margin-bottom: 9px;
+}
+#statement {
+  width: 197px;
+  /* 227 total */
+  height: 216px;
+  padding: 25px 15px 15px 15px;
+  float: left;
+  display: inline;
+  margin-right: 7px;
+  background: #7f7860 url(../img/statement_bgrd.gif) top left no-repeat;
+}
+#statement h2 {
+  margin: 0 0 6px 0;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #c6c3b8;
+  color: #DDD27F;
+  font-weight: bold;
+  font-size: 14px;
+}
+#statement p {
+  font-size: 16px;
+  line-height: 16px;
+  color: #fff;
+}
+#statement hr {
+  border: none;
+  border-top: 1px solid #c6c3b8;
+  height: 1px;
+}
+#home .banner {
+  width: 500px;
+  height: 256px;
+  float: left;
+  display: inline;
+  background: url(../img/img_main_home.jpg) top left no-repeat;
+}
+#page .banner {
+  width: 500px;
+  height: 190px;
+  float: left;
+  display: inline;
+  background: url(../img/img_main_employers.jpg) left 17px no-repeat;
+}
+#page .banner.imageAboutUs {
+  background: url(../img/img_main_aboutus.jpg) left 17px no-repeat;
+}
+#page .banner.imageEmployers {
+  background: url(../img/img_main_employers.jpg) left 17px no-repeat;
+}
+#page .banner.imageWorkers {
+  background: url(../img/img_main_workers.jpg) left 17px no-repeat;
+}
+#page .banner.imageVolunteers {
+  background: url(../img/img_main_volunteer.jpg) left 17px no-repeat;
+}
+#page .banner.imageDonate {
+  background: url(../img/img_main_donate.jpg) left 0 no-repeat;
+}
+/*
+#page #image.full {
+	background:			url(../img/img_main_employers.jpg) left 0px no-repeat;
+}
+*/
+#page #statement {
+  width: 197px;
+  height: 150px;
+  padding: 25px 15px 15px 15px;
+}
+#page #statement p {
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+}
+/* News area */
+.news {
+  width: 140px;
+  height: 215px;
+  padding: 26px 15px 15px 15px;
+  margin: 0 0 0 270px;
+  background-color: #247482;
+  filter: alpha(opacity=85);
+  -moz-opacity: .85;
+  opacity: .85;
+}
+.news h2 {
+  margin: 0 0 5px 0;
+  padding: 0 0 5px 0;
+  border-bottom: 1px solid #c6c3b8;
+  color: #DDD27F;
+  font-weight: bold;
+  font-size: 11px;
+}
+.news h4 {
+  margin: 0 0 0 0;
+  padding: 0;
+  color: #ddd27f;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: italic;
+}
+.news p {
+  margin: 0 0 9px 0;
+  font-size: 10px;
+  line-height: 12px;
+  color: #fff;
+}
+a.moreNews {
+  display: block;
+  width: 50px;
+  height: 15px;
+  cursor: hand;
+  color: #DDD27F !important;
+  font-size: 10px;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+a.moreNews:hover {
+  text-decoration: underline !important;
+}
+a.more {
+  font-size: 10px;
+  line-height: 12px;
+  color: #ddd27f;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: verdana, arial, sans-serif;
+  display: block;
+  width: 70px;
+  height: 12px;
+  outline: none;
+  text-indent: -5000px;
+  background: url(../img/btn_readmore.gif) top left no-repeat;
+}
+/* Content Area
+--------------------------------*/
+#content {
+  width: 750px;
+  margin-bottom: 9px;
+}
+/* home page boxes */
+.box {
+  padding: 6px;
+  float: left;
+  display: inline;
+  position: relative;
+  height: auto;
+  border: 1px solid #deddd7;
+  background-color: #fff;
+  margin-right: 15px;
+  font-family: verdana, arial, sans-serif;
+}
+.col-right .box {
+  margin-bottom: 5px;
+}
+.box.right {
+  margin-right: 0px;
+}
+.left a {
+  display: block;
+  width: 226px;
+  height: 116px;
+  background: #ffffff url(../img/img_facility_merged.jpg);
+  background-position: left 0px;
+}
+.left a:hover {
+  background-position: left 116px;
+}
+.middle a {
+  display: block;
+  width: 226px;
+  height: 116px;
+  background: #ffffff url(../img/img_hire_merged.jpg);
+  background-position: left 0px;
+}
+.middle a:hover {
+  background-position: left 116px;
+}
+.right a {
+  display: block;
+  width: 226px;
+  height: 116px;
+  background: #ffffff url(../img/img_right.jpg);
+  background-position: left 0px;
+}
+.right a:hover {
+  background-position: left 116px;
+}
+.box span {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  display: block;
+  width: 218px;
+  height: 20px;
+  padding: 0 8px 0 0;
+  font-size: 11px;
+  line-height: 18px;
+  font-family: verdana, arial, sans-serif;
+  text-align: right;
+  cursor: pointer;
+  color: #ddd27f;
+  background-color: #ad4625;
+  filter: alpha(opacity=80);
+  -moz-opacity: .80;
+  opacity: .80;
+}
+.box a,
+.box a:hover,
+.box a:visited,
+.box span {
+  text-decoration: none;
+}
+/* Regular page content area 
+--------------------------------*/
+.col-left,
+.col-right {
+  display: inline;
+  float: left;
+}
+.col-right {
+  width: 493px;
+  margin: 7px 7px 0 0;
+  /* changed from 9px top for font leading */
+}
+.col-right p {
+  line-height: 18px;
+}
+.story {
+  float: left;
+  display: inline;
+  position: relative;
+  width: 238px;
+}
+.story.wide {
+  width: auto;
+  /*314px*/
+}
+/*
+.story.wide2  {
+	width: 				495px;
+}
+*/
+.col-left {
+  width: 235px;
+  margin: 9px 15px 0 0;
+}
+.leftBox {
+  /* min-height:			160px;
+	_height:			160px; */
+  padding: 15px;
+  background: url(../img/col-left_bgrd.gif) top left repeat-x;
+  font-family: verdana, arial, sans-serif;
+  margin-bottom: 10px;
+}
+.leftBox p,
+.leftBox h4 {
+  font-family: verdana, arial, sans-serif;
+  font-size: 10px;
+}
+.leftBox h4 {
+  color: #247482;
+  margin-bottom: 3px;
+}
+ul.red li,
+ul.red a,
+ul.red a:visited {
+  color: #b23c25;
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+ul.red a:hover {
+  text-decoration: underline;
+}
+.testimonial {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-style: italic;
+}
+#errorMsgArea {
+  color: red;
+  background-color: white;
+  font-size: 15px;
+}
+/* Special Link Class
+--------------------------------*/
+a.top {
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+/* Footer
+--------------------------------*/
+#footer {
+  clear: both;
+  width: 750px;
+  position: relative;
+  font-family: verdana, arial, sans-serif;
+  font-size: 9px;
+}
+#footer a.email:hover {
+  text-decoration: underline;
+}
+#footer a.email,
+#footer a.email:hover,
+#footer a.email:visited {
+  color: #7c755e;
+  font-family: verdana, arial, sans-serif;
+  font-size: 9px;
+  float: right;
+  text-decoration: none;
+}
+#footer a.email:hover {
+  text-decoration: underline;
+}
+/* CSS HACKS
+--------------------------------------------------------------------*/
+/* clearfix (already applied on #body)
+--------------------------------*/
+.clearfix:after,
+#content:after,
+#banner:after,
+#footer:after {
+  content: ".";
+  display: block;
+  height: 0;
+  line-height: 0px;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix,
+#content,
+#banner,
+#footer {
+  display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix,
+* html #content,
+* html #banner,
+* html #footer {
+  height: 1%;
+}
+.clearfix,
+#content,
+#banner,
+#footer {
+  display: block;
+}
+/* End hide from IE-mac */
+
+#overlay {
+	position: fixed;
+	z-index:100;
+	top: 0;
+	left: 0;
+	bottom:0;
+	right:0;
+	height:100%;
+	width:100%;
+	background: #000;
+	opacity:.50;
+	filter: alpha(opacity=50);
+	display: none;
+}
+.ovdialog {
+	position:fixed;
+	width:380px;
+	height:200px;
+	top:50%;
+	left:50%;
+	margin-left:-190px;
+	margin-top:-100px;
+	z-index:120;
+	display:none;
+	background-color:#FEFEFE;
+	border:5px solid #C15229;
+	padding:15px 20px;
+	font-size:1.2em;
+}
