@@ -94,7 +94,12 @@ footer.page-footer {
 }
 
 
-.subnav-container{
+.subnav-container, ul, .row{
+  margin: 0px;
+  float: right;
+}
+
+.haha {
   margin: 0px;
   padding: 0px;
 }
