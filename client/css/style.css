@@ -5,24 +5,7 @@
  *
  * Made By MaterializeCSS.com
  */
-#empowering{
-  border: 2px solid red;
-  height: 200px;
-  width: 400px;
-}
-#folks{
-  border: 2px solid red;
-  height: 200px;
-  width: 700px;
-}
-.aboutus-img{
-  display: inline-block;
-  vertical-align: center;
-}
-p.dwc-img{
-  display: inline-block;
-  vertical-align: top;
-}
+
 #dwc-img{
   border: 2px solid red;
   height: 200px;
@@ -105,7 +88,6 @@ footer.page-footer {
     margin-top: -1px
 
   }
-  /*paste here*/
 }
 @media only screen and (min-width: 1200px) {
 
@@ -114,4 +96,31 @@ footer.page-footer {
     margin-top: -2px
 
   }
+}
+/*edit for dwc*/
+.empowering{
+  border: 2px solid red;
+  height: 200px;
+  width: 400px;
+}
+.empowering.img{
+  width:700;
+  height:200;
+}
+.subnav{
+  display: inline-block;
+  vertical-align: center;
+}
+.folks{
+  border: 2px solid red;
+  height: 200px;
+  width: 700px;
+}
+.aboutus-img{
+  display: inline-block;
+  vertical-align: center;
+}
+p.dwc-img{
+  display: inline-block;
+  vertical-align: top;
 }
