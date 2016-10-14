@@ -3425,14 +3425,13 @@ input[type=range] + .thumb {
     width: 70%;
   }
   .l12 {
-  width: 100%;
-  margin-left: auto;
-  left: auto;
-  right: auto;
-  /*edit for dwc*/
-  margin-top: -10px
-}
-  /*paste here*/
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+    /*edit for dwc*/
+    margin-top: -10px
+  }
 }
 
 .container .row {
