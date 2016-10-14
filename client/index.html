@@ -41,73 +41,112 @@
 				})
 				.when('/aboutus', 
 				{
-					templateUrl: "partials/aboutus.html"
+					templateUrl: "partials/aboutus/aboutus.html"
 				})
-				.when('/whoweare', 
+				.when('/aboutus/whoweare', 
 				{
-					templateUrl: "partials/whoweare.html"
+					templateUrl: "partials/aboutus/whoweare.html"
 				})
-				.when('/events', 
+				.when('/aboutus/events', 
 				{
-					templateUrl: "partials/events.html"
+					templateUrl: "partials/aboutus/events.html"
 				})
-				.when('/news', 
+				.when('/aboutus/news', 
 				{
-					templateUrl: "partials/news.html"
+					templateUrl: "partials/aboutus/news.html"
 				})
-				.when('/partners', 
+				.when('/aboutus/partners', 
 				{
-					templateUrl: "partials/partners.html"
+					templateUrl: "partials/aboutus/partners.html"
 				})
-				.when('/facility', 
+				.when('/aboutus/facility', 
 				{
-					templateUrl: "partials/facility.html"
+					templateUrl: "partials/aboutus/facility.html"
 				})
-				.when('/newsletters', 
+				.when('/aboutus/newsletters', 
 				{
-					templateUrl: "partials/newsletters.html"
+					templateUrl: "partials/aboutus/newsletters.html"
 				})
-				.when('/career', 
+				.when('/aboutus/career', 
 				{
-					templateUrl: "partials/career.html"
+					templateUrl: "partials/aboutus/career.html"
 				})
-				.when('/contactus', 
+				.when('/aboutus/contactus', 
 				{
-					templateUrl: "partials/contactus.html"
+					templateUrl: "partials/aboutus/contactus.html"
 				})
 				.when('/employers', 
 				{
-					templateUrl: "partials/employers.html"
+					templateUrl: "partials/employers/employers.html"
 				})
-				.when('/reserveworker', 
+				.when('/employers/reserveworker', 
 				{
-					templateUrl: "partials/reserveworker.html"
+					templateUrl: "partials/employers/reserveworker.html"
 				})
-				.when('/success_stories', 
+				.when('/employers/success_stories', 
 				{
-					templateUrl: "partials/success_stories.html"
+					templateUrl: "partials/employers/success_stories.html"
 				})
-				.when('/services', 
+				.when('/employers/services', 
 				{
-					templateUrl: "partials/services.html"
+					templateUrl: "partials/employers/services.html"
 				})
-				.when('/faq', 
+				.when('/employers/faq', 
 				{
-					templateUrl: "partials/faq.html"
+					templateUrl: "partials/employers/faq.html"
 				})
-				.when('/gardening', 
+				.when('/employers/gardening', 
 				{
-					templateUrl: "partials/gardening.html"
+					templateUrl: "partials/employers/gardening.html"
 				})
-				.when('/housecleaning', 
+				.when('/employers/housecleaning', 
 				{
-					templateUrl: "partials/housecleaning.html"
+					templateUrl: "partials/employers/housecleaning.html"
 				})
-				.when('/moving', 
+				.when('/employers/moving', 
 				{
-					templateUrl: "partials/moving.html"
+					templateUrl: "partials/employers/moving.html"
 				})
-
+				.when('/workers', 
+				{
+					templateUrl: "partials/workers/workers.html"
+				})
+				.when('/workers/programs', 
+				{
+					templateUrl: "partials/workers/programs.html"
+				})
+				.when('/workers/success_stories', 
+				{
+					templateUrl: "partials/workers/workers_success_stories.html"
+				})
+				.when('/workers/faq', 
+				{
+					templateUrl: "partials/workers/workers_faq.html"
+				})
+				.when('/volunteer', 
+				{
+					templateUrl: "partials/volunteers/volunteer.html"
+				})
+				.when('/volunteers/signup', 
+				{
+					templateUrl: "partials/volunteers/signup.html"
+				})
+				.when('/volunteers/opportunities', 
+				{
+					templateUrl: "partials/volunteers/opportunities.html"
+				})
+				.when('/volunteers/success_stories', 
+				{
+					templateUrl: "partials/volunteers/volunteers_success_stories.html"
+				})
+				.when('/volunteers/faq', 
+				{
+					templateUrl: "partials/volunteers/volunteers_faq.html"
+				})
+				.when('/donate', 
+				{
+					templateUrl: "partials/donate.html"
+				})
 				.otherwise({
 					redirectTo: "/"
 				});
@@ -378,16 +417,16 @@
 			<ul class="right hide-on-med-and-down">
 				<li><a href="#/aboutus" class="white-text waves-effect waves-light">About Us</a></li>
 				<li><a href="#/employers" class="white-text waves-effect waves-light">For Employers</a></li>
-				<li><a href="#/forWorkers" class="white-text waves-effect waves-light">For Workers</a></li>
-				<li><a href="#/forVolunteers" class="white-text waves-effect waves-light">For Volunteers</a></li>
-				<li><a href="#/forDonors" class="white-text waves-effect waves-light">For Donors</a></li>
+				<li><a href="#/workers" class="white-text waves-effect waves-light">For Workers</a></li>
+				<li><a href="#/volunteer" class="white-text waves-effect waves-light">For Volunteers</a></li>
+				<li><a href="#/donate" class="white-text waves-effect waves-light">For Donors</a></li>
 			</ul>
 			<ul class="side-nav deep-orange darken-4" id="mobile-nav">
 				<li><a href="#/aboutus" class="white-text waves-effect waves-light">About Us</a></li>
 				<li><a href="#/employers" class="white-text waves-effect waves-light">For Employers</a></li>
-				<li><a href="#/forWorkers" class="white-text waves-effect waves-light">For Workers</a></li>
-				<li><a href="#/forVolunteers" class="white-text waves-effect waves-light">For Volunteers</a></li>
-				<li><a href="#/forDonors" class="white-text waves-effect waves-light">For Donors</a></li>
+				<li><a href="#/workers" class="white-text waves-effect waves-light">For Workers</a></li>
+				<li><a href="#/volunteer" class="white-text waves-effect waves-light">For Volunteers</a></li>
+				<li><a href="#/donate" class="white-text waves-effect waves-light">For Donors</a></li>
 			</ul>
 		</div>
 	</nav>
