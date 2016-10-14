@@ -92,3 +92,28 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+
+/*edit for dwc*/
+@media only screen and (min-width: 993px) {
+
+  .row .col.l9 {
+    /*edit for dwc*/
+    margin-top: -2px
+
+  }
+  .row .col.m8 {
+    /*edit for dwc*/
+    margin-top: -1px
+
+  }
+  /*paste here*/
+}
+@media only screen and (min-width: 1200px) {
+
+  .row .col.l9 {
+    /*edit for dwc*/
+    margin-top: -2px
+
+  }
+}
