@@ -3464,7 +3464,7 @@ input[type=range] + .thumb {
   float: left;
   box-sizing: border-box;
   padding: 0 0.75rem;
-  min-height: 1px;
+  min-height: px;
 }
 
 .row .col[class*="push-"], .row .col[class*="pull-"] {
@@ -3553,6 +3553,8 @@ input[type=range] + .thumb {
   margin-left: auto;
   left: auto;
   right: auto;
+  /*edit for dwc*/
+  margin-top: -1px
 }
 
 .row .col.offset-s1 {
@@ -3747,6 +3749,8 @@ input[type=range] + .thumb {
     margin-left: auto;
     left: auto;
     right: auto;
+    /*edit for dwc*/
+    margin-top: -1px;
   }
   .row .col.m9 {
     width: 75%;
@@ -3936,6 +3940,9 @@ input[type=range] + .thumb {
     margin-left: auto;
     left: auto;
     right: auto;
+    /*edit for dwc*/
+    /*margin-bottom: -1px*/
+    margin-top: -2px;
   }
   .row .col.l10 {
     width: 83.3333333333%;
