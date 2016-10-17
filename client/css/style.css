@@ -5,6 +5,20 @@
  *
  * Made By MaterializeCSS.com
  */
+div.col.s12.m8.l9.grey {
+  vertical-align: top;
+  display: inline-block;
+}
+div.col.s12.m4.l3.teal {
+  vertical-align: top;
+  display: inline-block;
+}
+.main_content{
+  width: 70%;
+}
+.sidebar{
+  width: 20%;
+}
 
 #dwc-img{
   border: 2px solid red;
@@ -98,14 +112,14 @@ footer.page-footer {
   }
 }
 /*edit for dwc*/
+
 .empowering{
-  border: 2px solid red;
-  height: 200px;
-  width: 400px;
+  /*width:700;*/
+  height:255px;
+  border: 20px solid white;
 }
-.empowering.img{
-  width:700;
-  height:200;
+.quote{
+  margin-top: 50px;
 }
 .subnav{
   display: inline-block;
@@ -123,4 +137,6 @@ footer.page-footer {
 p.dwc-img{
   display: inline-block;
   vertical-align: top;
+  margin-left: 20px;
+  margin-top: 0px;
 }
