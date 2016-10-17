@@ -125,6 +125,21 @@ footer.page-footer {
   display: inline-block;
   vertical-align: center;
 }
+/* subnav image resize start*/
+.subnavcontainer{
+  background-color: black;
+}
+.subnavsidecontainer{
+  background-color: black;
+}
+.subnavimg{
+  width: 80%;
+  height: 50%;
+}
+.subnavsideimg{
+  width: 100%;
+}
+/* subnav image resize start*/
 .folks{
   border: 2px solid red;
   height: 200px;
