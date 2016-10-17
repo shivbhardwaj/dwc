@@ -7466,12 +7466,13 @@ Picker.extend( 'pickadate', DatePicker )
       }
     }; // Plugin end
     /* subnav image resize start*/
-    var img = document.getElementById('container').firstChild;
-	img.onload = function() {
-	    if(img.height > img.width) {
-	        img.height = '100%';
-	        img.width = 'auto';
-	    }
-	};
+ //    var img = document.getElementsByClassName('subnavimg');
+	// img.onload = function() {
+	// 	console.log("haha");
+	//     if(img.height > img.width) {
+	//         img.height = '100%';
+	//         img.width = 'auto';
+	//     }
+	// };
 	/* subnav image resize end*/
 }( jQuery ));

@@ -115,7 +115,14 @@ footer.page-footer {
 .subnavcontainer{
   background-color: black;
 }
-img.subnavimg{
+.subnavsidecontainer{
+  background-color: black;
+}
+.subnavimg{
+  width: 80%;
+  height: 50%;
+}
+.subnavsideimg{
   width: 100%;
 }
 /* subnav image resize start*/
