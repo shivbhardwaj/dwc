@@ -5,37 +5,38 @@
  *
  * Made By MaterializeCSS.com
  */
-.subnav{
+div.col.s12.m8.l9.grey {
+  vertical-align: top;
   display: inline-block;
-  vertical-align: center;
 }
-#empowering{
-  border: 2px solid red;
+div.col.s12.m4.l3.teal {
+  vertical-align: top;
+  display: inline-block;
+}
+.sidebar{
+  width: 20%;
+}
+.facility{
   height: 200px;
   width: 400px;
 }
-#folks{
-  border: 2px solid red;
-  height: 200px;
-  width: 700px;
-}
-.aboutus-img{
+.main-aboutus{
+  /*change width*/
+  /*it affects the length of the p tags*/
+  width: 80%;
+  background-color: orange;
   display: inline-block;
-  vertical-align: center;
 }
+img.main-aboutus{
+  display: inline-block;
+}
+
 p.dwc-img{
   display: inline-block;
   vertical-align: top;
-}
-#dwc-img{
-  border: 2px solid red;
-  height: 200px;
-  width: 500px;
-  margin-right: 40px;
-}
-#dwc-img-text{
-  height: 200px;
-  width: 400px;
+  margin-top: 0px;
+  margin-left: 100px;
+  width: 1600px;
 }
 .career h4, .career h3 {
   margin-top:10px;
@@ -93,14 +94,82 @@ p {
   font-size: inherit;
 }
 
+.row{
+  margin-bottom: 0px;
+}
 footer.page-footer {
   margin: 0;
 }
+/*edit for dwc*/
+@media only screen and (min-width: 993px) {
 
+  .row .col.l9 {
+    /*edit for dwc*/
+    margin-top: -2px;
 
-.subnav-right {
-  margin-right: 0px;
-  padding-right: 0px;
-  float: right;
+  }
+  .row .col.m8 {
+    /*edit for dwc*/
+    margin-top: -1px;
+
+  }
+}
+@media only screen and (min-width: 1200px) {
+
+  .row .col.l9 {
+    /*edit for dwc*/
+    margin-top: -1px;
+
+  }
+}
+/*edit for dwc*/
+
+img.empowering{
+  /*width:700;*/
+  /*height: 10%;*/
+  /*border: 20px solid white;*/
+}
+.quote{
+  margin-top: 50px;
+}
+.subnav{
+  display: inline-block;
+  vertical-align: center;
+}
+.main_content{
+  padding-bottom: 0px;
+}
+/* subnav image resize start*/
+.subnavcontainer{
   background-color: black;
+  margin: -2px auto;
+}
+.subnavsidecontainer{
+  /*background-color: black;*/
+}
+.subnavimg{
+  /*height wont be readjusted. It is supposed to be width*/
+  width: 78%;
+  /*height: 40%;*/
+}
+.subnavsideimg{
+  width: 100%;
+}
+/* subnav image resize start*/
+.folks{
+  border: 2px solid red;
+  height: 200px;
+  width: 700px;
+}
+.aboutus-img{
+  display: inline-block;
+  vertical-align: center;
+}
+p.dwc-img{
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+  margin-top: 0px;
+  width: 95%;
+  /*background-color: black;*/
 }

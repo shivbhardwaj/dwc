@@ -7465,4 +7465,14 @@ Picker.extend( 'pickadate', DatePicker )
         $.error( 'Method ' +  methodOrOptions + ' does not exist on jQuery.carousel' );
       }
     }; // Plugin end
+    /* subnav image resize start*/
+ //    var img = document.getElementsByClassName('subnavimg');
+	// img.onload = function() {
+	// 	console.log("haha");
+	//     if(img.height > img.width) {
+	//         img.height = '100%';
+	//         img.width = 'auto';
+	//     }
+	// };
+	/* subnav image resize end*/
 }( jQuery ));
