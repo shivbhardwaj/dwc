@@ -1,0 +1,100 @@
+<div class="container">
+	<!--SUB NAV BAR STARTS HERE -->
+	<div>
+		<ul class="subnav">
+			<li class="subnav"><a href="#/volunteers/signup">Sign Up | </a></li>
+			<li class="subnav"><a href="#/volunteers/opportunities">Opportunities | </a></li>
+			<li class="subnav"><a href="#/volunteers/success_stories">Success Stories | </a></li>
+			<li class="subnav"><a href="#/volunteers/faq">Frequently Asked Questions </a></li>
+		</ul>
+	</div>
+	<!--SUB NAV BAR ENDS HERE -->
+
+	<!--IMAGES START HERE -->
+	<div>
+		<p class="aboutus-img" id="empowering"><img src="../images/empowering_others.png" alt="[Empowering Others Quote]" width="325" height="200" align="right" /></p>
+		<p class="aboutus-img" id='folks'><img src="../images/dwc_volunteers.png" alt="[DWC Volunteers picture]" width="700" height="200" align="right" /></p>
+	</div>
+	<!--IMAGES END HERE -->
+
+	<!--MAIN CONTENT STARTS HERE -->
+	<div class="main-aboutus">
+	<h2>Sign Up</h2>
+            <p style="line-height:1.6em;">If you'd like to volunteer at the center or find out more about volunteering, 
+               please fill out this form and our Volunteer Coordinator will contact you.<br />
+			   (* indicate required fields)</p>
+
+							<form id="cSignup" name="cSignup" action="/volunteer/signup.php"
+				      method="post" class="form">
+	                <fieldset>
+		                <div>
+							<label for="firstName">* First Name:</label>
+							<div class="iefix">
+								<input id="firstName" name="firstName" type="text" class="type_text" required
+								       value="" />
+							</div>
+		                </div>
+		                <div>
+							<label for="lastName">* Last Name:</label>
+							<div class="iefix">
+								<input id="lastName" name="lastName" type="text" class="type_text" required
+								       value="" />
+							</div>
+		                </div>
+						<div>
+							<label for="email">E-mail Address:</label>
+							<div class="iefix">
+								<input id="email" name="email" type="text" class="type_text" 
+								       value="" />
+							</div>
+						</div>
+						<div>
+							<label for="phone">Phone:</label>
+							<div class="iefix">
+								<input id="phone" name="phone" type="text" class="type_text" 
+								       value="" />
+							</div>
+						</div>
+						(* One of E-mail Address or Phone is required)<br /><br />
+						<div>
+							<label for="message">* What I can do:</label>
+							<div class="iefix">							
+								<textarea id="message" name="message" required
+								          class="type_text"></textarea>
+							</div>
+						</div>
+						
+						<div>
+							<label for="mcaptcha">* Answer math question:</label>
+							<img src="../vendor/math_captcha/image.php" 
+								alt="Click to reload image" title="Click to reload image" id="captcha" 
+								onclick="reloadCaptcha()" /><br>
+							<input type="text" id="mcaptcha" name="mcaptcha" class="type_text" style="margin-top:6px;width:150px;" required
+								       value="" />
+						</div>
+						
+						<div>
+							<div class="iefix">
+								<input type="submit" name="cSubmit" value="Submit" style="padding:6px 20px;color:#C25028"/>
+							</div>
+						</div>
+	                </fieldset>
+	            </form>
+				<script type="text/javascript">
+					if (document.getElementById) {
+						var cSignupId = document.getElementById("cSignup");
+						cSignupId.elements['firstName'].focus();
+					}
+					else {
+						this.form.elements['firstName'].focus();
+					}
+
+					function reloadCaptcha() {
+						document.getElementById('captcha').src = document.getElementById('captcha').src+ '?' +new Date();
+					}
+				</script>
+						
+		</div><!-- RH content -->
+		
+		<div id="overlay"></div>
+			</div>
