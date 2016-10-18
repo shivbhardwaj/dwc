@@ -17,8 +17,8 @@ div.col.s12.m4.l3.teal {
   width: 20%;
 }
 .facility{
-  height: 600px;
-  width: 1000px;
+  height: 200px;
+  width: 400px;
 }
 .main-aboutus{
   height: 1829px;
@@ -118,7 +118,6 @@ footer.page-footer {
 /*edit for dwc*/
 
 img.empowering{
-  margin-top: 135px;
   /*width:700;*/
   /*height:255px;*/
   /*border: 20px solid white;*/
