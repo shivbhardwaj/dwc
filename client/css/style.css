@@ -170,5 +170,6 @@ p.dwc-img{
   vertical-align: top;
   margin-left: 20px;
   margin-top: 0px;
-  background-color: black;
+  width: 95%;
+  /*background-color: black;*/
 }
