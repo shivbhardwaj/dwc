@@ -21,7 +21,14 @@ div.col.s12.m4.l3.teal {
   width: 400px;
 }
 .main-aboutus{
-  height: 1829px;
+  /*change width*/
+  /*it affects the length of the p tags*/
+  width: 80%;
+  background-color: orange;
+  display: inline-block;
+}
+img.main-aboutus{
+  display: inline-block;
 }
 
 p.dwc-img{
@@ -111,7 +118,7 @@ footer.page-footer {
 
   .row .col.l9 {
     /*edit for dwc*/
-    margin-top: -2px;
+    margin-top: -1px;
 
   }
 }
@@ -119,7 +126,7 @@ footer.page-footer {
 
 img.empowering{
   /*width:700;*/
-  /*height:255px;*/
+  /*height: 10%;*/
   /*border: 20px solid white;*/
 }
 .quote{
@@ -129,16 +136,21 @@ img.empowering{
   display: inline-block;
   vertical-align: center;
 }
+.main_content{
+  padding-bottom: 0px;
+}
 /* subnav image resize start*/
 .subnavcontainer{
   background-color: black;
+  margin: -2px auto;
 }
 .subnavsidecontainer{
-  background-color: black;
+  /*background-color: black;*/
 }
 .subnavimg{
-  width: 80%;
-  height: 50%;
+  /*height wont be readjusted. It is supposed to be width*/
+  width: 78%;
+  /*height: 40%;*/
 }
 .subnavsideimg{
   width: 100%;
@@ -158,4 +170,5 @@ p.dwc-img{
   vertical-align: top;
   margin-left: 20px;
   margin-top: 0px;
+  background-color: black;
 }
