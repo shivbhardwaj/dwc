@@ -161,6 +161,10 @@ img.empowering{
   height: 200px;
   width: 700px;
 }
+.feedback{
+  align-content: center;
+  position: relative;
+}
 .aboutus-img{
   display: inline-block;
   vertical-align: center;
