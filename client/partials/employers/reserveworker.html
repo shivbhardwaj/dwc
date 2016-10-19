@@ -27,7 +27,7 @@
 		<div id="errorMsgArea"> </div>
 		<p>Please fill out this form to reserve a worker. &nbsp;&nbsp;(* indicate required fields)</p>
 
-		<form id="" name="" action="" method="" class="">
+		<form id="gform" method="POST" class="pure-form pure-form-stacked" action="https://script.google.com/macros/s/AKfycbxNPh-rCgOe8IrLAi_DJuhBkwJQKQUJg-qOXRR5uj6PKOFnOucj/exec">
 		    <h3 style="color:#C25028">Employer</h3>
 		    <hr>
 		    <fieldset>
@@ -102,7 +102,7 @@
 					<div class="labelFF iefix">
 						<textarea id="worksite" name="worksite" class="type_textFF" rows="2" cols="50"></textarea>
 						<div style="display:inline;vertical-align:top;">&nbsp;&nbsp;
-						<input type="checkbox" class="checkbox" name="sameAddr" id="sameAddr" > Same as above
+						<input type="checkbox" class="checkbox" name="sameAddr" id="sameAddr"> Same as above
 						</div>
 					</div>
 				</div>
@@ -113,7 +113,7 @@
 						<input type="text" id="startDay" name="startDay" class="type_textFF" placeholder="mm/dd/yyyy" required value="" /> &nbsp;&nbsp;
 						<label for="startTime" class="labelFF">* Start time:</label>
 						<input type="text" id="startTime" name="startTime" class="type_textFF" size="8" required value="" />
-						<input type="radio" id="startTimeAmPm" name="startTimeAmPm" class="radio" style="vertical-align:middle;" required value="am" />am&nbsp;&nbsp;<input type="radio" id="startTimeAmPm" name="startTimeAmPm" class="radio" style="vertical-align:middle;" required value="pm" />pm					
+						<input type="radio" id="startTimeAmPm" name="startTimeAmPm" class="radio" style="vertical-align:middle;" value="am" />am&nbsp;&nbsp;<input type="radio" id="startTimeAmPm" name="startTimeAmPm" class="radio" style="vertical-align:middle;"  value="pm" />pm					
 					</div>
 				</div>
 				
@@ -154,7 +154,8 @@
 				
 				<div style="margin:0;padding:0">
 					<div class="iefix" style="text-align:center">
-						<input type="submit" name="cSubmit" value="Submit" style="padding:6px 20px;color:#C25028"/>
+						<button class="button-success pure-button button-xlarge">
+      					<i class="fa fa-paper-plane"></i>&nbsp;Send</button>
 					</div>
 				</div>
 			</fieldset>
@@ -180,6 +181,8 @@
 		<div id="overlay"></div>
 						
 		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script data-cfasync="false" type="text/javascript" src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+  		<script data-cfasync="false" type="text/javascript" src="./../../js/form-submission-handler.js"></script>
 		<script>
 		$(document).ready(function(){
 			$("#sameAddr").change(function(){
