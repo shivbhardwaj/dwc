@@ -133,7 +133,7 @@ p.dwc-img{
   /*}*/
 /*}*/
 
-<<<<<<< HEAD
+
 /*@media only screen and (max-width : 600px) {*/
   /*#index-banner .section {*/
     /*top: 0;*/
@@ -146,22 +146,7 @@ p.dwc-img{
 /*.icon-block .material-icons {*/
   /*font-size: inherit;*/
 /*}*/
-=======
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-.box, .story{
-  display: inline-block;
-}
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
->>>>>>> 30dd2ac64068633efc196463b7ddff7332121b48
+
 
 /*.row{*/
   /*margin-bottom: 0px;*/
