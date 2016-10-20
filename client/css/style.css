@@ -37,7 +37,7 @@ nav .brand-logo{
 }
 
 .card-panel{
-  background-image: url("./../images/statement_bgrd.gif"); ;
+  background-image: url("./../images/statement_bgrd.gif");
 }
 
 .tax-info{
@@ -56,7 +56,7 @@ div.col.s12.m8.l9.grey {
 div.col.s12.m4.l3{
   vertical-align: top;
   display: inline-block;
-  background-color: #e1e2b6;
+  /*background-color: #e1e2b6;*/
 }
 .sidebar{
   width: 20%;
@@ -201,9 +201,7 @@ img.empowering{
   width: 78%;
   /*height: 40%;*/
 }
-.subnavsideimg{
-  width: 100%;
-}
+
 /* subnav image resize start*/
 .folks{
   border: 2px solid red;
