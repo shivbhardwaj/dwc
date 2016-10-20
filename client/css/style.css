@@ -56,15 +56,12 @@ div.col.s12.m8.l9.grey {
 div.col.s12.m4.l3{
   vertical-align: top;
   display: inline-block;
-<<<<<<< HEAD
-  /*remove the test color*/
-=======
->>>>>>> 6fd44a16fc067db07061d5f1e30e4b38d30d77bf
-  /*background-color: #e1e2b6;*/
 }
+
 .sidebar{
   width: 20%;
 }
+
 .facility{
   height: 200px;
   width: 400px;
@@ -133,7 +130,9 @@ p {
     top: 0;
   }
 }
-
+.box, .story{
+  display: inline-block;
+}
 .icon-block {
   padding: 0 15px;
 }
