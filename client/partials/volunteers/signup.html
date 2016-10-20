@@ -83,14 +83,14 @@
 								</div>
 							</div>
 							
-							<div>
+							<!-- <div>
 								<label for="mcaptcha">* Answer math question:</label>
 								<img src="../vendor/math_captcha/image.php" 
 									alt="Click to reload image" title="Click to reload image" id="captcha" 
 									onclick="reloadCaptcha()" /><br>
 								<input type="text" id="mcaptcha" name="mcaptcha" class="type_text" style="margin-top:6px;width:150px;" required
 									       value="" />
-							</div>
+							</div> -->
 							
 							<div>
 								<div class="iefix">
@@ -108,9 +108,9 @@
 							this.form.elements['firstName'].focus();
 						}
 
-						function reloadCaptcha() {
-							document.getElementById('captcha').src = document.getElementById('captcha').src+ '?' +new Date();
-						}
+						// function reloadCaptcha() {
+						// 	document.getElementById('captcha').src = document.getElementById('captcha').src+ '?' +new Date();
+						// }
 					</script>
 							
 			</div><!-- RH content -->
