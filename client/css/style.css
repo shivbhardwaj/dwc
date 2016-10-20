@@ -12,7 +12,7 @@
 .nav-wrapper{
   background-color: #E1E2B6;
 }
-
+/*
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -23,11 +23,11 @@ nav .brand-logo{
   height: 100%;
   width: auto;
   margin: 0 auto;
-}
+}*/
 
 /** start main page style */
 
-.home_page{
+/*.home_page{
  background-color: #E1E2B6;
 }
 
@@ -35,49 +35,44 @@ nav .brand-logo{
   font: Trebuchet;
   text-align: center;
 }
-
+*/
 /*.card-panel{
   background-image: url("./../images/statement_bgrd.gif");
 }*/
 
-.tax-info{
+/*.tax-info{
   text-align: center;
-}
+}*/
 
 
 /* end main page */
 
 
 /* start about us*/
-div.col.s12.m8.l9.grey {
+/*div.col.s12.m8.l9.grey {
   vertical-align: top;
   display: inline-block;
 }
 div.col.s12.m4.l3{
   vertical-align: top;
   display: inline-block;
-<<<<<<< HEAD
-  /*remove the test color*/
-=======
->>>>>>> 6fd44a16fc067db07061d5f1e30e4b38d30d77bf
-  /*background-color: #e1e2b6;*/
-}
-.sidebar{
+*/
+/*.sidebar{
   width: 20%;
-}
-.facility{
+}*/
+/*.facility{
   height: 200px;
   width: 400px;
-}
+}*/
 
 
-.main-aboutus{
+/*.main-aboutus{*/
   /*change width*/
   /*it affects the length of the p tags*/
   /*width: 80%;
   background-color: #e1e2b6;
   display: inline-block;*/
-}
+/*}
 img.main-aboutus{
   display: inline-block;
 }
@@ -98,83 +93,83 @@ p.dwc-img{
 .career ul li {
   list-style: disc inside;
   line-height: 1.8em;
-}
+}*/
 
-p {
-  line-height: 2rem;
-}
+/*p {*/
+  /*line-height: 2rem;*/
+/*}*/
 
-.button-collapse {
-  color: #26a69a;
-}
+/*.button-collapse {*/
+  /*color: #26a69a;*/
+/*}*/
 
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
+/*.parallax-container {*/
+  /*min-height: 380px;*/
+  /*line-height: 0;*/
+  /*height: auto;*/
+  /*color: rgba(255,255,255,.9);*/
+/*}*/
+  /*.parallax-container .section {*/
+    /*width: 100%;*/
+  /*}*/
 
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
+/*@media only screen and (max-width : 992px) {*/
+  /*.parallax-container .section {*/
+    /*position: absolute;*/
+    /*top: 40%;*/
+  /*}*/
+  /*#index-banner .section {*/
+    /*top: 10%;*/
+  /*}*/
+/*}*/
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
+/*@media only screen and (max-width : 600px) {*/
+  /*#index-banner .section {*/
+    /*top: 0;*/
+  /*}*/
+/*}*/
 
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
+/*.icon-block {*/
+  /*padding: 0 15px;*/
+/*}*/
+/*.icon-block .material-icons {*/
+  /*font-size: inherit;*/
+/*}*/
 
-.row{
-  margin-bottom: 0px;
-}
+/*.row{*/
+  /*margin-bottom: 0px;*/
+/*}*/
 
-.footer{
-  background-color: #E1E2B6;
+/*.footer{*/
+  /*background-color: #E1E2B6;*/
 
-}
-footer.page-footer {
-  margin: 0;
-}
+/*}*/
+/*footer.page-footer {*/
+  /*margin: 0;*/
+/*}*/
 /*edit for dwc*/
-@media only screen and (min-width: 993px) {
+/*@media only screen and (min-width: 993px) {
 
-  .row .col.l9 {
+  .row .col.l9 {*/
     /*edit for dwc*/
-    margin-top: -2px;
+    /*margin-top: -2px;*/
     /*background-image: url("./../images/body_bgrd.gif");*/
 
-  }
-  .row .col.m8 {
+  /*}*/
+  /*.row .col.m8 {*/
     /*edit for dwc*/
-    margin-top: -1px;
+    /*margin-top: -1px;*/
     /*background-image: url("./../images/body_bgrd.gif");*/
 
-  }
+  /*}*//*
 }
 @media only screen and (min-width: 1200px) {
 
-  .row .col.l9 {
+  .row .col.l9 {*/
     /*edit for dwc*/
-    margin-top: -1px;
-  }
-}
+    /*margin-top: -1px;*/
+  /*}*/
+/*}*/
 /*edit for dwc*/
 
 /*img.empowering{*/
@@ -189,13 +184,13 @@ footer.page-footer {
   /*background-color: white;*/
   /*width: 100%;*/
 /*}*/
-.subnav{
+/*.subnav{
   display: inline-block;
   vertical-align: center;
 }
-.card-panel-sidebaradjust{
-  margin-top: 20%;
-}
+.card-panel-sidebaradjust{*/
+  /*margin-top: 20%;*/
+/*}*/
 /*edit for dwc remove sample*/
 /*.main_content{
   padding-bottom: 0px;
@@ -242,5 +237,13 @@ footer.page-footer {
   margin-left: 20px;
   margin-top: 0px;
   width: 95%;*/
-  /*background-color: black;*/
-/*}
+  /*background-color: black;
+}
+*/
+.subnav{
+  display: inline-block;
+  vertical-align: center;
+}
+.career ul li {
+  list-style: disc inside;
+}
