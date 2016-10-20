@@ -140,6 +140,11 @@ p {
 .row{
   margin-bottom: 0px;
 }
+
+.footer{
+  background-color: #E1E2B6;
+
+}
 footer.page-footer {
   margin: 0;
 }
