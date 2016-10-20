@@ -1,4 +1,4 @@
-/* Custom Stylesheet */
+ Custom Stylesheet */
 /**
  * Use this file to override Materialize files so you can update
  * the core Materialize files in the future
@@ -56,7 +56,8 @@ div.col.s12.m8.l9.grey {
 div.col.s12.m4.l3{
   vertical-align: top;
   display: inline-block;
-  background-color: #e1e2b6;
+  /*remove the test color*/
+  /*background-color: #e1e2b6;*/
 }
 .sidebar{
   width: 20%;
@@ -70,9 +71,9 @@ div.col.s12.m4.l3{
 .main-aboutus{
   /*change width*/
   /*it affects the length of the p tags*/
-  width: 80%;
+  /*width: 80%;
   background-color: #e1e2b6;
-  display: inline-block;
+  display: inline-block;*/
 }
 img.main-aboutus{
   display: inline-block;
@@ -154,13 +155,13 @@ footer.page-footer {
   .row .col.l9 {
     /*edit for dwc*/
     margin-top: -2px;
-    background-image: url("./../images/body_bgrd.gif");
+    /*background-image: url("./../images/body_bgrd.gif");*/
 
   }
   .row .col.m8 {
     /*edit for dwc*/
     margin-top: -1px;
-    background-image: url("./../images/body_bgrd.gif");
+    /*background-image: url("./../images/body_bgrd.gif");*/
 
   }
 }
@@ -173,60 +174,66 @@ footer.page-footer {
 }
 /*edit for dwc*/
 
-img.empowering{
+/*img.empowering{*/
   /*width:700;*/
   /*height: 10%;*/
   /*border: 20px solid white;*/
-}
-.quote{
-  margin-top: 50px;
-}
-.white{
-  background-color: white;
-  width: 100%;
-}
+/*}*/
+/*.quote{*/
+  /*margin-top: 50px;*/
+/*}*/
+/*.white{*/
+  /*background-color: white;*/
+  /*width: 100%;*/
+/*}*/
 .subnav{
   display: inline-block;
   vertical-align: center;
 }
-.main_content{
+/*edit for dwc remove sample*/
+/*.main_content{
   padding-bottom: 0px;
-}
+}*/
 /* subnav image resize start*/
-.subnavcontainer{
+/*.subnavcontainer{
   background-color: black;
   margin: -2px auto;
-}
-.subnavsidecontainer{
-  /*background-color: black;*/
-}
-.subnavimg{
+}*/
+/*.subnavsidecontainer{
+  background-color: black;
+}*/
+/*.subnavimg{*/
   /*height wont be readjusted. It is supposed to be width*/
-  width: 78%;
+  /*width: 78%;*/
   /*height: 40%;*/
-}
-.subnavsideimg{
-  width: 100%;
-}
+/*}*/
+/*.subnavimgdonor{*/
+  /*height wont be readjusted. It is supposed to be width*/
+  /*margin-top: 3%;*/
+  /*height: 40%;*/
+/*}*/
+/*.subnavsideimg{*/
+  /*width: 100%;*/
+/*}*/
 /* subnav image resize start*/
-.folks{
-  border: 2px solid red;
+/*.folks{*/
+  /*border: 2px solid red;
   height: 200px;
-  width: 700px;
-}
-.feedback{
-  align-content: center;
-  position: relative;
-}
-.aboutus-img{
-  display: inline-block;
-  vertical-align: center;
-}
-p.dwc-img{
-  display: inline-block;
+  width: 700px;*/
+/*}*/
+/*.feedback{*/
+  /*align-content: center;
+  position: relative;*/
+/*}*/
+/*.aboutus-img{*/
+  /*display: inline-block;
+  vertical-align: center;*/
+/*}*/
+/*p.dwc-img{*/
+  /*display: inline-block;
   vertical-align: top;
   margin-left: 20px;
   margin-top: 0px;
-  width: 95%;
+  width: 95%;*/
   /*background-color: black;*/
-}
+/*}
