@@ -40,10 +40,10 @@ nav .brand-logo{
   background-image: url("./../images/statement_bgrd.gif"); ;
 }
 
-.card-image{
-  width: 50px;
-  height: 50px;
+.tax-info{
+  text-align: center;
 }
+
 
 /* end main page */
 
