@@ -12,6 +12,8 @@
 
 	<!-- JavaScript for: jQuery, angular, materialize, and angular-materialize. All of which are needed. -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.15.0/jquery.validate.min.js"></script>
 	<script src="js/init.js"></script>
 
 	<!-- ANGULAR -->
@@ -19,7 +21,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-route.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-messages.js"></script>
 
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script> -->
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
 	<script>
 		(function(){
@@ -41,43 +44,133 @@
 				})
 				.when('/aboutus', 
 				{
-					templateUrl: "partials/aboutus.html"
+					templateUrl: "partials/aboutus/aboutus.html"
 				})
-				.when('/whoweare', 
+				.when('/aboutus/whoweare', 
 				{
-					templateUrl: "partials/whoweare.html"
+					templateUrl: "partials/aboutus/whoweare.html"
 				})
-				.when('/events', 
+				.when('/aboutus/events', 
 				{
-					templateUrl: "partials/events.html"
+					templateUrl: "partials/aboutus/events.html"
 				})
-				.when('/news', 
+				.when('/aboutus/news', 
 				{
-					templateUrl: "partials/news.html"
+					templateUrl: "partials/aboutus/news.html"
 				})
-				.when('/partners', 
+				.when('/aboutus/partners', 
 				{
-					templateUrl: "partials/partners.html"
+					templateUrl: "partials/aboutus/partners.html"
 				})
-				.when('/facility', 
+				.when('/aboutus/facility', 
 				{
-					templateUrl: "partials/facility.html"
+					templateUrl: "partials/aboutus/facility.html"
 				})
-				.when('/newsletters', 
+				.when('/aboutus/newsletters', 
 				{
-					templateUrl: "partials/newsletters.html"
+					templateUrl: "partials/aboutus/newsletters.html"
 				})
-				.when('/career', 
+				.when('/aboutus/career', 
 				{
-					templateUrl: "partials/career.html"
+					templateUrl: "partials/aboutus/career.html"
 				})
-				.when('/contactus', 
+				.when('/aboutus/contactus', 
 				{
-					templateUrl: "partials/contactus.html"
+					templateUrl: "partials/aboutus/contactus.html"
+				})
+				.when('/employers', 
+				{
+					templateUrl: "partials/employers/employers.html"
+				})
+				.when('/employers/reserveworker', 
+				{
+					templateUrl: "partials/employers/reserveworker.html"
+				})
+				.when('/employers/success_stories', 
+				{
+					templateUrl: "partials/employers/success_stories.html"
+				})
+				.when('/employers/services', 
+				{
+					templateUrl: "partials/employers/services.html"
+				})
+				.when('/employers/faq', 
+				{
+					templateUrl: "partials/employers/faq.html"
+				})
+				.when('/employers/gardening', 
+				{
+					templateUrl: "partials/employers/gardening.html"
+				})
+				.when('/employers/housecleaning', 
+				{
+					templateUrl: "partials/employers/housecleaning.html"
+				})
+				.when('/employers/moving', 
+				{
+					templateUrl: "partials/employers/moving.html"
+				})
+				.when('/workers', 
+				{
+					templateUrl: "partials/workers/workers.html"
+				})
+				.when('/workers/programs', 
+				{
+					templateUrl: "partials/workers/programs.html"
+				})
+				.when('/workers/success_stories', 
+				{
+					templateUrl: "partials/workers/workers_success_stories.html"
+				})
+				.when('/workers/faq', 
+				{
+					templateUrl: "partials/workers/workers_faq.html"
+				})
+				.when('/workers/success_stories/4th_of_july_picnic', 
+				{
+					templateUrl: "partials/workers/4th_of_july_picnic.html"
+				})
+				.when('/volunteer', 
+				{
+					templateUrl: "partials/volunteers/volunteer.html"
+				})
+				.when('/volunteers/signup', 
+				{
+					templateUrl: "partials/volunteers/signup.html"
+				})
+				.when('/volunteers/opportunities', 
+				{
+					templateUrl: "partials/volunteers/opportunities.html"
+				})
+				.when('/volunteers/success_stories', 
+				{
+					templateUrl: "partials/volunteers/volunteers_success_stories.html"
+				})
+				.when('/volunteers/faq', 
+				{
+					templateUrl: "partials/volunteers/volunteers_faq.html"
+				})
+				.when('/donate', 
+				{
+					templateUrl: "partials/donate.html"
 				})
 				.otherwise({
 					redirectTo: "/"
 				});
+
+				// Removal of hashtags
+
+				// if(window.history && window.history.pushState){
+    //         		//$locationProvider.html5Mode(true); will cause an error $location in HTML5 mode requires a  tag to be present! Unless you set baseUrl tag after head tag like so: <head> <base href="/">
+
+    //      			// to know more about setting base URL visit: https://docs.angularjs.org/error/$location/nobase
+
+		  //       	// if you don't wish to set base URL then use this
+		  //        	$locationProvider.html5Mode({
+		  //                enabled: true,
+		  //                requireBase: false
+		  //         	});
+		  //       }
 			}]);
 
 			/////////////////////////////////////////////////////
@@ -315,59 +408,58 @@
 </script>
 </head>
 <body>
-	<!-- Dropdown Structure for navbar below-->
-	<!-- <ul id="dropdown1" class="dropdown-content deep-orange darken-3">
-		<li><a href="#!" class="white-text">one</a></li>
-		<li><a href="#!" class="white-text">two</a></li>
-		<li class="divider" class="white-text"></li>
-		<li><a href="#!" class="white-text">three</a></li>
-	</ul> -->
-	<!-- Navbar -->
-	<!-- <nav>
-		<div class="nav-wrapper white-text deep-orange darken-4">
-			<a href="#!" class="brand-logo white-text">DWC</a>
-			<ul class="right hide-on-med-and-down white-text">
-				<li><a href="#/aboutus" class="white-text waves-effect waves-light">About Us</a></li>
-				<li><a href="#/forEmployers" class="white-text waves-effect waves-light">For Employers</a></li>
-				<li><a href="#/forWorkers" class="white-text waves-effect waves-light">For Workers</a></li>
-				<li><a href="#/forVolunteers" class="white-text waves-effect waves-light">For Volunteers</a></li>
-				<li><a href="#/forDonors" class="white-text waves-effect waves-light">For Donors</a></li>
-				Dropdown Trigger
-				<li><a class="dropdown-button white-text" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-			</ul>
-		</div>
-	</nav> -->
-	<!-- This is navbar start -->
-	<nav>
-		<div class="nav-wrapper white-text deep-orange darken-4">
-			<a href="#!" class="brand-logo white-text">DWC</a>
-			<a href="#!" data-activates="mobile-nav" class="button-collapse"><i class="material-icons white-text">menu</i></a>
-			<ul class="right hide-on-med-and-down">
-				<li><a href="#/aboutus" class="white-text waves-effect waves-light">About Us</a></li>
-				<li><a href="#/forEmployers" class="white-text waves-effect waves-light">For Employers</a></li>
-				<li><a href="#/forWorkers" class="white-text waves-effect waves-light">For Workers</a></li>
-				<li><a href="#/forVolunteers" class="white-text waves-effect waves-light">For Volunteers</a></li>
-				<li><a href="#/forDonors" class="white-text waves-effect waves-light">For Donors</a></li>
-			</ul>
-			<ul class="side-nav deep-orange darken-4" id="mobile-nav">
-				<li><a href="#/aboutus" class="white-text waves-effect waves-light">About Us</a></li>
-				<li><a href="#/forEmployers" class="white-text waves-effect waves-light">For Employers</a></li>
-				<li><a href="#/forWorkers" class="white-text waves-effect waves-light">For Workers</a></li>
-				<li><a href="#/forVolunteers" class="white-text waves-effect waves-light">For Volunteers</a></li>
-				<li><a href="#/forDonors" class="white-text waves-effect waves-light">For Donors</a></li>
-			</ul>
-		</div>
-	</nav>
-	<!-- This is navbar start -->
 	
-	<!-- partials div start -->
-	<div ng-view="">
-	</div>
-	<!-- partials div end -->
-	<div id="footer">
-		<p>Day Worker Center of Mountain View, 113 Escuela Ave., Mountain View, CA 94040&nbsp;&nbsp;&nbsp;650-903-4102 &nbsp;&nbsp;&nbsp; <a href="mailto:info@dayworkercentermv.org">info@dayworkercentermv.org</a></p>
-	</div>
+	
+	<!-- background image start -->
+	<div style= "background-image: url(./../images/body_bgrd.gif)">
+		<br>
+		<div class="z-depth-5 container" style="background: linear-gradient(45deg, #be9e6a 0%, #c3a473 9%, #f2e2ca 97%, #dfdfb4 100%); border: 3px solid black; padding:0% 1%;">
 
-	</body>
+			<nav style="min-height: 90px">
+				<div class="nav-wrapper" style ="margin: 0% -1%">
+					<!-- <a href="#!" class="brand-logo white-text">DWC</a> -->
+					<div class="row">
+					<a href="#!"><img class="col s7 m5 l3" src="../images/DWC_Logo.png" alt="DWC Logo"></a>
+					<a href="#!" data-activates="mobile-nav" class="button-collapse" style="float: right;margin: 0% 3%"><i class="material-icons blue-text">menu</i></a>
+					<ul class="right hide-on-med-and-down" style="margin-right: 1%">
+						<li><a href="#/aboutus" class="blue-text waves-effect waves-light">About Us</a></li>
+						<li><a href="#/employers" class="blue-text waves-effect waves-light">For Employers</a></li>
+						<li><a href="#/workers" class="blue-text waves-effect waves-light">For Workers</a></li>
+						<li><a href="#/volunteer" class="blue-text waves-effect waves-light">For Volunteers</a></li>
+						<li><a href="#/donate" class="blue-text waves-effect waves-light">For Donors</a></li>
+					</ul>
+					<ul class="side-nav #ffe082-4" id="mobile-nav">
+						<li><a href="#/aboutus" class="blue-text waves-effect waves-light">About Us</a></li>
+						<li><a href="#/employers" class="blue-text waves-effect waves-light">For Employers</a></li>
+						<li><a href="#/workers" class="blue-text waves-effect waves-light">For Workers</a></li>
+						<li><a href="#/volunteer" class="blue-text waves-effect waves-light">For Volunteers</a></li>
+						<li><a href="#/donate" class="blue-text waves-effect waves-light">For Donors</a></li>
+					</ul>
+				</div>
+				</div>
+			</nav>
+
+			<!-- This is navbar start -->
+
+			<!-- partials div start -->
+			<div ng-view="">
+			</div>
+			<!-- partials div end -->
+
+			<!-- 	footer start -->
+		
+			<div class="row">
+				<div class="col s12">
+					<div class="footer" align="center">
+						<!-- <a href="www.facebook.com/dayworkercentermv"><img src="./../images/facebook_find_us_on_facebook.gif"></a> --> 
+						<p>Day Worker Center of Mountain View, 113 Escuela Ave., Mountain View, CA 94040&nbsp;&nbsp;&nbsp;650-903-4102 &nbsp;&nbsp;&nbsp; <a href="mailto:info@dayworkercentermv.org">info@dayworkercentermv.org</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br>
+	</div> 
+	<!-- background image start -->
 </body>
+<!-- </body> -->
 </html>
