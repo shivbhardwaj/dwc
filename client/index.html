@@ -157,6 +157,20 @@
 				.otherwise({
 					redirectTo: "/"
 				});
+
+				// Removal of hashtags
+
+				// if(window.history && window.history.pushState){
+    //         		//$locationProvider.html5Mode(true); will cause an error $location in HTML5 mode requires a  tag to be present! Unless you set baseUrl tag after head tag like so: <head> <base href="/">
+
+    //      			// to know more about setting base URL visit: https://docs.angularjs.org/error/$location/nobase
+
+		  //       	// if you don't wish to set base URL then use this
+		  //        	$locationProvider.html5Mode({
+		  //                enabled: true,
+		  //                requireBase: false
+		  //         	});
+		  //       }
 			}]);
 
 			/////////////////////////////////////////////////////
@@ -399,14 +413,15 @@
 	<!-- background image start -->
 	<div style= "background-image: url(./../images/body_bgrd.gif)">
 		<br>
-		<div class="z-depth-5 container" style="background: #E1E1B1; border: 3px solid black; padding:0% 1%;">
+		<div class="z-depth-5 container" style="background: linear-gradient(45deg, #be9e6a 0%, #c3a473 9%, #f2e2ca 97%, #dfdfb4 100%); border: 3px solid black; padding:0% 1%;">
 
-			<nav>
+			<nav style="min-height: 90px">
 				<div class="nav-wrapper" style ="margin: 0% -1%">
 					<!-- <a href="#!" class="brand-logo white-text">DWC</a> -->
-					<a href="#!"><img class="brand-logo blue-text" src="../images/logo.gif" alt="DWC Logo"></a>
-					<a href="#!" data-activates="mobile-nav" class="button-collapse"><i class="material-icons blue-text">menu</i></a>
-					<ul class="right hide-on-med-and-down">
+					<div class="row">
+					<a href="#!"><img class="col s7 m5 l3" src="../images/DWC_Logo.png" alt="DWC Logo"></a>
+					<a href="#!" data-activates="mobile-nav" class="button-collapse" style="float: right;margin: 0% 3%"><i class="material-icons blue-text">menu</i></a>
+					<ul class="right hide-on-med-and-down" style="margin-right: 1%">
 						<li><a href="#/aboutus" class="blue-text waves-effect waves-light">About Us</a></li>
 						<li><a href="#/employers" class="blue-text waves-effect waves-light">For Employers</a></li>
 						<li><a href="#/workers" class="blue-text waves-effect waves-light">For Workers</a></li>
@@ -421,7 +436,9 @@
 						<li><a href="#/donate" class="blue-text waves-effect waves-light">For Donors</a></li>
 					</ul>
 				</div>
+				</div>
 			</nav>
+
 			<!-- This is navbar start -->
 
 			<!-- partials div start -->
