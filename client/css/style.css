@@ -4,29 +4,85 @@
  * the core Materialize files in the future
  *
  * Made By MaterializeCSS.com
- */
-div.col.s12.m8.l9.grey {
+/**********/
+
+/** start index.html styling **/
+
+
+.nav-wrapper{
+  background-color: #f2e2ca;
+}
+/*
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+nav .brand-logo{
+  max-height: 100%;
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
+}*/
+
+/** start main page style */
+
+/*.home_page{
+ background-color: #E1E2B6;
+}
+
+.headline h4{
+  font: Trebuchet;
+  text-align: center;
+}
+*/
+/*.card-panel{
+  background-image: url("./../images/statement_bgrd.gif");
+}*/
+
+/*.tax-info{
+  text-align: center;
+}*/
+
+
+/* end main page */
+
+
+/* start about us*/
+/*div.col.s12.m8.l9.grey {
   vertical-align: top;
   display: inline-block;
 }
-div.col.s12.m4.l3.teal {
+div.col.s12.m4.l3{
   vertical-align: top;
   display: inline-block;
+<<<<<<< HEAD
+*/
+/*.sidebar{
+  width: 20%;
+}*/
+/*.facility{
+=======
 }
+
 .sidebar{
   width: 20%;
 }
+
 .facility{
+>>>>>>> 30dd2ac64068633efc196463b7ddff7332121b48
   height: 200px;
   width: 400px;
-}
-.main-aboutus{
+}*/
+
+
+/*.main-aboutus{*/
   /*change width*/
   /*it affects the length of the p tags*/
-  width: 80%;
-  background-color: orange;
-  display: inline-block;
-}
+  /*width: 80%;
+  background-color: #e1e2b6;
+  display: inline-block;*/
+/*}
 img.main-aboutus{
   display: inline-block;
 }
@@ -47,133 +103,159 @@ p.dwc-img{
 .career ul li {
   list-style: disc inside;
   line-height: 1.8em;
-}
-nav ul a,
-nav .brand-logo {
-  color: #444;
-}
+}*/
 
-p {
-  line-height: 2rem;
-}
+/*p {*/
+  /*line-height: 2rem;*/
+/*}*/
 
-.button-collapse {
-  color: #26a69a;
-}
+/*.button-collapse {*/
+  /*color: #26a69a;*/
+/*}*/
 
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
+/*.parallax-container {*/
+  /*min-height: 380px;*/
+  /*line-height: 0;*/
+  /*height: auto;*/
+  /*color: rgba(255,255,255,.9);*/
+/*}*/
+  /*.parallax-container .section {*/
+    /*width: 100%;*/
+  /*}*/
 
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
+/*@media only screen and (max-width : 992px) {*/
+  /*.parallax-container .section {*/
+    /*position: absolute;*/
+    /*top: 40%;*/
+  /*}*/
+  /*#index-banner .section {*/
+    /*top: 10%;*/
+  /*}*/
+/*}*/
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
 
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
+/*@media only screen and (max-width : 600px) {*/
+  /*#index-banner .section {*/
+    /*top: 0;*/
+  /*}*/
+/*}*/
 
-.row{
-  margin-bottom: 0px;
-}
-footer.page-footer {
-  margin: 0;
-}
+/*.icon-block {*/
+  /*padding: 0 15px;*/
+/*}*/
+/*.icon-block .material-icons {*/
+  /*font-size: inherit;*/
+/*}*/
+
+
+/*.row{*/
+  /*margin-bottom: 0px;*/
+/*}*/
+
+/*.footer{*/
+  /*background-color: #E1E2B6;*/
+
+/*}*/
+/*footer.page-footer {*/
+  /*margin: 0;*/
+/*}*/
 /*edit for dwc*/
-@media only screen and (min-width: 993px) {
+/*@media only screen and (min-width: 993px) {
 
-  .row .col.l9 {
+  .row .col.l9 {*/
     /*edit for dwc*/
-    margin-top: -2px;
+    /*margin-top: -2px;*/
+    /*background-image: url("./../images/body_bgrd.gif");*/
 
-  }
-  .row .col.m8 {
+  /*}*/
+  /*.row .col.m8 {*/
     /*edit for dwc*/
-    margin-top: -1px;
+    /*margin-top: -1px;*/
+    /*background-image: url("./../images/body_bgrd.gif");*/
 
-  }
+  /*}*//*
 }
 @media only screen and (min-width: 1200px) {
 
-  .row .col.l9 {
+  .row .col.l9 {*/
     /*edit for dwc*/
-    margin-top: -1px;
-
-  }
-}
+    /*margin-top: -1px;*/
+  /*}*/
+/*}*/
 /*edit for dwc*/
 
-img.empowering{
+/*img.empowering{*/
   /*width:700;*/
   /*height: 10%;*/
   /*border: 20px solid white;*/
+/*}*/
+/*.quote{*/
+  /*margin-top: 50px;*/
+/*}*/
+/*.white{*/
+  /*background-color: white;*/
+  /*width: 100%;*/
+/*}*/
+/*.subnav{
+  display: inline-block;
+  vertical-align: center;
 }
-.quote{
-  margin-top: 50px;
+.card-panel-sidebaradjust{*/
+  /*margin-top: 20%;*/
+/*}*/
+/*edit for dwc remove sample*/
+/*.main_content{
+  padding-bottom: 0px;
+}*/
+/* subnav image resize start*/
+/*.subnavcontainer{
+  background-color: black;
+  margin: -2px auto;
+}*/
+/*.subnavsidecontainer{
+  background-color: black;
+}*/
+/*.subnavimg{*/
+  /*height wont be readjusted. It is supposed to be width*/
+  /*width: 78%;*/
+  /*height: 40%;*/
+
+/*}*/
+/*.subnavimgdonor{*/
+  /*height wont be readjusted. It is supposed to be width*/
+  /*margin-top: 3%;*/
+  /*height: 40%;*/
+/*}*/
+/*.subnavsideimg{*/
+  /*width: 100%;*/
+/*}*/
+/* subnav image resize start*/
+/*.folks{*/
+  /*border: 2px solid red;
+  height: 200px;
+  width: 700px;*/
+/*}*/
+/*.feedback{*/
+  /*align-content: center;
+  position: relative;*/
+/*}*/
+/*.aboutus-img{*/
+  /*display: inline-block;
+  vertical-align: center;*/
+/*}*/
+/*p.dwc-img{*/
+  /*display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+  margin-top: 0px;
+  width: 95%;*/
+  /*background-color: black;
 }
+*/
 .subnav{
   display: inline-block;
   vertical-align: center;
 }
-.main_content{
-  padding-bottom: 0px;
-}
-/* subnav image resize start*/
-.subnavcontainer{
-  background-color: black;
-  margin: -2px auto;
-}
-.subnavsidecontainer{
-  /*background-color: black;*/
-}
-.subnavimg{
-  /*height wont be readjusted. It is supposed to be width*/
-  width: 78%;
-  /*height: 40%;*/
-}
-.subnavsideimg{
-  width: 100%;
-}
-/* subnav image resize start*/
-.folks{
-  border: 2px solid red;
-  height: 200px;
-  width: 700px;
-}
-.feedback{
-  align-content: center;
-  position: relative;
-}
-.aboutus-img{
-  display: inline-block;
-  vertical-align: center;
-}
-p.dwc-img{
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 20px;
-  margin-top: 0px;
-  width: 95%;
-  /*background-color: black;*/
+.career ul li {
+  list-style: disc inside;
 }
