@@ -14,15 +14,26 @@ module.exports = {
     create: function(req, res) {
         var newJob = new Job(
         	{
-                employer: req.body.employer ,
-                startDate: req.body.startDate ,
+                // employer: req.body.employer ,
+                firstName: req.body.firstName,
+                lastName: req.body.lastName,
+                companyName: req.body.companyName,
+                physicalAddress: req.body.physicalAddress,
+                city: req.body.city,
+                zip: req.body.zip,
+                phoneNumber: req.body.phoneNumber,
+                emailAddress: req.body.emailAddress,
+                howHeard: req.body.howHeard,
+                worksite: req.body.worksite,
+                jobDescription: req.body.jobDescription,
+                startDate: req.body.startDate,
                 startTime: req.body.startTime,
-                hours: req.body.hours,
-                skillsNeeded: req.body.skillsNeeded ,
-                numberWorkers: req.body.numberWorkers ,
-                payRate: req.body.payRate ,
+                estimatedHours: req.body.estimatedHours,
+                skillsNeeded: req.body.skillsNeeded,
+                numberOfWorkers: req.body.numberOfWorkers,
+                payRate: req.body.payRate,
                 perks: req.body.perks,
-                englishNeeded: req.body.englishNeeded  	
+                englishLevel: req.body.englishLevel 	
             });
         newJob.save(function(err, data) {
             if (err) {
@@ -37,15 +48,33 @@ module.exports = {
             if (err) {
                 res.json({ error: err }); // could not locate the entry
             }
-            job.employer = req.body.employer;
+            job.firstName = req.body.firstName;
+            job.lastName = req.body.lastName;
+            job.companyName = req.body.companyName;
+            job.physicalAddress = req.body.physicalAddress;
+            job.city = req.body.city;
+            job.zip = req.body.zip;
+            job.phoneNumber = req.body.phoneNumber;
+            job.emailAddress = req.body.emailAddress;
+            job.howHeard = req.body.howHeard;
+            job.worksite = req.body.worksite;
+            job.jobDescription = req.body.jobDescription;
             job.startDate = req.body.startDate;
             job.startTime = req.body.startTime;
-            job.hours = req.body.hours;
+            job.estimatedHours = req.body.estimatedHours;
             job.skillsNeeded = req.body.skillsNeeded;
-            job.numberWorkers = req.body.numberWorkers;
+            job.numberOfWorkers = req.body.numberOfWorkers;
             job.payRate = req.body.payRate;
             job.perks = req.body.perks;
-            job.englishNeeded = req.body.englishNeeded;
+            job.englishLevel = req.body.englishLevel;
+            job.updatedBy = req.body.updatedBy;
+            job.workersAssigned = req.body.workersAssigned;
+            job.assignmentNotes = req.body.assignmentNotes;
+            job.assignedBy = req.body.assignedBy;
+            job.confirmedBy = req.body.confirmedBy;
+            job.review = req.body.review;
+            job.reviewNotes = req.body.reviewNotes;
+            job.reviewedBy = req.body.reviewedBy;
             job.save(function(err) {
                 if (err) {
                     res.json({ error: err }); // could not save into database

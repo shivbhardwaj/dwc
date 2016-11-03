@@ -4,6 +4,16 @@ var JobSchema = new mongoose.Schema({
 	// ----------------------employer information
 	// employerId:{type: String, required: true, minlength: 1},
 	employer: {type: String, required: true, minlength: 1},
+	employerName: {type: String, required: true, minlength: 1},
+	company: {type: String},
+	emailAddress: {type: String, required: true, minlength: 1},
+	physicalAddress: {type: String, required: true, minlength: 1},
+	city: {type: String, required: true, minlength: 1},
+	state: {type: String, required: true, minlength: 1},
+
+	// password: {type: String, required: true, minlength: 1}, //do we want this for recurring employers?
+	
+	phoneNumber: {type: String, required: true, minlength: 1},
 
 	// ----------------------job information
 	startDate: {type: Date, required: true},
