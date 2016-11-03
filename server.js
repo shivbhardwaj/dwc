@@ -21,9 +21,10 @@ server.register(Inert, function () {
   server.start(function() { console.log('Visit: http://127.0.0.1:' +port) });
 });
 
+app.use(bodyParser.json(({limit: '16mb'})));
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname,"./client")));
+app.use(express.static(path.join(__dirname,"./node_modules")));
 //researching
 // app.use(expressJwt({ secret: jwtSecret }).unless({ path: ['/', '/login', '/register'] }));
 require("./server/config/mongoose.js");

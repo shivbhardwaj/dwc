@@ -12,6 +12,11 @@
     "mongoose": "^4.6.0",
     "hapi": "^11.1.2",
     "inert": "^3.2.0",
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "angular-base64": "latest",
+    "angular-base64-upload": "latest",
+    "angular-messages": "latest",
     "xss-filters": "^1.2.7"
   },
   "devDependencies": {},
