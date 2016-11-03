@@ -43,7 +43,7 @@ module.exports = {
             }
         });
     },
-    update: function(req, res) {
+    update: function(req, res){
         Job.findOne({ _id: req.params.id }, function(err, job) {
             if (err) {
                 res.json({ error: err }); // could not locate the entry
@@ -82,9 +82,10 @@ module.exports = {
                     res.json({ success: "update success" });
                 }
             })
-
         });
     },
+
+
     delete: function(req, res) {
         Job.remove({ _id: req.params.id }, function(err, job) {
             if (err) {

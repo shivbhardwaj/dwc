@@ -18,11 +18,22 @@ var JobSchema = new mongoose.Schema({
 	// ----------------------job information
 	startDate: {type: Date, required: true},
 	startTime:{type: String, required: true, minlength: 3},
-	workHours:{type: Number, required: true, minlength: 1},
+	workSite:{type: String, required: true, minlength: 1},
+	jobDescription: {type: String},
+	estimatedHours:{type: Number, required: true, minlength: 1},
 	skillsNeeded: [{type: String, required: true}],
 	numberOfWorkers: {type: Number, required: true, minlength: 1},
 	payRate: {type: Number, required: true, min: 15},
 	perks:[{type: String}],
-	englishNeeded: {type: string, required: true, minlength: 1}
+	englishLevel: {type: String, required: true, minlength: 1}
+	hearAbout: {type: String,minlength: 1},
+	updatedBy: {type: String, required: true, minlength: 1},
+	workersAssigned: {type: String, required: true, minlength: 1},
+	assignmentNotes: {type: String, required: true, minlength: 1},
+	assignedBy: {type: String, required: true, minlength: 1},
+	confirmedBy: {type: String, required: true, minlength: 1},
+	review: {type: String, required: true, minlength: 1},
+	reviewNotes: {type: String, required: true, minlength: 1},
+	reviewedBy: {type: String, required: true, minlength: 1},
 },{timestamps: true});
 mongoose.model("Job",JobSchema);
