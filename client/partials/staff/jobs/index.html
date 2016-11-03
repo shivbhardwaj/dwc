@@ -1,0 +1,21 @@
+<input type="text" name="search" ng-model="searchText">
+	<table class="responsive-table" class="bordered">
+		<thead>
+			<tr>
+				<th data-field="date">Date</th>
+				<th data-field="time">Time</th>
+				<th data-field="address">Address</th>
+				<th data-field="numberOfWorkers">Number of Workers</th>
+			</tr>
+		</thead>
+			<tbody>
+				<tr ng-repeat="job in jobs | filter:searchText">
+					<td>{{ job.jobDate }}</td>
+					<td>{{ job.jobTime }}</td>
+					<td>{{ job.jobAddress }}</td>
+					<td>{{ job.jobnumberOfWorkers }}</td>
+					<td><a ng-click="assigned(job.id)" class="btn waves-effect waves-light" type="assigned">assigned</a></td>
+				</tr>
+			</tbody>			
+	</table>
+
