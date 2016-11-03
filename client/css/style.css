@@ -8,7 +8,9 @@
 
 /** start index.html styling **/
 
-
+.input-field label {
+     color: black;
+}
 .nav-wrapper{
   background-color: #f2e2ca;
 }
