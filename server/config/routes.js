@@ -12,7 +12,13 @@ module.exports = function(app){
 		users.index(req,res);
 	});
 	app.get("/aboutus",function(req,res){
-		
+
+	});
+	app.post("/login",function(req,res){
+		users.login(req,res);
+	});
+	app.post("/register",function(req,res){
+		users.register(req,res);
 	});
 
 	/////////////////////////////////////////////////////
@@ -20,7 +26,7 @@ module.exports = function(app){
 	//					sample routes				   //
 	//                                                 //
 	/////////////////////////////////////////////////////
-	
+
 	// app.post("/login",function(req,res){
 	// 	users.login(req,res);
 	// });
