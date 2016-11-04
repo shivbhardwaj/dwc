@@ -120,18 +120,14 @@ var DWCAppModule = angular.module("DWC",["ngRoute","ngMessages", "ngCookies"]);
 		})
 
 		// -------STAFF
-		// .when('/staff',
-		// {
-		// 	templateUrl: "partials/staff/index.html"
-		// })
 		.when('/staff/login',
 		{
-			templateUrl: "partials/login.html",
+			templateUrl: "partials/staff/login.html",
 			controller: 'loginController'
 		})
 		.when('/staff',
 		{
-			templateUrl: "partials/staffDashboard.html",
+			templateUrl: "partials/staff/staffDashboard.html",
 			controller: 'loginController'
 		})
 		// -------STAFF END
@@ -161,6 +157,26 @@ var DWCAppModule = angular.module("DWC",["ngRoute","ngMessages", "ngCookies"]);
 		// -------JOBS END
 
 		// -------PAGES
+		// .when('/staff/pages',
+		// {
+		// 	templateUrl: "partials/staff/pages/index.html"
+		// 	// controller: 'jobIndexController'
+		// })
+		// .when('/staff/pages/new',
+		// {
+		// 	templateUrl: "partials/staff/pages/index.html"
+		// 	// controller: 'jobNewController'
+		// })
+		.when('/staff/pages/:id/edit',
+		{
+			templateUrl: "partials/staff/pages/edit.html"
+			// controller: 'jobEditController'
+		})
+		.when('/staff/pages/:id',
+		{
+			templateUrl: "partials/staff/pages/show.html"
+			// controller: 'jobShowController'
+		})
 
 		// -------PAGES END
 
