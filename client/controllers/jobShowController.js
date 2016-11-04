@@ -1,4 +1,4 @@
-app.controller('showController', ['$scope','jobsFactory', '$location', '$routeParams', function($scope, jobsFactory, $location, routeParams) {
+DWCAppModule.controller('jobShowController', ['$scope','jobsFactory', '$location', '$routeParams', function($scope, jobsFactory, $location, routeParams) {
 
     $scope.show = function(){
         jobsFactory.getOneJob(routeParams.id, function(data){

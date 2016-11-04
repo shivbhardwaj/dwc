@@ -1,4 +1,4 @@
-app.controller('editController', ['$scope','pagesFactory', '$location', '$routeParams', function($scope, pagesFactory, $location, routeParams) {
+DWCAppModule.controller('pageEditController', ['$scope','pagesFactory', '$location', '$routeParams', function($scope, pagesFactory, $location, routeParams) {
 
     $scope.update = function(){
         pagesFactory.updatePage(routeParams.id, $scope.page, function(data){

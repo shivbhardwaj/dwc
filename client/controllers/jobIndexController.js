@@ -1,4 +1,4 @@
-app.controller('indexController', ['$scope','jobsFactory', '$location', function($scope, jobsFactory, $location) {
+DWCAppModule.controller('jobIndexController', ['$scope','jobsFactory', '$location', function($scope, jobsFactory, $location) {
 /*
   THIS INDEX METHOD ACCESSES THE JobS FACTORY AND RUNS THE JobS INDEX.
   WE MIGHT RE USE INDEX A FEW TIMES, SO TO MINIMIZE REPETITION WE SET IT AS A VARIABLE.

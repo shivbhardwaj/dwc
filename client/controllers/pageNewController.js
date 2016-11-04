@@ -1,4 +1,4 @@
-app.controller('newController', ['$scope','pagesFactory', '$location', function($scope, pagesFactory, $location) {
+DWCAppModule.controller('pageNewController', ['$scope','pagesFactory', '$location', function($scope, pagesFactory, $location) {
 /*
   OUR $scope.create function goes here <-- $scope because we need to access this method 
   with ng-submit or ng-click (from the form in the previous assignment).  

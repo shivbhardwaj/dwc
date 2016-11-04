@@ -1,4 +1,4 @@
-app.controller('indexController', ['$scope','pagesFactory', '$location', function($scope, pagesFactory, $location) {
+DWCAppModule.controller('pageIndexController', ['$scope','pagesFactory', '$location', function($scope, pagesFactory, $location) {
 /*
   THIS INDEX METHOD ACCESSES THE PageS FACTORY AND RUNS THE PageS INDEX.
   WE MIGHT RE USE INDEX A FEW TIMES, SO TO MINIMIZE REPETITION WE SET IT AS A VARIABLE.

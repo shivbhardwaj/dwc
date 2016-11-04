@@ -1,4 +1,4 @@
-app.controller('newController', ['$scope','jobsFactory', '$location', function($scope, jobsFactory, $location) {
+DWCAppModule.controller('jobNewController', ['$scope','jobsFactory', '$location', function($scope, jobsFactory, $location) {
 /*
   OUR $scope.create function goes here <-- $scope because we need to access this method 
   with ng-submit or ng-click (from the form in the previous assignment).  
@@ -8,5 +8,5 @@ app.controller('newController', ['$scope','jobsFactory', '$location', function($
         jobsFactory.createJob($scope.job, function(){
             $location.url("/jobs");
         });
-    }
+        }
 }]);

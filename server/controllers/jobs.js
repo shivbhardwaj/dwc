@@ -12,6 +12,8 @@ module.exports = {
         });
     },
     create: function(req, res) {
+        console.log("gdafzsgfdsgfd")
+        console.log(req.body)
         var newJob = new Job(
         	{
                 // employer: req.body.employer ,
@@ -37,8 +39,10 @@ module.exports = {
             });
         newJob.save(function(err, data) {
             if (err) {
-                res.json({ error: err });
+                res.json(err);
+                console.log('asdf')
             } else {
+                console.log('asdfsdfdsafsdafdsafdsadfs')
                 res.json({ data: data }); // change later to simple success message
             }
         });
