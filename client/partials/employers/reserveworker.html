@@ -1,55 +1,55 @@
 
 <div class="row">
-    <form ng-submit="update()" class="col s12">
+    <form ng-submit="create()" class="col s12">
         <div class="row">
             <h5 class="center-align">Employer Information</h5>
         </div>
         <hr>
       <div class="row">
         <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate" ng-model="Job.firstName">
+          <input id="first_name" type="text" class="validate" ng-model="newJob.firstName">
           <label for="first_name">*First Name</label>
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate" ng-model="Job.lastName">
+          <input id="last_name" type="text" class="validate" ng-model="newJob.lastName">
           <label for="last_name">*Last Name</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="company_name" type="text" class="validate" ng-model="Job.companyName">
+          <input id="company_name" type="text" class="validate" ng-model="newJob.companyName">
           <label for="company_name">Company Name (if applicable)</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="physicalAddress" type="text" class="validate" ng-model="Job.physicalAddress">
+          <input id="physicalAddress" type="text" class="validate" ng-model="newJob.physicalAddress">
           <label for="physicalAddress">*Address</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input id="city" type="text" class="validate" ng-model="Job.city">
+          <input id="city" type="text" class="validate" ng-model="newJob.city">
           <label for="city">*City</label>
         </div>
         <div class="input-field col s6">
-          <input id="zip" type="text" class="validate" ng-model="Job.zip">
+          <input id="zip" type="text" class="validate" ng-model="newJob.zip">
           <label for="zip">*Zip Code</label>
         </div>
       </div>
       <div class="row">
       <div class="input-field col s6">
-          <input id="phoneNumber" type="text" class="validate" ng-model="phoneNumber">
+          <input id="phoneNumber" type="text" class="validate" ng-model="newJob.phoneNumber">
           <label for="phoneNumber">*Phone</label>
         </div>
         <div class="input-field col s6">
-          <input id="emailAddress" type="email" class="validate" ng-model="Job.emailAddress">
+          <input id="emailAddress" type="email" class="validate" ng-model="newJob.emailAddress">
           <label for="emailAddress">*Email</label>
         </div>
       </div>
       <div class="row">
         <div class="col s12">
-          <div class="input-field inline" ng-model="Job.hearAbout">
+          <div class="input-field inline" ng-model="newJob.hearAbout">
             <textarea id="howHeard" class="materialize-textarea"></textarea>
             <label for="howHeard">How did you hear about us?</label>
           </div>
@@ -58,29 +58,29 @@
       <hr>
       <br>
         <div class="row">
-            <h5 class="center-align">Job Information</h5>
+            <h5 class="center-align">newJob.Information</h5>
         </div>
         <hr>
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="worksite" type="text" ng-model="Job.workSite">
+          <input id="worksite" type="text" ng-model="newJob.workSite">
           <label for="worksite">Worksite (if different from above)</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="jobDescription" type="text" ng-model="Job.workSite">
-          <label for="jobDescription">*Job Description</label>
+          <input id="newJob.escription" type="text" ng-model="newJob.workSite">
+          <label for="newJob.escription">*newJob.Description</label>
         </div>
       </div>
         <div class="row">
             <div class="input-field col s4">
-                <input id="startDate" type="date" class="datepicker" ng-model="Job.startDate">
+                <input id="startDate" type="date" class="datepicker" ng-model="newJob.startDate">
                 <label for="startDate">*Start Date</label>
             </div>
             <div class="input-field col s4">
-                <select id="startTime" ng-model="Job.startTime">
+                <select id="startTime" ng-model="newJob.startTime">
                     <option value="" disabled selected>*Start Time</option>
                     <option value="12:00am">12:00am</option>
                     <option value="12:30am">12:30am</option>
@@ -133,29 +133,29 @@
                 </select>
             </div>
             <div class="input-field col s4">
-                <input id="estimatedHours" type="number" class="validate" ng-model="Job.estimatedHours">
+                <input id="estimatedHours" type="number" class="validate" ng-model="newJob.estimatedHours">
                 <label for="estimatedHours">*Estimated Work Hours</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input id="skillsNeeded" type="text" class="validate" ng-model="Job.skillsNeeded">
-                <label for="skillsNeeded">*Job Skills Needed</label>
+                <input id="skillsNeeded" type="text" class="validate" ng-model="newJob.skillsNeeded">
+                <label for="skillsNeeded">*newJob.Skills Needed</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s6">
-                <input id="numberOfWorkers" type="number" class="validate" ng-model="Job.numberOfWorkers">
+                <input id="numberOfWorkers" type="number" class="validate" ng-model="newJob.numberOfWorkers">
                 <label for="numberOfWorkers">*Number of Workers Needed</label>
             </div>
             <div class="input-field col s6">
-                <input id="payRate" type="number" class="validate" ng-model="Job.payRate">
+                <input id="payRate" type="number" class="validate" ng-model="newJob.payRate">
                 <label for="payRate">*Pay Rate</label>
             </div>
         </div>
        <div>
             <div class="input-field col s6">
-                <select ng-model="Job.perks" id="perks" multiple>
+                <select ng-model="newJob.perks" id="perks" multiple>
                     <option value="" disabled selected>Choose any that apply</option>
                     <option value="Will provide lunch">Will provide lunch</option>
                     <option value="Restroom available">Restroom available</option>
@@ -165,7 +165,7 @@
                 </select>
             </div>
             <div class="input-field col s6">
-                <select id="englishLevel" class="validate" ng-model="Job.englishLevel">
+                <select id="englishLevel" class="validate" ng-model="newJob.englishLevel">
                     <option value="" disabled selected>*English Level Needed</option>
                     <option value="None">None</option>
                     <option value="Understand only">Understand only</option>
@@ -174,16 +174,26 @@
                 </select>
             </div>
         </div>
-        <div class="row">
-            <button ng-click="update()" class="btn waves-effect waves-light col s4 m4 l2 offset-s4 offset-m4 offset-l5" type="submit" name="action">Submit
-            <i class="material-icons right">Update</i>
-            </button>
-        </div>
-        <div class="row">
-            <button ng-click="delete()" class="btn waves-effect waves-light col s4 m4 l2 offset-s4 offset-m4 offset-l5" type="submit" name="action">Submit
-            <i class="material-icons right">Delete</i>
-            </button>
-        </div>
-    </form>
-
+               	<div class="row">
+       		<button class="btn waves-effect waves-light col s4 m4 l2 offset-s4 offset-m4 offset-l5" type="submit" name="action">Submit
+    		<i class="material-icons right">send</i>
+  			</button>
+  		</div>
+  	</form>
+    
+  </div>
+  <hr>
 <a ng-href="#/staff">back to home</a>
+
+  <script type="text/javascript">
+  	$(document).ready(function() {
+    $('select').material_select();
+  	$('#how_heard').trigger('autoresize');
+  	$('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  	});
+  });
+  </script>
+
+

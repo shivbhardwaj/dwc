@@ -31,5 +31,5 @@ require("./server/config/mongoose.js");
 require("./server/config/routes.js")(app);
 
 app.listen(port,function(){
-	console.log("haha on 8000");
+	console.log("on 8000");
 })

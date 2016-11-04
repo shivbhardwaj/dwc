@@ -25,7 +25,7 @@ var JobSchema = new mongoose.Schema({
 	numberOfWorkers: {type: Number, required: true, minlength: 1},
 	payRate: {type: Number, required: true, min: 15},
 	perks:[{type: String}],
-	englishLevel: {type: String, required: true, minlength: 1}
+	englishLevel: {type: String, required: true, minlength: 1},
 	hearAbout: {type: String,minlength: 1},
 	updatedBy: {type: String, required: true, minlength: 1},
 	workersAssigned: {type: String, required: true, minlength: 1},

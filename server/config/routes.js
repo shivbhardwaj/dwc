@@ -1,84 +1,48 @@
-<<<<<<< HEAD
 "use strict";
-/////////////////////////////////////////////////////
-//                                                 //
-//	Place controllers here just like the example   //
-//	below: 										   //
-//var users = require("./../controllers/users.js");//
-//                                                 //
-/////////////////////////////////////////////////////
-var users = require('./../controllers/users.js');
-
-
-module.exports = function(app){
-	// app.get("/haha",function(req,res){
-	// 	users.index(req,res);
-	// });
-	app.get("/aboutus",function(req,res){
-
-	});
-	app.post("/login",function(req,res){
-		users.login(req,res);
-	});
-	app.post("/register",function(req,res){
-		users.register(req,res);
-	});
-
-	/////////////////////////////////////////////////////
-	//                                                 //
-	//					sample routes				   //
-	//                                                 //
-	/////////////////////////////////////////////////////
-
-	// app.post("/login",function(req,res){
-	// 	users.login(req,res);
-	// });
-	// app.post("/register",function(req,res){
-	// 	users.create(req,res);
-	// });
-}
-
-console.log("server routes");
 /* require controller file */
-var employers = require('../controllers/employers.js');
-var jobs = require('../controllers/jobs.js');
-var pages = require('../controllers/pages.js');
-var users = require('../controllers/users.js');
-var workers = require('../controllers/workers.js');
+// var employers = require('../controllers/employers.js');
+var jobs = require('./../controllers/jobs.js');
+var pages = require('./../controllers/pages.js');
+var users = require('./../controllers/users.js');
+// var workers = require('../controllers/workers.js');
 
 module.exports = function(app){
+
+	// ----------------login routes
+	app.post("/login", users.login);
+	app.post("/register", users.register);
 	//----------------employers routes
-	// app.get("/employers", employersController.index); // show all employers
-	// app.get("/employers/:id", employersController.show); // show one employer
-	// app.post("/employers", employersController.create); // create a new employer
-	// app.put("/employers/:id", employersController.update); // update a employer info
-	// app.delete("/employers/:id", employersController.delete); // delete a employer
+	// app.get("/employers", employers.index); // show all employers
+	// app.get("/employers/:id", employers.show); // show one employer
+	// app.post("/employers", employers.create); // create a new employer
+	// app.put("/employers/:id", employers.update); // update a employer info
+	// app.delete("/employers/:id", employers.delete); // delete a employer
 
 	//----------------jobs routes
-	app.get("/jobs", jobsController.index); // show all jobs
-	app.get("/jobs/:id", jobsController.show); // show one job
-	app.post("/jobs", jobsController.create); // create a new job
-	app.put("/jobs/:id", jobsController.update); // update a job info
-	app.delete("/jobs/:id", jobsController.delete); // delete a job
+	app.get("/jobs", jobs.index); // show all jobs
+	app.get("/jobs/:id", jobs.show); // show one job
+	app.post("/jobs", jobs.create); // create a new job
+	app.put("/jobs/:id", jobs.update); // update a job info
+	app.delete("/jobs/:id", jobs.delete); // delete a job
 
 	//----------------pages routes
-	app.get("/pages", pagesController.index); // show all pages
-	app.get("/pages/:id", pagesController.show); // show one page
-	app.post("/pages", pagesController.create); // create a new page
-	app.put("/pages/:id", pagesController.update); // update a page info
-	app.delete("/pages/:id", pagesController.delete); // delete a page
+	app.get("/pages", pages.index); // show all pages
+	app.get("/pages/:id", pages.show); // show one page
+	app.post("/pages", pages.create); // create a new page
+	app.put("/pages/:id", pages.update); // update a page info
+	app.delete("/pages/:id", pages.delete); // delete a page
 
 	//----------------users routes
-	app.get("/users", usersController.index); // show all users
-	app.get("/users/:id", usersController.show); // show one user
-	app.post("/users", usersController.create); // create a new user
-	app.put("/users/:id", usersController.update); // update a user info
-	app.delete("/users/:id", usersController.delete); // delete a user
+	// app.get("/users", users.index); // show all users
+	// app.get("/users/:id", users.show); // show one user
+	// app.post("/users", users.create); // create a new user
+	// app.put("/users/:id", users.update); // update a user info
+	// app.delete("/users/:id", users.delete); // delete a user
 
 	//----------------workers routes
-	// app.get("/workers", workersController.index); // show all workers
-	// app.get("/workers/:id", workersController.show); // show one worker
-	// app.post("/workers", workersController.create); // create a new worker
-	// app.put("/workers/:id", workersController.update); // update a worker info
-	// app.delete("/workers/:id", workersController.delete); // delete a worker
+	// app.get("/workers", workers.index); // show all workers
+	// app.get("/workers/:id", workers.show); // show one worker
+	// app.post("/workers", workers.create); // create a new worker
+	// app.put("/workers/:id", workers.update); // update a worker info
+	// app.delete("/workers/:id", workers.delete); // delete a worker
 }
