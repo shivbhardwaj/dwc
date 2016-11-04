@@ -8,11 +8,11 @@ var workers = require('../controllers/workers.js');
 
 module.exports = function(app){
 	//----------------employers routes
-	app.get("/employers", employersController.index); // show all employers
-	app.get("/employers/:id", employersController.show); // show one employer
-	app.post("/employers", employersController.create); // create a new employer
-	app.put("/employers/:id", employersController.update); // update a employer info
-	app.delete("/employers/:id", employersController.delete); // delete a employer
+	// app.get("/employers", employersController.index); // show all employers
+	// app.get("/employers/:id", employersController.show); // show one employer
+	// app.post("/employers", employersController.create); // create a new employer
+	// app.put("/employers/:id", employersController.update); // update a employer info
+	// app.delete("/employers/:id", employersController.delete); // delete a employer
 
 	//----------------jobs routes
 	app.get("/jobs", jobsController.index); // show all jobs
@@ -36,10 +36,10 @@ module.exports = function(app){
 	app.delete("/users/:id", usersController.delete); // delete a user
 
 	//----------------workers routes
-	app.get("/workers", workersController.index); // show all workers
-	app.get("/workers/:id", workersController.show); // show one worker
-	app.post("/workers", workersController.create); // create a new worker
-	app.put("/workers/:id", workersController.update); // update a worker info
-	app.delete("/workers/:id", workersController.delete); // delete a worker
+	// app.get("/workers", workersController.index); // show all workers
+	// app.get("/workers/:id", workersController.show); // show one worker
+	// app.post("/workers", workersController.create); // create a new worker
+	// app.put("/workers/:id", workersController.update); // update a worker info
+	// app.delete("/workers/:id", workersController.delete); // delete a worker
 }
 

@@ -154,7 +154,7 @@
         </div>
        <div>
        		<div class="input-field col s6">
-    			<select id="perks" multiple ng-model="Job.perks">
+    			<select ng-model="Job.perks" id="perks" multiple >
 				    <option value="" disabled selected>Choose any that apply</option>
 				    <option value="Will provide lunch">Will provide lunch</option>
 				    <option value="Restroom available">Restroom available</option>
@@ -164,7 +164,7 @@
 		    	</select>
   			</div>
   			<div class="input-field col s6">
-    			<select id="englishLevel" class="validate" ng-model="englishLevel">
+    			<select id="englishLevel" class="validate" ng-model="Job.englishLevel">
 				    <option value="" disabled selected>*English Level Needed</option>
 				    <option value="None">None</option>
 				    <option value="Understand only">Understand only</option>
