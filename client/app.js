@@ -117,6 +117,12 @@ var DWCAppModule = angular.module("DWC",["ngRoute","ngMessages", "ngCookies"]);
 		{
 			templateUrl: "partials/donate.html"
 		})
+
+// -------STAFF
+		// .when('/staff',
+		// {
+		// 	templateUrl: "partials/staff/index.html"
+		// })
 		.when('/staff/login',
 		{
 			templateUrl: "partials/login.html",
@@ -127,21 +133,48 @@ var DWCAppModule = angular.module("DWC",["ngRoute","ngMessages", "ngCookies"]);
 			templateUrl: "partials/staffDashboard.html",
 			controller: 'loginController'
 		})
+// -------STAFF END
+
+// -------JOBS
+		.when('/staff/jobs',
+		{
+			templateUrl: "partials/staff/jobs/index.html"
+			controller: 'jobIndexController'
+		})
+		.when('/staff/jobs/new',
+		{
+			templateUrl: "partials/staff/jobs/index.html"
+			controller: 'jobNewController'
+		})
+		.when('/staff/jobs/:id/edit',
+		{
+			templateUrl: "partials/staff/jobs/edit.html"
+			controller: 'jobEditController'
+		})
+		.when('/staff/jobs/:id',
+		{
+			templateUrl: "partials/staff/jobs/show.html"
+			controller: 'jobShowController'
+		})
+// -------JOBS END
+
+// -------PAGES
+
+// -------PAGES END
+
+// -------CATCHALL
 		.otherwise({
 			redirectTo: "/"
 		});
-	})
-}());
 
-// Removal of hashtags
-
-	// if(window.history && window.history.pushState){
-	// 	$locationProvider.html5Mode(true);
-	// 	//will cause an error $location in HTML5 mode requires a  tag to be present! Unless you set baseUrl tag after head tag like so: <head> <base href="/">
-	// 	//to know more about setting base URL visit: https://docs.angularjs.org/error/$location/nobase
-	// 	//if you don't wish to set base URL then use this
-	// 	// 	$locationProvider.html5Mode({
-	//   //        enabled: true,
-	//   //        requireBase: false
-	//   // 	});
-	// }
+				// if(window.history && window.history.pushState){
+				// 	$locationProvider.html5Mode(true);
+				// 	//will cause an error $location in HTML5 mode requires a  tag to be present! Unless you set baseUrl tag after head tag like so: <head> <base href="/">
+				// 	//to know more about setting base URL visit: https://docs.angularjs.org/error/$location/nobase
+				// 	//if you don't wish to set base URL then use this
+				// 	// 	$locationProvider.html5Mode({
+				//   //        enabled: true,
+				//   //        requireBase: false
+				//   // 	});
+				// }
+}]);
