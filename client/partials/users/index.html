@@ -1,0 +1,26 @@
+
+			<input type="text" name="search" ng-model="searchText">
+			 <table class="responsive-table" class="bordered">
+			  	<thead>
+			  		<tr>
+			  			<th data-field="id">User name</th>
+			  			<th data-field="emailAddress">Email Address</th>
+			  			<th data-field="firstName">First Name</th>
+			  			<th data-field="lastName">Last Name</th>
+			  			<th data-field="phoneNumber">Phone Number</th>
+			  			<th data-field="action">Action</th>
+			  		</tr>
+			  	</thead>
+			  		<tbody>
+			  			<tr ng-repeat="user in users | filter:searchText">
+				  			<td>{{ user.userName }}</td>
+				  			<td>{{ user.emailAddress }}</td>
+				  			<td>{{ user.firstName }}</td>
+				  			<td>{{ user.lastName }}</td>
+				  			<td>{{ user.phoneNumber }}</td>
+				  			<td><a ng-click="editUser(user.id)" class="btn waves-effect waves-light" type="edit">edit</a> | <a ng-click="deleteUser(user.id" class="btn waves-effect waves-light" type="delete">delete</a></td>
+			  			</tr>
+			  		</tbody>
+			</table>
+		
+

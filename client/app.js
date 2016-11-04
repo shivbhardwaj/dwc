@@ -2,7 +2,8 @@ var DWCAppModule = angular.module("DWC",["ngRoute","ngMessages", "ngCookies"]);
 (function(){
 	DWCAppModule.config(function($routeProvider){
 		$routeProvider
-		.when("/",{
+		.when("/",
+		{
 			templateUrl: "partials/main.html"
 		})
 		.when('/aboutus',
@@ -117,11 +118,20 @@ var DWCAppModule = angular.module("DWC",["ngRoute","ngMessages", "ngCookies"]);
 		{
 			templateUrl: "partials/donate.html"
 		})
+<<<<<<< HEAD
 		// -------STAFF
 		.when('/staff',
 		{
 			templateUrl: "partials/staff/index.html"
 		})
+=======
+
+		// -------STAFF
+		// .when('/staff',
+		// {
+		// 	templateUrl: "partials/staff/index.html"
+		// })
+>>>>>>> database
 		.when('/staff/login',
 		{
 			templateUrl: "partials/login.html",
@@ -155,6 +165,7 @@ var DWCAppModule = angular.module("DWC",["ngRoute","ngMessages", "ngCookies"]);
 			templateUrl: "partials/staff/jobs/show.html"
 			// controller: 'jobShowController'
 		})
+<<<<<<< HEAD
 		.otherwise({
 			redirectTo: "/"
 		})
@@ -168,5 +179,27 @@ var DWCAppModule = angular.module("DWC",["ngRoute","ngMessages", "ngCookies"]);
 				//          requireBase: false
 				//   	});
 				// }
+=======
+		// -------JOBS END
+
+		// -------PAGES
+
+		// -------PAGES END
+
+		// -------CATCHALL
+		.otherwise({
+			redirectTo: "/"
+		})
+		// if(window.history && window.history.pushState){
+		// 	$locationProvider.html5Mode(true);
+		// 	//will cause an error $location in HTML5 mode requires a  tag to be present! Unless you set baseUrl tag after head tag like so: <head> <base href="/">
+		// 	//to know more about setting base URL visit: https://docs.angularjs.org/error/$location/nobase
+		// 	//if you don't wish to set base URL then use this
+		// 	// 	$locationProvider.html5Mode({
+		//   //        enabled: true,
+		//   //        requireBase: false
+		//   // 	});
+		// }
+>>>>>>> database
 	})
 }());
