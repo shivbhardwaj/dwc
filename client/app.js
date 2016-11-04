@@ -15,6 +15,13 @@
 				.when("/",{
 					templateUrl: "partials/main.html"
 				})
+
+				.when('/donate',
+				{
+					templateUrl: "partials/donate.html"
+				})
+
+// -------ABOUT US
 				.when('/aboutus',
 				{
 					templateUrl: "partials/aboutus/aboutus.html"
@@ -51,6 +58,9 @@
 				{
 					templateUrl: "partials/aboutus/contactus.html"
 				})
+// -------ABOUT US END
+
+// -------EMPLOYERS			
 				.when('/employers',
 				{
 					templateUrl: "partials/employers/employers.html"
@@ -83,6 +93,9 @@
 				{
 					templateUrl: "partials/employers/moving.html"
 				})
+// -------EMPLOYERS END	
+
+// -------WORKERS			
 				.when('/workers',
 				{
 					templateUrl: "partials/workers/workers.html"
@@ -103,6 +116,9 @@
 				{
 					templateUrl: "partials/workers/4th_of_july_picnic.html"
 				})
+// -------WORKERS END
+
+// -------VOLUNTEER				
 				.when('/volunteer',
 				{
 					templateUrl: "partials/volunteers/volunteer.html"
@@ -123,10 +139,8 @@
 				{
 					templateUrl: "partials/volunteers/volunteers_faq.html"
 				})
-				.when('/donate',
-				{
-					templateUrl: "partials/donate.html"
-				})
+
+// -------VOLUNTEER END
 
 // -------STAFF
 				.when('/staff',
@@ -138,23 +152,23 @@
 // -------JOBS
 				.when('/staff/jobs',
 				{
-					templateUrl: "partials/staff/jobs/index.html"
-					controller: 'jobIndexController'
+					templateUrl: "partials/staff/jobs/index.html",
+					// controller: 'jobIndexController'
 				})
 				.when('/staff/jobs/new',
 				{
-					templateUrl: "partials/staff/jobs/index.html"
-					controller: 'jobNewController'
+					templateUrl: "partials/staff/jobs/index.html",
+					// controller: 'jobNewController'
 				})
 				.when('/staff/jobs/:id/edit',
 				{
-					templateUrl: "partials/staff/jobs/edit.html"
-					controller: 'jobEditController'
+					templateUrl: "partials/staff/jobs/edit.html",
+					// controller: 'jobEditController'
 				})
 				.when('/staff/jobs/:id',
 				{
-					templateUrl: "partials/staff/jobs/show.html"
-					controller: 'jobShowController'
+					templateUrl: "partials/staff/jobs/show.html",
+					// controller: 'jobShowController'
 				})
 // -------JOBS END
 
