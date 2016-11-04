@@ -17,6 +17,7 @@
     "angular-base64": "latest",
     "angular-base64-upload": "latest",
     "angular-messages": "latest",
+    "angular-cookies": "^1.5.8",
     "xss-filters": "^1.2.7"
   },
   "devDependencies": {},

@@ -10,14 +10,6 @@ DWCAppModule.factory('userFactory', function($http) {
     this.register = function(data,callback,errback){
       $http.post('/register',data).then(callback,errback);
     }
-
-    this.myWorkouts = function(userId,callback,errback){
-      $http.get('/myWorkouts/'+userId).then(function(data){
-        console.log('FACTORY', data.data);
-        callback(data.data);
-      });
-    }
-
   }
   return new usersFactory;
 });
