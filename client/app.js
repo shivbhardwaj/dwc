@@ -127,10 +127,42 @@
 				{
 					templateUrl: "partials/donate.html"
 				})
+
+// -------STAFF
 				.when('/staff',
 				{
-					templateUrl: "partials/login.html"
+					templateUrl: "partials/staff/index.html"
 				})
+// -------STAFF END
+
+// -------JOBS
+				.when('/staff/jobs',
+				{
+					templateUrl: "partials/staff/jobs/index.html"
+					controller: 'jobIndexController'
+				})
+				.when('/staff/jobs/new',
+				{
+					templateUrl: "partials/staff/jobs/index.html"
+					controller: 'jobNewController'
+				})
+				.when('/staff/jobs/:id/edit',
+				{
+					templateUrl: "partials/staff/jobs/edit.html"
+					controller: 'jobEditController'
+				})
+				.when('/staff/jobs/:id',
+				{
+					templateUrl: "partials/staff/jobs/show.html"
+					controller: 'jobShowController'
+				})
+// -------JOBS END
+
+// -------PAGES
+
+// -------PAGES END
+
+// -------CATCHALL
 				.otherwise({
 					redirectTo: "/"
 				});
