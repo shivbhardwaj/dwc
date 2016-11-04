@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 var mongoose = require("mongoose");
 var JobSchema = new mongoose.Schema({
 	// ----------------------employer information
@@ -17,23 +17,23 @@ var JobSchema = new mongoose.Schema({
 
 	// ----------------------job information
 	startDate: {type: Date, required: true},
-	startTime:{type: String, required: true, minlength: 3},
-	workSite:{type: String, required: true, minlength: 1},
-	jobDescription: {type: String},
+	startTime:{type: String, required: true},
+	workSite:{type: String},
+	jobDescription: {type: String, required: true, minlength: 1},
 	estimatedHours:{type: Number, required: true, minlength: 1},
-	skillsNeeded: [{type: String, required: true}],
+	skillsNeeded: {type: String, required: true},
 	numberOfWorkers: {type: Number, required: true, minlength: 1},
 	payRate: {type: Number, required: true, min: 15},
-	perks:[{type: String}],
+	perks:{type: String},
 	englishLevel: {type: String, required: true, minlength: 1},
-	hearAbout: {type: String,minlength: 1},
-	updatedBy: {type: String, required: true, minlength: 1},
-	workersAssigned: {type: String, required: true, minlength: 1},
-	assignmentNotes: {type: String, required: true, minlength: 1},
-	assignedBy: {type: String, required: true, minlength: 1},
-	confirmedBy: {type: String, required: true, minlength: 1},
-	review: {type: String, required: true, minlength: 1},
-	reviewNotes: {type: String, required: true, minlength: 1},
-	reviewedBy: {type: String, required: true, minlength: 1},
+	hearAbout: {type: String},
+	updatedBy: {type: String},
+	workersAssigned: {type: String},
+	assignmentNotes: {type: String},
+	assignedBy: {type: String},
+	confirmedBy: {type: String},
+	review: {type: String},
+	reviewNotes: {type: String},
+	reviewedBy: {type: String},
 },{timestamps: true});
 mongoose.model("Job",JobSchema);

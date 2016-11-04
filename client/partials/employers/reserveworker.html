@@ -9,57 +9,67 @@
 </div>
 <div class="row">
     <form ng-submit="create()" class="col s12">
+      {{ errors }}
         <div class="row">
             <h5 class="center-align">Employer Information</h5>
         </div>
         <hr>
       <div class="row">
         <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate" ng-model="newJob.firstName">
+          <input id="first_name" type="text" class="validate" ng-model="job.firstName">
           <label for="first_name">*First Name</label>
+          {{errors.firstName.messages}}
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate" ng-model="newJob.lastName">
+          <input id="last_name" type="text" class="validate" ng-model="job.lastName">
           <label for="last_name">*Last Name</label>
+          {{errors.lastName.messages}}
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="company_name" type="text" class="validate" ng-model="newJob.companyName">
+          <input id="company_name" type="text" class="validate" ng-model="job.companyName">
           <label for="company_name">Company Name (if applicable)</label>
+          {{errors.companyName.messages}}
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="physicalAddress" type="text" class="validate" ng-model="newJob.physicalAddress">
+          <input id="physicalAddress" type="text" class="validate" ng-model="job.physicalAddress">
           <label for="physicalAddress">*Address</label>
+          {{errors.physicalAddress.messages}}
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input id="city" type="text" class="validate" ng-model="newJob.city">
+          <input id="city" type="text" class="validate" ng-model="job.city">
           <label for="city">*City</label>
+          {{errors.city.messages}}
         </div>
         <div class="input-field col s6">
-          <input id="zip" type="text" class="validate" ng-model="newJob.zip">
+          <input id="zip" type="text" class="validate" ng-model="job.zip">
           <label for="zip">*Zip Code</label>
+          {{errors.zip.messages}}
         </div>
       </div>
       <div class="row">
       <div class="input-field col s6">
-          <input id="phoneNumber" type="text" class="validate" ng-model="newJob.phoneNumber">
+          <input id="phoneNumber" type="text" class="validate" ng-model="job.phoneNumber">
           <label for="phoneNumber">*Phone</label>
+          {{errors.phoneNumber.messages}}
         </div>
         <div class="input-field col s6">
-          <input id="emailAddress" type="email" class="validate" ng-model="newJob.emailAddress">
+          <input id="emailAddress" type="email" class="validate" ng-model="job.emailAddress">
           <label for="emailAddress">*Email</label>
+          {{errors.emailAddress.messages}}
         </div>
       </div>
       <div class="row">
         <div class="col s12">
-          <div class="input-field inline" ng-model="newJob.hearAbout">
+          <div class="input-field inline" ng-model="job.hearAbout">
             <textarea id="howHeard" class="materialize-textarea"></textarea>
             <label for="howHeard">How did you hear about us?</label>
+            {{errors.hearAbout.messages}}
           </div>
         </div>
       </div>
@@ -72,23 +82,26 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="worksite" type="text" ng-model="newJob.workSite">
+          <input id="worksite" type="text" ng-model="job.workSite">
           <label for="worksite">Worksite (if different from above)</label>
+          {{errors.workSite.messages}}
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="newJob.escription" type="text" ng-model="newJob.workSite">
-          <label for="newJob.escription">*newJob.Description</label>
+          <input id="jobDescription" type="text" ng-model="job.jobDescription">
+          <label for="JobDescription">*Job Description</label>
+          {{errors.jobDescription.messages}}
         </div>
       </div>
         <div class="row">
             <div class="input-field col s4">
-                <input id="startDate" type="date" class="datepicker" ng-model="newJob.startDate">
+                <input id="startDate" type="date" class="datepicker" ng-model="job.startDate">
                 <label for="startDate">*Start Date</label>
+                {{errors.startDate.messages}}
             </div>
             <div class="input-field col s4">
-                <select id="startTime" ng-model="newJob.startTime">
+                <select id="startTime" ng-model="job.startTime">
                     <option value="" disabled selected>*Start Time</option>
                     <option value="12:00am">12:00am</option>
                     <option value="12:30am">12:30am</option>
@@ -139,31 +152,36 @@
                     <option value="11:00pm">11:00pm</option>
                     <option value="11:30pm">11:30pm</option>
                 </select>
+                {{errors.startTime.messages}}
             </div>
             <div class="input-field col s4">
-                <input id="estimatedHours" type="number" class="validate" ng-model="newJob.estimatedHours">
+                <input id="estimatedHours" type="number" class="validate" ng-model="job.estimatedHours">
                 <label for="estimatedHours">*Estimated Work Hours</label>
+                {{errors.estimatedHours.messages}}
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input id="skillsNeeded" type="text" class="validate" ng-model="newJob.skillsNeeded">
-                <label for="skillsNeeded">*newJob.Skills Needed</label>
+                <input id="skillsNeeded" type="text" class="validate" ng-model="job.skillsNeeded">
+                <label for="skillsNeeded">*Job Skills Needed</label>
+                {{errors.skillsNeeded.messages}}
             </div>
         </div>
         <div class="row">
             <div class="input-field col s6">
-                <input id="numberOfWorkers" type="number" class="validate" ng-model="newJob.numberOfWorkers">
+                <input id="numberOfWorkers" type="number" class="validate" ng-model="job.numberOfWorkers">
                 <label for="numberOfWorkers">*Number of Workers Needed</label>
+                {{errors.numberOfWorkers.messages}}
             </div>
             <div class="input-field col s6">
-                <input id="payRate" type="number" class="validate" ng-model="newJob.payRate">
+                <input id="payRate" type="number" class="validate" ng-model="job.payRate">
                 <label for="payRate">*Pay Rate</label>
+                {{errors.payRate.messages}}
             </div>
         </div>
        <div>
             <div class="input-field col s6">
-                <select ng-model="newJob.perks" id="perks" multiple>
+                <select ng-model="job.perks" id="perks" multiple>
                     <option value="" disabled selected>Choose any that apply</option>
                     <option value="Will provide lunch">Will provide lunch</option>
                     <option value="Restroom available">Restroom available</option>
@@ -171,19 +189,21 @@
                     <option value="Will pay commute time">Will pay commute time</option>
                     <option value="Will pay cash">Will pay cash</option>
                 </select>
+                {{errors.perks.messages}}
             </div>
             <div class="input-field col s6">
-                <select id="englishLevel" class="validate" ng-model="newJob.englishLevel">
+                <select id="englishLevel" class="validate" ng-model="job.englishLevel">
                     <option value="" disabled selected>*English Level Needed</option>
                     <option value="None">None</option>
                     <option value="Understand only">Understand only</option>
                     <option value="Understand and speak">Understand and speak</option>
                     <option value="Understand and speak well">Understand and speak well</option>
                 </select>
+                {{errors.englishLevel.messages}}
             </div>
         </div>
                	<div class="row">
-       		<button class="btn waves-effect waves-light col s4 m4 l2 offset-s4 offset-m4 offset-l5" type="submit" name="action">Submit
+       		<button class="btn waves-effect waves-light col s4 m4 l2 offset-s4 offset-m4 offset-l5" ng-click="submit" name="action">Submit
     		<i class="material-icons right">send</i>
   			</button>
   		</div>

@@ -1,4 +1,4 @@
-app.controller('showController', ['$scope','pagesFactory', '$location', '$routeParams', function($scope, pagesFactory, $location, routeParams) {
+DWCAppModule.controller('pageShowController', ['$scope','pagesFactory', '$location', '$routeParams', function($scope, pagesFactory, $location, routeParams) {
 
     $scope.show = function(){
         pagesFactory.getOnePage(routeParams.id, function(data){

@@ -1,4 +1,4 @@
-app.factory('jobsFactory', ['$http', function($http){
+DWCAppModule.factory('jobsFactory', ['$http', function($http){
     var factory = {};
     var jobs = [];
     var job = [];
@@ -21,8 +21,11 @@ app.factory('jobsFactory', ['$http', function($http){
     }
 
     factory.createJob = function(newJob, callback){
+
         $http.post("/jobs", newJob).then(function(returned_data){
+            console.log('this is stuff')
             console.log(returned_data);
+             console.log('this is stuff')
             if(typeof(callback) == 'function'){
                 callback(returned_data.data);
             }

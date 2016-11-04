@@ -1,4 +1,4 @@
-app.controller('editController', ['$scope','jobsFactory', '$location', '$routeParams', function($scope, jobsFactory, $location, routeParams) {
+DWCAppModule.controller('jobEditController', ['$scope','jobsFactory', '$location', '$routeParams', function($scope, jobsFactory, $location, routeParams) {
 
     $scope.update = function(){
         jobsFactory.updateJob(routeParams.id, $scope.job, function(data){
