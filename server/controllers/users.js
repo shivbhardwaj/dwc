@@ -126,7 +126,7 @@ module.exports=(function(){
 					console.log('couldnt delete the desired user', err);
 				}
 				else{
-					console.log('sccuessfully deleted user from DB', result);
+					console.log('successfully deleted user from DB', result);
 					res.json(result);
 				}
 			})

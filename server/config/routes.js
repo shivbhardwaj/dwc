@@ -6,11 +6,13 @@
 //var users = require("./../controllers/users.js");//
 //                                                 //
 /////////////////////////////////////////////////////
+var users = require('./../controllers/users.js');
+
 
 module.exports = function(app){
-	app.get("/haha",function(req,res){
-		users.index(req,res);
-	});
+	// app.get("/haha",function(req,res){
+	// 	users.index(req,res);
+	// });
 	app.get("/aboutus",function(req,res){
 
 	});
