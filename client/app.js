@@ -6,6 +6,14 @@ var DWCAppModule = angular.module("DWC",["ngRoute","ngMessages", "ngCookies"]);
 		{
 			templateUrl: "partials/main.html",
 		})
+		.when("/success",
+		{
+			templateUrl: "partials/employers/reserveWorkerSuccess.html",
+		})
+		.when("/fail",
+		{
+			templateUrl: "partials/employers/reserveWorkerFailure.html",
+		})
 		.when('/aboutus',
 		{
 			templateUrl: "partials/aboutus/aboutus.html",

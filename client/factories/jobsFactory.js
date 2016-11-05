@@ -28,6 +28,12 @@ DWCAppModule.factory('jobsFactory', ['$http', function($http){
              console.log('this is stuff')
             if(typeof(callback) == 'function'){
                 callback(returned_data.data);
+                if(returned_data.data.errors){
+                    window.location.href = '#/fail'
+                }
+                else{
+                window.location.href = '#/success';
+            } 
             }
         });
     };
