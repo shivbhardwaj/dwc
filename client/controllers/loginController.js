@@ -15,7 +15,8 @@ DWCAppModule.controller('loginController', function($scope, $location, $cookies,
       else{
         $scope.user = data.data;
         cookie_userID = data.data._id;
-        cookie_userNAME = data.data.first_name;
+        cookie_firstNAME = data.data.firstName;
+        cookie_lastNAME = data.data.lastName;
         console.log(cookie_userID, 'this is the cookie_userID for user: ', cookie_userNAME);
         $cookies.put('logged_user', cookie_userID);
         console.log($cookies.get('logged_user'));
@@ -37,12 +38,14 @@ DWCAppModule.controller('loginController', function($scope, $location, $cookies,
         else{
           $scope.user = data.data;
           cookie_userID = data.data._id;
-          cookie_userNAME = data.data.first_name;
-          console.log(cookie_userID, 'this is the cookie_userID for user: ', cookie_userNAME);
+          cookie_firstNAME = data.data.firstName;
+          cookie_lastNAME = data.data.lastName;
+          console.log(cookie_userID, 'this is the cookie_userID for user: ', cookie_firstNAME, cookie_lastNAME);
 
           $location.url('/staff');
           $cookies.put('logged_user', cookie_userID);
-          $cookies.put('user_name', cookie_userNAME);
+          $cookies.put('firstName', cookie_firstNAME);
+          $cookies.put('lastName', cookie_lastNAME);
           console.log($cookies.get('logged_user'));
         }
       },
@@ -60,8 +63,9 @@ DWCAppModule.controller('loginController', function($scope, $location, $cookies,
 		$location.url('/');
 		console.log($cookies.get('logged_user'), 'this is the logged_user cookie POST remove');
 		cookie_userID='';
-		cookie_userNAME='';
-		console.log(cookie_userID, 'this is the cookie_userID for user: ', cookie_userNAME);
+		cookie_firstNAME='';
+    cookie_lastNAME='';
+		console.log(cookie_userID, 'this is the cookie_userID for user: ', cookie_firstNAME, cookie_lastNAME);
 	}
 
 });
