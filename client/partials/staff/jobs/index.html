@@ -1,3 +1,5 @@
+
+<h1>Unassigned Tasks</h1>
 <input type="text" name="search" ng-model="searchText">
 	<table class="responsive-table" class="bordered">
 		<thead>
@@ -9,13 +11,65 @@
 			</tr>
 		</thead>
 			<tbody>
-				<tr ng-repeat="job in jobs | filter:searchText">
-					<td>{{ job.jobDate }}</td>
-					<td>{{ job.jobTime }}</td>
-					<td>{{ job.jobAddress }}</td>
-					<td>{{ job.jobnumberOfWorkers }}</td>
-					<td><a ng-click="assigned(job.id)" class="btn waves-effect waves-light" type="assigned">assigned</a></td>
+				<tr ng-repeat="job in jobs | filter:searchText" ng-if="!job.workersAssigned">
+					<td>{{ job.startDate | date:'yyyy-MM-dd' }}</td>
+					<td>{{ job.startTime }}</td>
+					<td>{{ job.physicalAddress }}</td>
+					<td>{{ job.numberOfWorkers }}</td>
+					<td><a href="#/staff/jobs/{{job._id}}/assign" class="btn waves-effect waves-light" type="assigned">assign</a></td>
 				</tr>
 			</tbody>			
 	</table>
 
+<div ng-repeat-end ng-if="job.workersAssigned"></div>
+
+<hr>
+
+<h1>Assigned Tasks</h1>
+<table class="responsive-table" class="bordered">
+		<thead>
+			<tr>
+				<th data-field="date">Date</th>
+				<th data-field="time">Time</th>
+				<th data-field="address">Address</th>
+				<th data-field="numberOfWorkers">Number of Workers</th>
+			</tr>
+		</thead>
+			<tbody>
+				<tr ng-repeat="job in jobs | filter:searchText" ng-if="job.workersAssigned && !job.review">
+					<td>{{ job.startDate | date:'yyyy-MM-dd' }}</td>
+					<td>{{ job.startTime }}</td>
+					<td>{{ job.physicalAddress }}</td>
+					<td>{{ job.numberOfWorkers }}</td>
+					<td><a href="#/staff/jobs/{{job._id}}/review" class="btn waves-effect waves-light" type="assigned">Review</a></td>
+				</tr>
+			</tbody>			
+	</table>
+
+<div ng-repeat-end ng-if="!job.workersAssigned"></div>
+
+<hr>
+
+<h1>Completed Tasks</h1>
+<table class="responsive-table" class="bordered">
+		<thead>
+			<tr>
+				<th data-field="date">Date</th>
+				<th data-field="time">Time</th>
+				<th data-field="address">Address</th>
+				<th data-field="numberOfWorkers">Number of Workers</th>
+			</tr>
+		</thead>
+			<tbody>
+				<tr ng-repeat="job in jobs | filter:searchText" ng-if="job.review">
+					<td>{{ job.startDate | date:'yyyy-MM-dd' }}</td>
+					<td>{{ job.startTime }}</td>
+					<td>{{ job.physicalAddress }}</td>
+					<td>{{ job.numberOfWorkers }}</td>
+					<td><a href="#/staff/jobs/{{job._id}}" class="btn waves-effect waves-light" type="assigned">expand</a></td>
+
+				</tr>
+			</tbody>			
+	</table>
+
+<div ng-repeat-end ng-if="!job.review"></div>

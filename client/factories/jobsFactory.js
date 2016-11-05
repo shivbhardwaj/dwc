@@ -37,6 +37,7 @@ DWCAppModule.factory('jobsFactory', ['$http', function($http){
             console.log(returned_data);
             if(typeof(callback) == 'function'){
                 callback(returned_data.data);
+                history.back();
             }
         });
     }
