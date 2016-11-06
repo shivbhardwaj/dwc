@@ -23,9 +23,6 @@ DWCAppModule.factory('jobsFactory', ['$http', function($http){
     factory.createJob = function(newJob, callback){
 
         $http.post("/jobs", newJob).then(function(returned_data){
-            console.log('this is stuff')
-            console.log(returned_data);
-             console.log('this is stuff')
             if(typeof(callback) == 'function'){
                 callback(returned_data.data);
                 if(returned_data.data.errors){
@@ -36,7 +33,7 @@ DWCAppModule.factory('jobsFactory', ['$http', function($http){
             } 
             }
         });
-    };
+    }
     factory.updateJob = function(id, updatedJob, callback){
         console.log(id);
         $http.put("/jobs/"+id, updatedJob).then(function(returned_data){

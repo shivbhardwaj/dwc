@@ -147,6 +147,11 @@ var DWCAppModule = angular.module("DWC",["ngRoute","ngMessages", "ngCookies"]);
 			templateUrl: "partials/staff/jobs/index.html",
 			controller: 'jobIndexController'
 		})
+		.when('/staff/jobs/reports',
+		{
+			templateUrl: "partials/staff/jobs/report.html",
+			controller: 'jobIndexController'
+		})
 		.when('/staff/jobs/new',
 		{
 			templateUrl: "partials/staff/jobs/index.html",
