@@ -32,10 +32,9 @@ module.exports = {
             if (err) {
                 res.json({ error: err }); // could not locate the entry
             }
-            page.text = req.body.text;
-            page.video = req.body.video;
-            page.pdf = req.body.pdf;
-            page.image = req.body.image.base64;
+            page.frontPageLink = req.body.frontPageLink;
+            page.frontPageImage = req.body.frontPageImage.base64;
+            page.eventPageImage = req.body.eventPageImage.base64;
             page.save(function(err) {
                 if (err) {
                     res.json({ error: err }); // could not save into database

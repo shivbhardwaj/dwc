@@ -4,6 +4,7 @@ DWCAppModule.controller('pageIndexController', ['$scope','pagesFactory', '$locat
   WE MIGHT RE USE INDEX A FEW TIMES, SO TO MINIMIZE REPETITION WE SET IT AS A VARIABLE.
 */
     $scope.index = function(){
+      console.log('pageIndexController')
         pagesFactory.getAllPages(function(returnedData){
             $scope.pages = returnedData;
         });

@@ -56,9 +56,15 @@
 		<p><a href="http://www.facebook.com/pages/Day-Worker-Center-of-Mountain-View/135770265238" target="_blank" title="Visit our Facebook page"><img src="../images/facebook_find_us_on_facebook.gif" alt="Find us on Facebook" border="0" /></a></p>
 	</div>
 	
-	<div class="col s12 m8 l8">
+	<!-- <div class="col s12 m8 l8"> -->
 		<!--MAIN CONTENT STARTS HERE -->
-		<div class="main-aboutus">
+		<h3 class="center-align">Upcoming Events</h3>
+			<hr />
+		<div ng-repeat-start="page in pages" ng-if="$first" big>
+			<img class="col s12 m8 l8" data-ng-src="{{'data:image/jpg;base64,'+page.eventPageImage}}" >
+		</div>
+		<div ng-repeat-end ng-if="!first"></div>
+		<!-- <div class="main-aboutus">
 			<h3>Upcoming Events</h3>
 			<hr />
 			<h4>&iexcl;Tocar y Danzar! on Saturday, October 8, 2016 @7:30PM.</h4>
@@ -77,6 +83,6 @@
 			
 			<h4>Wellbeing Presentation</h4>
 			<h5>For workers' only</h5>
-		</div>
-	</div>
+		</div> -->
+	<!-- </div> -->
 </div>
