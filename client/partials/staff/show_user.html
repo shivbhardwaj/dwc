@@ -1,0 +1,11 @@
+<h2>{{user.firstName}}'s Account</h2>
+
+
+<h4>First Name: {{user.firstName}}</h4>
+<h4>Last Name: {{user.lastName}}</h4>
+<h4>Email Address: {{user.emailAddress}}</h4>
+<h4>Access Level: {{user.userLevel}}</h4>
+
+<h4><a href="#/users/{{user._id}}/edit">Edit User Record</a></h4>
+<button ng-click='removeUser(user._id)'>Delete User Record</button>
+<h4><a href="#/staff/allUsers">All User Records</a></h4>

@@ -1,0 +1,31 @@
+<h4><a href="#/staff/allUsers">All User Records</a></h4>
+<h4><a href="#/users/{{user._id}}">Show User Record</a></h4>
+<form ng-submit="updateUser()" class="col s12">
+  <div class="input-field col s6">
+    <input id="first_name" type="text" class="validate" ng-model="user.firstName">
+    <label for="first_name">First Name</label>
+    {{errors.firstName.messages}}
+  </div>
+  <div class="input-field col s6">
+    <input id="last_name" type="text" class="validate" ng-model="user.lastName">
+    <label for="last_name">Last Name</label>
+    {{errors.lastName.messages}}
+  </div>
+  <div class="input-field col s6">
+    <input id="emailAddress" type="email" class="validate" ng-model="user.emailAddress">
+    <label for="emailAddress">Email Address</label>
+    {{errors.emailAddress.messages}}
+  </div>
+  <div class="input-field col s6">
+    <select id="userLevel" ng-model="user.userLevel">User Level
+        <option value="" disabled selected>User Level</option>
+        <option value="1">1 - Staff</option>
+        <option value="2">2 - Supervisor</option>
+        <option value="3">3 - Admin</option>
+  	</select>
+    {{errors.userLevel.messages}}
+  </div>
+  <button class="btn waves-effect waves-light col s4 m4 l2 offset-s4 offset-m4 offset-l5" ng-click="submit" name="action">Update
+    <i class="material-icons right">send</i>
+  </button>
+</form>
