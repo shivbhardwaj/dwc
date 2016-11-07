@@ -1,5 +1,15 @@
-DWCAppModule.controller('jobEditController', ['$scope','jobsFactory', '$location', '$routeParams', function($scope, jobsFactory, $location, routeParams) {
-
+DWCAppModule.controller('jobEditController', ['$scope','jobsFactory', '$cookies','$location', '$routeParams', function($scope, jobsFactory,$cookies, $location, routeParams) {
+  var logged_in_user = $cookies.get('logged_user');
+  console.log(logged_in_user, " this is the logged in user in the jobShowController");
+  $scope.firstName = $cookies.get("firstName");
+  console.log("this is $scope.firstName for the logged in user ", $scope.firstName);
+  $scope.userLevel = $cookies.get("userLevel");
+  console.log("this is $scope.userLevel for the logged in user ", $scope.userLevel);
+  $scope.lastName = $cookies.get("lastName");
+  console.log("this is $scope.lastName for the logged in user ", $scope.lastName);
+  $scope.emailAddress = $cookies.get("emailAddress");
+  console.log("this is $scope.emailAddress for the logged in user ", $scope.emailAddress);
+  
     $scope.update = function(){
         jobsFactory.updateJob(routeParams.id, $scope.job, function(data){
             $scope.jobs = data;

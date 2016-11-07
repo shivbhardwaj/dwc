@@ -7,7 +7,7 @@ var User = mongoose.model('User');
 
 list = [
     {
-      emailAddress:'admin@gmail.com',
+      emailAddress:'admin@admin.com',
       password:'password',
       firstName:'Administrator',
       lastName: 'Admin',
