@@ -1,8 +1,7 @@
-<!-- <body ng-controller = 'loginController'> -->
   <div class = 'container'>
-  <!-- <h2>Welcome to Domination!</h2> -->
-  <form ng-model = "registration" ng-submit = "register()">
-    <!-- <h3>Join Us!</h3> -->
+  <!--
+    <form ng-model = "registration" ng-submit = "register()">
+    <h3>Join Us!</h3>
     {{errors}}
     {{errors.firstName.message}}
     <div><input type="text" ng-model = "registration.firstName" placeholder= "First Name"></div>
@@ -13,9 +12,8 @@
     {{errors.password.message}}
     <div><input type="password"  ng-model = "registration.password" placeholder= "Password"></div>
     <div><input type="password" ng-model = "registration.confirm_password" placeholder= "Confirm Password"></div>
-  <div><input type="submit" value = "register"></div>
-  </form>
-</br>
+    <div><input type="submit" value = "register"></div>
+  </form> -->
   <form ng-model = "userLogin" ng-submit = "login()">
     <h3>Welcome Back!</h3>
     {{errors.login_reg.message}}

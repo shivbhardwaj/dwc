@@ -143,6 +143,24 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 			templateUrl: "partials/staff/staffDashboard.html",
 			controller: 'loginController'
 		})
+		.when('/staff/createUser',
+		{
+			templateUrl: "partials/staff/create_user.html",
+			controller: 'newUserController'
+		})
+		.when('/staff/allUsers',
+		{
+			templateUrl: "partials/staff/allUsers.html",
+			controller: 'allUsersController'
+		})
+		.when('/users/:id', {
+			controller: 'showUserController',
+			templateUrl: 'partials/staff/show_user.html'
+		})
+		.when('/users/:id/edit', {
+			controller: 'editUserController',
+			templateUrl: 'partials/staff/edit_user.html'
+		})
 		// -------STAFF END
 
 		// -------JOBS

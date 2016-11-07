@@ -24,7 +24,9 @@ module.exports=(function(){
             res.json({
                 _id: data._id,
                 firstName: data.firstName,
-                lastName: data.lastName
+                lastName: data.lastName,
+								emailAddress: data.emailAddress,
+								userLevel: data.userLevel
             });
         } else {
             res.json({
@@ -52,7 +54,9 @@ module.exports=(function(){
             res.json({
                 _id: newuser._id,
                 firstName: newuser.firstName,
-                lastName: newuser.lastName
+                lastName: newuser.lastName,
+								emailAddress: data.emailAddress,
+								userLevel: data.userLevel
             });
           }
         });

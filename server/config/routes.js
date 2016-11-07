@@ -11,7 +11,19 @@ module.exports = function(app){
 
 	// ----------------login routes
 	app.post("/login", users.login);
-	app.post("/register", users.register);
+	app.post("/users", users.userRegister);
+	app.get("/users/:id", users.getUser);
+	// app.get("/staff/createUser", users.userRegister);
+	app.get("/staff/allUsers", users.getUsers);
+	app.post("/staff/removeUser", users.removeUser);
+	app.post("/user/:id",function(req,res){
+		users.updateUser(req,res);
+	});
+	app.post('/user/:id/delete', function(req, res){
+		console.log('made it to my /user/:id/delete post route');
+		users.removeUser(req,res);
+	})
+
 	//----------------employers routes
 	// app.get("/employers", employers.index); // show all employers
 	// app.get("/employers/:id", employers.show); // show one employer

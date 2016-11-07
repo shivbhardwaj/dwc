@@ -1,10 +1,16 @@
-<h2>Welcome!</h2>
+<h2>Welcome, {{firstName}}!</h2>
+
+<div ng-if="userLevel==3">
+	<a href="#/staff/createUser"><h1>Add New User</h1></a>
+	<a href="#/staff/allUsers"><h1>View All Users</h1></a>
+</div>
+<br>
 
 <ul>
 	<li><a href="#/staff/jobs"><h1>All Jobs</h1></a></li>
 	<li><a href="#/staff/jobs/reports"><h1>REPORTS</h1></a></li>
 	<li><a href="#/staff/pages"><h1>Show Page</h1></a></li>
-  <li><a href="#/staff/mails"><h1>Contacts</h1></a></li>
+  	<li><a href="#/staff/mails"><h1>Contacts</h1></a></li>
 </ul>
 
 <a ng-click='logout()'>Log Out</a>
