@@ -2,8 +2,9 @@
 /* require controller file */
 // var employers = require('../controllers/employers.js');
 var jobs = require('./../controllers/jobs.js');
-var pages = require('./../controllers/pages.js');
+var mails = require('./../controllers/mails.js');
 var users = require('./../controllers/users.js');
+var pages = require('./../controllers/pages.js');
 // var workers = require('../controllers/workers.js');
 
 module.exports = function(app){
@@ -24,6 +25,13 @@ module.exports = function(app){
 	app.post("/jobs", jobs.create); // create a new job
 	app.put("/jobs/:id", jobs.update); // update a job info
 	app.delete("/jobs/:id", jobs.delete); // delete a job
+
+	//----------------mails routes
+	app.get("/mails", mails.index); // show all mails
+	app.get("/mails/:id", mails.show); // show one mail
+	app.post("/mails", mails.create); // create a new mail
+	app.put("/mails/:id", mails.update); // update a mail info
+	app.delete("/mails/:id", mails.delete); // delete a mail
 
 	//----------------pages routes
 	app.get("/pages", pages.index); // show all pages

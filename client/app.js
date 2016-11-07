@@ -51,6 +51,7 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 		.when('/aboutus/contactus',
 		{
 			templateUrl: "partials/aboutus/contactus.html",
+			controller: 'mailNewController'
 		})
 		.when('/employers',
 		{
@@ -112,6 +113,7 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 		.when('/volunteers/signup',
 		{
 			templateUrl: "partials/volunteers/signup.html",
+			controller: 'mailNewController'
 		})
 		.when('/volunteers/opportunities',
 		{
@@ -205,6 +207,22 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 		// })
 
 		// -------PAGES END
+
+		// -------MAILS
+		.when('/staff/mails',
+		{
+			templateUrl: "partials/staff/mails/index.html",
+			controller: 'mailIndexController'
+		})
+		
+		.when('/staff/mails/:id',
+		{
+			templateUrl: "partials/staff/mails/show.html",
+			controller: 'mailShowController'
+		})
+		
+
+		// -------MAILS END
 
 		// -------CATCHALL
 		.otherwise({

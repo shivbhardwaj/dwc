@@ -69,55 +69,52 @@
 			</p>
 			<p>Please fill out this form to contact us.<br />
 			(* indicate required fields)</p>		
-			<form id="cInfo" name="cInfo" action="/aboutus/contact_us.php" method="post" class="form">
+			<form ng-submit="create()" ng-init="mail.contactType='Contact'">
 				<fieldset>
 					<div>
 						<label for="firstName">* First Name:</label>
 						<div class="iefix">
-							<input id="firstName" name="firstName" type="text" class="type_text" value="" />
+							<input id="firstName" ng-model="mail.firstName" type="text" />
 						</div>
 					</div>
 					<div>
 						<label for="lastName">* Last Name:</label>
 						<div class="iefix">
-							<input id="lastName" name="lastName" type="text" class="type_text" value="" />
+							<input id="lastName" ng-model="mail.lastName" type="text"/>
 						</div>
 					</div>
 					<div>
 						<label for="email">E-mail Address:</label>
 						<div class="iefix">
-							<input id="email" name="email" type="text" class="type_text" value="" />
+							<input id="email" ng-model="mail.emailAddress" type="text"/>
 						</div>
 					</div>
 					<div>
 						<label for="phone">Phone:</label>
 						<div class="iefix">
-							<input id="phone" name="phone" type="text" class="type_text" value="" />
+							<input id="phone" ng-model="mail.phoneNumber" type="text"/>
 						</div>
 					</div>
 					(* One of E-mail Address or Phone is required)<br /><br />
 					<div>
 						<label for="message">* Your message:</label>
 						<div class="iefix">
-							<textarea id="message" name="message" class="type_text"></textarea>
+							<textarea id="message" ng-model="mail.message" class="type_text"></textarea>
 						</div>
 					</div>
+					<input id="contactType" ng-model="mail.contactType" type="hidden"/>
 					<div>
 						<div class="iefix">
-							<input type="submit" name="cSubmit" value="Submit" />
+							<input type="submit" ng-model="cSubmit" value="Submit" />
 						</div>
 					</div>
 				</fieldset>
 			</form>
-			<script type="text/javascript">
-				if (document.getElementById) {
-					var cInfoId = document.getElementById("cInfo");
-					cInfoId.elements['firstName'].focus();
-				}
-				else {
-					this.form.elements['firstName'].focus();
-				}
-			</script>
 		</div>
 	</div>
+	<script type="text/javascript">
+		function Ctrl($scope) {
+    $scope.mail.contactType = 'Contact';
+}
+	</script>
 </div>

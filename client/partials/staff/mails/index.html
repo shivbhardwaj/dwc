@@ -1,0 +1,26 @@
+<form>
+	<div class="input-field">
+	<input type="text" id="searchbox" ng-model="searchText">
+	<label for="searchbox">Search all mails by keyword</label>
+	</div>
+</form>
+
+<h1>Contact Requests</h1>
+	<table class="responsive-table" class="bordered">
+		<thead>
+			<tr>
+				<th data-field="date">Date</th>
+				<th data-field="name">Name</th>
+				<th data-field="type">Type</th>
+				<th data-field="action">Action</th>
+			</tr>
+		</thead>
+			<tbody>
+				<tr ng-repeat="mail in mails | filter:searchText">
+					<td>{{ mail.createdAt | date:'yyyy-MM-dd' }}</td>
+					<td>{{ mail.firstName }} {{ mail.lastName }}</td>
+					<td>{{ mail.contactType }}</td>
+					<td><a href="#/staff/mails/{{mail._id}}" class="btn waves-effect waves-light" type="assigned">details</a></td>
+				</tr>
+			</tbody>			
+	</table>
