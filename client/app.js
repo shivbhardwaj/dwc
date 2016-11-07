@@ -1,10 +1,11 @@
-var DWCAppModule = angular.module("DWC",["ngRoute","ngMessages", "ngCookies"]);
+var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "base64", "naif.base64"]);
 (function(){
 	DWCAppModule.config(function($routeProvider){
 		$routeProvider
 		.when("/",
 		{
 			templateUrl: "partials/main.html",
+			controller: 'pageIndexController'
 		})
 		.when("/success",
 		{
@@ -25,6 +26,7 @@ var DWCAppModule = angular.module("DWC",["ngRoute","ngMessages", "ngCookies"]);
 		.when('/aboutus/events',
 		{
 			templateUrl: "partials/aboutus/events.html",
+			controller: 'pageIndexController'
 		})
 		.when('/aboutus/news',
 		{
@@ -199,11 +201,11 @@ var DWCAppModule = angular.module("DWC",["ngRoute","ngMessages", "ngCookies"]);
 		// -------JOBS END
 
 		// -------PAGES
-		// .when('/staff/pages',
-		// {
-		// 	templateUrl: "partials/staff/pages/index.html",
-		// 	// controller: 'jobIndexController'
-		// })
+		.when('/staff/pages',
+		{
+			templateUrl: "partials/staff/pages/index.html",
+			controller: 'pageIndexController'
+		})
 		// .when('/staff/pages/new',
 		// {
 		// 	templateUrl: "partials/staff/pages/index.html",
@@ -212,13 +214,13 @@ var DWCAppModule = angular.module("DWC",["ngRoute","ngMessages", "ngCookies"]);
 		.when('/staff/pages/:id/edit',
 		{
 			templateUrl: "partials/staff/pages/edit.html",
-			// controller: 'jobEditController'
+			controller: 'pageEditController'
 		})
-		.when('/staff/pages/:id',
-		{
-			templateUrl: "partials/staff/pages/show.html",
+		// .when('/staff/pages/:id',
+		// {
+			// templateUrl: "partials/staff/pages/show.html",
 			// controller: 'jobShowController'
-		})
+		// })
 
 		// -------PAGES END
 
