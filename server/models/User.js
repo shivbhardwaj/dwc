@@ -7,7 +7,7 @@ var UserSchema = new mongoose.Schema({
 	firstName: {type: String, required: true, minlength: 1},
 	lastName: {type: String, required: true, minlength: 1},
 	phoneNumber: {type: String, minlength: 1},
-	userLevel: {type: Number,required: true, default: 1}
+	userLevel: {type: String,required: true, default: 1}
 },{timestamps: true});
 
 UserSchema.methods.generateHash = function(password) {
