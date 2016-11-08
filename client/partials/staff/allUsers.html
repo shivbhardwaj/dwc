@@ -1,0 +1,11 @@
+<div ng-controller="allUsersController">
+	<a href="#/staff">Back to Staff Home</a>
+	<div ng-repeat= "user in users">
+		<h4>First & Last Name: {{user.firstName}} {{user.lastName}}</h4>
+		<h4>User Email: {{user.emailAddress}}</h4>
+		<h4><a href="#/users/{{user._id}}">Show User Record</a></h4>
+		<h4><a href="#/users/{{user._id}}/edit">Edit User Record</a></h4>
+		<hr>
+	</div>
+
+</div>

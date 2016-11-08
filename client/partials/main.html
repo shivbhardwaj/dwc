@@ -1,43 +1,81 @@
-<div ng-controller="MainPageController">
-<!-- sample sub nav -->
-<!-- <div class="row">
-	<div class="col s12 deep-orange darken-1"><p>s12 put the sub tab in grids and account for readjusting on screen size just like the samples</p></div>
-	<div class="col s12 m4 l2 deep-orange darken-1"><p>s12 m4</p></div>
-	<div class="col s12 m4 l8"><p>s12 m4</p></div>
-	<div class="col s12 m4 l2"><p>s12 m4</p></div>
-</div> -->
+<div class="row">
+
+	<div class="col s12 m8 offset-m2 l6 offset-l6">
+		<ul class="subnav">
+		</ul>
+	</div>
+	</div>
+	<div class="row">
+		<div class="col s12 m4 l4">
+			<div class="card small hide-on-med-and-down">
+				<div class="card-image">
+	            	<img src="./../../images/statement_bgrd.gif">
+	            	<span class="card-content card-title">Our Mission</span>
+	            </div>
+	            <div class="card-content">
+	             	<p style="font-size: smaller;">Connect workers and employers in a safe and supportive environment. Empower workers to improve their socio-economic condition through fair employment, education, and job skills training. Participate in advocacy efforts that support the day laborer community.</p>
+	            </div>
+			</div>
+		</div>
+		<img div class="col s12 m12 l8" src="./../images/DWC_main.jpg" alt="[DWC Members picture]"/>
+	</div>
 	<!-- Page Layout here -->
 	<div class="row">
-			<div class="col s12 m4 l3 grey"> 
-			<!-- Note that "m4 l3" was added -->
-			<!-- Grey navigation panel
-
-			This content will be:
-			3-columns-wide on large screens,
-			4-columns-wide on medium screens,
-			12-columns-wide on small screens  -->
-
-			side
-
-		</div>
-
-		<div class="col s12 m8 l9 teal"> 
-			<!-- Note that "m8 l9" was added -->
-			<!-- Teal page content
-
-			This content will be:
-			9-columns-wide on large screens,
-			8-columns-wide on medium screens,
-			12-columns-wide on small screens  -->
-
-			<!-- put the sub tab in grids and account for readjusting on screen size just like the samples below -->
-			
-
-
-
-			main
-		</div>
-
+		<div class="col s10 offset-s1 m8 offset-m2 hide-on-large-only">
+        	<h5 class="center-align">Our Mission</h5>
+         	<p>Connect workers and employers in a safe and supportive environment. Empower workers to improve their socio-economic condition through fair employment, education, and job skills training. Participate in advocacy efforts that support the day laborer community.</p>
+	    </div>
 	</div>
-	<!-- haha -->
+
+	<div class="row">
+	  	<div class="tax-info" style="text-align: center">
+	  		<p>The Day Worker Center of Mountain View is a 501(c)3 non-profit (Federal Tax Identification Number: 20-2874108)</p>
+	  	</div>
+  	</div>
+
+
+			 <!--  	middle content of links and photos -->
+
+			<div class="row vertalign">
+					<div class="col s10 offset-s1 m6 l4">
+        		<a href= "#/aboutus">
+        			<div class="card-panel" style="background-image: url(./../images/img_left_on_facility.jpg); background-repeat: no-repeat; background-size: cover; padding-top: 35%">
+          				<p class="right-align black-text" >Our new location</p>
+        			</div>
+        		</a>
+      		</div>
+			<div class="col s10 offset-s1 m6 l4">
+        		<a href= "#/employers/reserveworker">
+        			<div class="card-panel" style="background-image: url(./../images/hire.jpg); background-repeat: no-repeat;background-position: center; background-size: cover; padding-top: 35%">
+        				<p class="right-align white-text"><span style="opacity: 0">Hire a worker</span></p>
+        			</div>
+        		</a>
+      		</div>
+      		<div class="col s10 offset-s1 m6 offset-m3 l4">
+        		<a href= "#/volunteer">
+        			<div class="card-panel" style="background-image: url(./../images/volunteer.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; padding-top: 35%">
+          				<p class="right-align white-text" >Volunteer</p>
+        			</div>
+        		</a>
+      		</div>
+			</div>
+				<!-- end of middle content of links and photos -->
+
+
+				<!-- Recent Fundraisers and Events -->
+				<div class="row">
+					<div ng-repeat-start="page in pages" ng-if="$first" big>
+						<a href="{{ page.frontPageLink }}">
+							<img class="col s12 m12 l10 offset-l1" data-ng-src="{{'data:image/jpg;base64,'+page.frontPageImage}}">
+						</a>
+					</div>
+					<div ng-repeat-end ng-if="!first"></div>
+				</div>
+
+				<div class="row">
+					<a href="https://www.gofundme.com/2rkhhfx8"><img class="col s12 m12 l10 offset-l1" src="./../images/fundraiser.jpg"></a>
+
+				</div>
+				<div class="row" style="text-align: center;">
+				<iframe src="http://www.slideshare.net/slideshow/embed_code/key/d3x6EcM3Km12jd" align="center" scrolling="no" style="width:85vmin; height: 110vmin;">c</iframe>
 </div>

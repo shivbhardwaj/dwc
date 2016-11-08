@@ -1,0 +1,111 @@
+<div class="row">
+	<div class="col s12 m8 offset-m2 l6 offset-l6">
+		<ul class="subnav">
+			<li class="subnav"><a href="#/aboutus/whoweare">Who We Are | </a></li>
+			<li class="subnav"><a href="#/aboutus/events">Events | </a></li>
+			<li class="subnav"><a href="#/aboutus/news">News | </a></li>
+			<li class="subnav"><a href="#/aboutus/partners">Partners | </a></li>
+			<li class="subnav"><a href="#/aboutus/facility">Facility | </a></li>
+			<li class="subnav"><a href="#/aboutus/newsletters">Newsletters | </a></li>
+			<li class="subnav"><a href="#/aboutus/career">Careers | </a></li>
+			<li class="subnav"><a href="#/aboutus/contactus">Contact Us</a></li>
+		</ul>
+	</div>
+	</div>
+<div class="row">
+<div class="col s12 m4 l4"> 
+		<div class="card small hide-on-med-and-down">
+			<div class="card-image">
+            	<img src="./../../images/statement_bgrd.gif">
+            	<span class="card-title">Empowering Others</span>
+            </div>
+            <div class="card-content">
+             	<p>"We are realizing our dreams here"</p>
+				<p>"Aqui estamos realizando nuestros suenos"</p>
+            </div>
+		</div>
+</div>
+	<img div class="col s12 m12 l8" src="./../images/DWC_about.jpg" alt="[DWC Members picture]"/>
+	</div>
+
+
+<div class="row">
+
+	<div class="col s12 m4 l4"> 
+		
+		<h4>Day Worker Center of Mountain View</h4>
+		<hr/>
+		<h5>Serving Mountain View and surrounding communities since 1996</h5>
+		<p>Open Monday to Saturday, 7am - 5pm</p>		
+		<p>113 Escuela Avenue<br>Mountain View, CA, 94040<br>650-903-4102<br><a href="mailto:info@dayworkercentermv.org" class="email">info@dayworkercentermv.org</a>.</p>		
+		<hr/>
+		<h5>Day Worker Center Newsletter</h5>
+		<p>Read <a href="#/aboutus/newsletters">the current Newsletter</a></p>
+		<h5>Day Workers' Journal</h5>
+		<p>Visit the <a href="http://dayworkersjournal.wordpress.com/" target="_blank" title="Visit the Day Workers Journal">Day Workers' Journal</a>, a Day Worker Center blog by and about the workers.</p>
+		<hr/>
+		<p><a href="http://www.facebook.com/pages/Day-Worker-Center-of-Mountain-View/135770265238" target="_blank" title="Visit our Facebook page"><img src="../images/facebook_find_us_on_facebook.gif" alt="Find us on Facebook" border="0" /></a></p>
+	</div>
+	
+	<div class="col s12 m8 l8">
+		<!--MAIN CONTENT STARTS HERE -->
+		<div class="main-aboutus">
+			<h3>Contact Us</h3>
+			<h4>Street Address:</h4>
+			<p>
+				113 Escuela Ave.<br />
+				Mountain View, CA 94040<br />
+				650-903-4102<br />
+				650-903-4106
+			</p>
+			<p>Please fill out this form to contact us.<br />
+			(* indicate required fields)</p>		
+			<form ng-submit="create()" ng-init="mail.contactType='Contact'">
+				<fieldset>
+					<div>
+						<label for="firstName">* First Name:</label>
+						<div class="iefix">
+							<input id="firstName" ng-model="mail.firstName" type="text" />
+						</div>
+					</div>
+					<div>
+						<label for="lastName">* Last Name:</label>
+						<div class="iefix">
+							<input id="lastName" ng-model="mail.lastName" type="text"/>
+						</div>
+					</div>
+					<div>
+						<label for="email">E-mail Address:</label>
+						<div class="iefix">
+							<input id="email" ng-model="mail.emailAddress" type="text"/>
+						</div>
+					</div>
+					<div>
+						<label for="phone">Phone:</label>
+						<div class="iefix">
+							<input id="phone" ng-model="mail.phoneNumber" type="text"/>
+						</div>
+					</div>
+					(* One of E-mail Address or Phone is required)<br /><br />
+					<div>
+						<label for="message">* Your message:</label>
+						<div class="iefix">
+							<textarea id="message" ng-model="mail.message" class="type_text"></textarea>
+						</div>
+					</div>
+					<input id="contactType" ng-model="mail.contactType" type="hidden"/>
+					<div>
+						<div class="iefix">
+							<input type="submit" ng-model="cSubmit" value="Submit" />
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function Ctrl($scope) {
+    $scope.mail.contactType = 'Contact';
+}
+	</script>
+</div>

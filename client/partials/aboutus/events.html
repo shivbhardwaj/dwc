@@ -1,0 +1,56 @@
+<div class="row">
+	<div class="col s12 m8 offset-m2 l6 offset-l6">
+		<ul class="subnav">
+			<li class="subnav"><a href="#/aboutus/whoweare">Who We Are | </a></li>
+			<li class="subnav"><a href="#/aboutus/events">Events | </a></li>
+			<li class="subnav"><a href="#/aboutus/news">News | </a></li>
+			<li class="subnav"><a href="#/aboutus/partners">Partners | </a></li>
+			<li class="subnav"><a href="#/aboutus/facility">Facility | </a></li>
+			<li class="subnav"><a href="#/aboutus/newsletters">Newsletters | </a></li>
+			<li class="subnav"><a href="#/aboutus/career">Careers | </a></li>
+			<li class="subnav"><a href="#/aboutus/contactus">Contact Us</a></li>
+		</ul>
+	</div>
+	</div>
+<div class="row">
+<div class="col s12 m4 l4"> 
+		<div class="card small hide-on-med-and-down">
+			<div class="card-image">
+            	<img src="./../../images/statement_bgrd.gif">
+            	<span class="card-title">Empowering Others</span>
+            </div>
+            <div class="card-content">
+             	<p>"We are realizing our dreams here"</p>
+				<p>"Aqui estamos realizando nuestros suenos"</p>
+            </div>
+		</div>
+</div>
+	<img div class="col s12 m12 l8" src="./../images/DWC_about.jpg" alt="[DWC Members picture]"/>
+	</div>
+
+
+<div class="row">
+
+	<div class="col s12 m4 l4"> 
+		<h4>Day Worker Center of Mountain View</h4>
+		<hr/>
+		<h5>Serving Mountain View and surrounding communities since 1996</h5>
+		<p>Open Monday to Saturday, 7am - 5pm</p>		
+		<p>113 Escuela Avenue<br>Mountain View, CA, 94040<br>650-903-4102<br><a href="mailto:info@dayworkercentermv.org" class="email">info@dayworkercentermv.org</a>.</p>		
+		<hr/>
+		<h5>Day Worker Center Newsletter</h5>
+		<p>Read <a href="#/aboutus/newsletters">the current Newsletter</a></p>
+		<h5>Day Workers' Journal</h5>
+		<p>Visit the <a href="http://dayworkersjournal.wordpress.com/" target="_blank" title="Visit the Day Workers Journal">Day Workers' Journal</a>, a Day Worker Center blog by and about the workers.</p>
+		<hr/>
+		<p><a href="http://www.facebook.com/pages/Day-Worker-Center-of-Mountain-View/135770265238" target="_blank" title="Visit our Facebook page"><img src="../images/facebook_find_us_on_facebook.gif" alt="Find us on Facebook" border="0" /></a></p>
+	</div>
+		<!--MAIN CONTENT STARTS HERE -->
+		<h3 class="center-align">Upcoming Events</h3>
+			<hr />
+		<div ng-repeat-start="page in pages" ng-if="$first" big>
+			<img class="col s12 m8 l8" data-ng-src="{{'data:image/jpg;base64,'+page.eventPageImage}}" >
+		</div>
+		<div ng-repeat-end ng-if="!first"></div>
+		
+</div>

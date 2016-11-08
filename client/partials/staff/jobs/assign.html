@@ -1,0 +1,25 @@
+<div class="row">
+<form ng-submit="update()" class="col s12" >
+        <div class="row">
+            <h5 class="center-align">Employer Information</h5>
+        </div>
+        <hr>
+      <div class="row">
+        <div class="  input-field col s6">
+          <input id="workersAssigned" type="text" class="validate" ng-model="job.workersAssigned" required>
+          <label for="workersAssigned">Workers Assigned</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="assignmentNotes" type="text" class="validate" ng-model="job.assignmentNotes" required>
+          <label for="assignmentNotes">Assignment Notes</label>
+        </div>
+      </div>
+      <input ng-model="job.assignedBy" ng-bind="job.assignedBy=emailAddress" required type="hidden">
+      <div class="row">
+          <button class="btn waves-effect waves-light col s4 m4 l2 offset-s4 offset-m4 offset-l5" ng-click="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </form>
+
+<a ng-href="#/staff">back to home</a>

@@ -4,103 +4,20 @@
  * the core Materialize files in the future
  *
  * Made By MaterializeCSS.com
- */
+/**********/
+
+/** start index.html styling **/
+
+.input-field label {
+     color: black;
+}
+.nav-wrapper{
+  background-color: #f2e2ca;
+}
 .subnav{
   display: inline-block;
   vertical-align: center;
 }
-#empowering{
-  border: 2px solid red;
-  height: 200px;
-  width: 400px;
-}
-#folks{
-  border: 2px solid red;
-  height: 200px;
-  width: 700px;
-}
-.aboutus-img{
-  display: inline-block;
-  vertical-align: center;
-}
-p.dwc-img{
-  display: inline-block;
-  vertical-align: top;
-}
-#dwc-img{
-  border: 2px solid red;
-  height: 200px;
-  width: 500px;
-  margin-right: 40px;
-}
-#dwc-img-text{
-  height: 200px;
-  width: 400px;
-}
-.career h4, .career h3 {
-  margin-top:10px;
-}
-.career p {
-  line-height: 1.5em;
-}
 .career ul li {
   list-style: disc inside;
-  line-height: 1.8em;
-}
-nav ul a,
-nav .brand-logo {
-  color: #444;
-}
-
-p {
-  line-height: 2rem;
-}
-
-.button-collapse {
-  color: #26a69a;
-}
-
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
-  margin: 0;
-}
-
-
-.subnav-right {
-  margin-right: 0px;
-  padding-right: 0px;
-  float: right;
-  background-color: black;
 }

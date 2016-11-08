@@ -1,0 +1,18 @@
+<a href="#/staff"> Go Back </a>
+
+<div ng-repeat-start="page in pages" ng-if="$first" big>
+	Front Page Banner: <img data-ng-src="{{'data:image/jpg;base64,'+page.frontPageImage}}" width="30%">
+
+<br>
+	Front Page Link: {{ page.frontPageLink }}
+	<br>
+
+	<hr>
+
+	Events Page Banner: <img data-ng-src="{{'data:image/jpg;base64,'+page.eventPageImage}}" width="30%">
+	<br>
+	<a ng-href="#/staff/pages/{{page._id}}/edit">Edit Images/links</a>
+	
+</div>
+
+<div ng-repeat-end ng-if="!first"></div>

@@ -1,0 +1,79 @@
+
+<form>
+	<div class="input-field">
+	<input type="text" id="searchbox" ng-model="searchText">
+	<label for="searchbox">Search all jobs by keyword</label>
+	</div>
+</form>
+
+<h1>Unassigned Tasks</h1>
+	<table class="responsive-table bordered centered">
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Employer Name</th>
+				<th>Employer Phone</th>
+				<th>Work Request</th>
+				<th>Address of Job</th>
+				<th>Start Time</th>
+				<th>Hours</th>
+				<th>Hourly Rate</th>
+				<th>Number of Workers</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+			<tbody>
+				<tr ng-repeat="job in jobs | filter:searchText" ng-if="!job.workersAssigned">
+					<td>{{ job.startDate | date:'yyyy-MM-dd' }}</td>
+					<td>{{ job.firstName }} {{ job.lastName }}</td>
+					<td>{{ job.phoneNumber }}</td>
+					<td>{{ job.jobDescription }}</td>
+					<td>{{ job.worksite ? job.worksite : job.physicalAddress + ', ' + job.city }}</td>
+					<td>{{ job.startTime }}</td>
+					<td>{{ job.estimatedHours }}</td>
+					<td>${{ job.payRate }}</td>
+					<td>{{ job.numberOfWorkers }}</td>
+					<td><a href="#/staff/jobs/{{job._id}}/assign" class="btn waves-effect waves-light" type="assigned">assign</a> <a href="#/staff/jobs/{{job._id}}" class="btn waves-effect waves-light" type="assigned">details</a></td>
+				</tr>
+			</tbody>			
+	</table>
+
+<div ng-repeat-end ng-if="job.workersAssigned"></div>
+
+<h1>Assigned Tasks</h1>
+
+<table class="responsive-table bordered centered">
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Employer Name</th>
+				<th>Employer Phone</th>
+				<th>Workers Assigned</th>
+				<th>Work Request</th>
+				<th>Address of Job</th>
+				<th>Start Time</th>
+				<th>Hours</th>
+				<th>Hourly Rate</th>
+				<th>Pay Calculation</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+			<tbody>
+				<tr ng-repeat="job in jobs | filter:searchText" ng-if="job.workersAssigned && !job.review">
+					<td>{{ job.startDate | date:'yyyy-MM-dd' }}</td>
+					<td>{{ job.firstName }} {{ job.lastName }}</td>
+					<td>{{ job.phoneNumber }}</td>
+					<td>{{ job.workersAssigned }}</td>
+					<td>{{ job.jobDescription }}</td>
+					<td>{{ job.workSite ? job.workSite : job.physicalAddress + ', ' + job.city }}</td>
+					<td>{{ job.startTime }}</td>
+					<td>{{ job.estimatedHours }}</td>
+					<td>${{ job.payRate }}</td>
+					<td>${{ job.payRate*job.estimatedHours }}</td>
+					<td><a href="#/staff/jobs/{{job._id}}/review" class="btn waves-effect waves-light" type="assigned">Review</a> <a href="#/staff/jobs/{{job._id}}" class="btn waves-effect waves-light" type="assigned">details</a></td>
+				</tr>
+			</tbody>			
+	</table>
+
+<div ng-repeat-end ng-if="!job.workersAssigned"></div>
+
