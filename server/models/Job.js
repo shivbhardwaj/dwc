@@ -18,7 +18,7 @@ var JobSchema = new mongoose.Schema({
 	// ----------------------job information
 	startDate: {type: Date, required: true},
 	startTime:{type: String, required: true},
-	workSite:{type: String},
+	worksite:{type: String},
 	jobDescription: {type: String, required: true, minlength: 1},
 	estimatedHours:{type: Number, required: true, minlength: 1},
 	skillsNeeded: {type: String, required: true},
