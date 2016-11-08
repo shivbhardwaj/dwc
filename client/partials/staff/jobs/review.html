@@ -5,15 +5,22 @@
         </div>
         <hr>
       <div class="row">
-      <div class="input-field col s6">
-          <input id="review" type="text" class="validate" ng-model="job.review" required>
-          <label for="review">Review</label>
+        <div class="input-field col s6">
+          <select id="englishLevel" class="validate" ng-model="job.review" required>
+            <option value="" disabled selected>*Review</option>
+            <option value="*****">*****</option>
+            <option value="****">****</option>
+            <option value="***">***</option>
+            <option value="**">**</option>
+            <option value="*">*</option>
+          </select>
         </div>
         <div class="input-field col s6">
           <input id="reviewNotes" type="text" class="validate" ng-model="job.reviewNotes" required>
           <label for="reviewNotes">Review Notes</label>
         </div>
       </div>
+
       <input ng-model="job.reviewedBy" ng-bind="job.reviewedBy=emailAddress" required type="hidden">
       <div class="row">
           <button class="btn waves-effect waves-light col s4 m4 l2 offset-s4 offset-m4 offset-l5" ng-click="submit" name="action">Submit
@@ -23,3 +30,13 @@
     </form>
 
 <a ng-href="#/staff">back to home</a>
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('select').material_select();
+    $('#how_heard').trigger('autoresize');
+    $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
+  });
+  </script>
