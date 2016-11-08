@@ -66,7 +66,7 @@
 					<td>{{ job.phoneNumber }}</td>
 					<td>{{ job.workersAssigned }}</td>
 					<td>{{ job.jobDescription }}</td>
-					<td>{{job.worksite ? job.worksite : job.physicalAddress + ', ' + job.city }}</td>
+					<td>{{ job.workSite ? job.workSite : job.physicalAddress + ', ' + job.city }}</td>
 					<td>{{ job.startTime }}</td>
 					<td>{{ job.estimatedHours }}</td>
 					<td>${{ job.payRate }}</td>
