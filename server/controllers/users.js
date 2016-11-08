@@ -64,33 +64,26 @@ module.exports=(function(){
     ///////
 		getUsers: function(req, res){
 			User.find({}, function(err, users){
-				if(err){
-					console.log(err);
-					console.log('error in getUsers controller');
-				} else{
-					console.log('this is all the users', users);
+				if(err){										
+				} else{					
 					res.json(users);
 				}
 			});
 		},
 		getUser: function(req, res){
 			User.findOne({_id: req.params.id}, function(err, result){
-				if(err){
-					console.log('this is the err when looking for user', err);
-				} else {
-					console.log('this is the user', result);
+				if(err){					
+				} else {					
 					res.json(result);
 				}
 			});
 		},
 		updateUser: function(req, res){
 			User.findOne({_id:req.params.id}, function(err, result){
-				if (err){
-					console.log('unable to find user, here is error ', err);
+				if (err){					
 					res.json(err);
 				}
-				else {
-					console.log("foundit!\n",result);
+				else {					
 					// result.userName=req.body.userName;
 					result.emailAddress=req.body.emailAddress;
 					result.password=req.body.password;
@@ -99,11 +92,9 @@ module.exports=(function(){
 					result.phoneNumber=req.body.phoneNumber;
 					result.userLevel=req.body.userLevel;
 					result.save(function(err, result){
-						if(err){
-							console.log('unable to save user, here is err', err);
+						if(err){							
 							res.json(err);
-						} else{
-							console.log('successfully updated user!', result);
+						} else{							
 							res.json(result);
 						}
 					});
@@ -111,26 +102,19 @@ module.exports=(function(){
 			});
 		},
 		userRegister: function(req, res){
-			user=new User(req.body);
-			console.log('this is req.body', req.body);
+			user=new User(req.body);			
 			user.save(function(err, result){
-				if(err){
-					console.log('error creating a new user, ', err);
-					console.log('this is req.body', req.body);
-				} else{
-					console.log('this is our new user ', result);
+				if(err){										
+				} else{					
 					res.json(result);
 				}
 			})
 		},
-		removeUser: function(req, res){
-			console.log("this is the id using req params ", req.params.id);
+		removeUser: function(req, res){			
 			User.remove({_id:req.params.id}, function(err, result){
-				if(err){
-					console.log('couldnt delete the desired user', err);
+				if(err){					
 				}
-				else{
-					console.log('successfully deleted user from DB', result);
+				else{					
 					res.json(result);
 				}
 			})

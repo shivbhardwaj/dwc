@@ -1,9 +1,7 @@
 DWCAppModule.controller('newUserController', function($scope, $routeParams, $location, userFactory){
+	
 
-	console.log('I am able to load my newUserController along with my newUserController partial');
-
-  $scope.register=function(){
-		console.log('userRegister in the newUserController', $scope.newUser);
+  $scope.register=function(){		
 		userFactory.addUser($scope.newUser, function(userArray){
 			$scope.users=userArray;
 		})

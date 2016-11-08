@@ -4,17 +4,14 @@ DWCAppModule.factory('jobsFactory', ['$http', function($http){
     var job = [];
 
     factory.getAllJobs = function(callback){
-        $http.get("/jobs").then(function(data){
-            console.log(data);
+        $http.get("/jobs").then(function(data){            
             jobs = data.data;
             callback(jobs);
         });
     }
 
-    factory.getOneJob = function(id, callback){
-        console.log(id);
-        $http.get("/jobs/"+id).then(function(data){
-            console.log(data);
+    factory.getOneJob = function(id, callback){        
+        $http.get("/jobs/"+id).then(function(data){            
             jobs = data.data;
             callback(jobs);
         });
@@ -34,18 +31,15 @@ DWCAppModule.factory('jobsFactory', ['$http', function($http){
             }
         });
     }
-    factory.updateJob = function(id, updatedJob, callback){
-        console.log(id);
-        $http.put("/jobs/"+id, updatedJob).then(function(returned_data){
-            console.log(returned_data);
+    factory.updateJob = function(id, updatedJob, callback){        
+        $http.put("/jobs/"+id, updatedJob).then(function(returned_data){            
             if(typeof(callback) == 'function'){
                 callback(returned_data.data);
                 history.back();
             }
         });
     }
-    factory.deleteJob = function(id, callback){
-        console.log(id);
+    factory.deleteJob = function(id, callback){        
         $http.delete("/jobs/"+id).then(function(){
             if(typeof(callback) == 'function'){
                 callback();

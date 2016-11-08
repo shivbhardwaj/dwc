@@ -13,10 +13,8 @@
           <input id="reviewNotes" type="text" class="validate" ng-model="job.reviewNotes" required>
           <label for="reviewNotes">Review Notes</label>
         </div>
-        
       </div>
-
-      <!-- <input type="hidden" ng-model="job.reviewedBy" value="{{_id}}"> -->
+      <input ng-model="job.reviewedBy" ng-bind="job.reviewedBy=emailAddress" required type="hidden">
       <div class="row">
           <button class="btn waves-effect waves-light col s4 m4 l2 offset-s4 offset-m4 offset-l5" ng-click="submit" name="action">Submit
         <i class="material-icons right">send</i>
