@@ -249,7 +249,6 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 
 //--------------THE CODE BELOW WILL ALLOW YOU TO REMOVE THE # FROM THE NAVBAR 
 
-
 		// if(window.history && window.history.pushState){
 		// 	$locationProvider.html5Mode(true);
 		// 	//will cause an error $location in HTML5 mode requires a  tag to be present! Unless you set baseUrl tag after head tag like so: <head> <base href="/">
@@ -261,7 +260,6 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 		//   // 	});
 		// }
 //--------------END OF ANTI-# 
-
 
 	})
 }());

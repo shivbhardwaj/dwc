@@ -45,6 +45,7 @@ DWCAppModule.factory('jobsFactory', ['$http', function($http){
             }
         });
     }
+
     factory.updateJob = function(id, updatedJob, callback){        
         $http.put("/jobs/"+id, updatedJob).then(function(returned_data){            
             if(typeof(callback) == 'function'){
@@ -58,6 +59,7 @@ DWCAppModule.factory('jobsFactory', ['$http', function($http){
             if(typeof(callback) == 'function'){
                 callback();
                 window.location.href = '#/staff/jobs';
+
             }
         });
     }
