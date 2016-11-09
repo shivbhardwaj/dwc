@@ -1,3 +1,15 @@
+<nav>
+<div class="nav-wrapper">
+	<ul>
+		<li><a href="#/staff/jobs">All Jobs</a></li>
+		<li><a href="#/staff/jobs/reports">Reports</a></li>
+		<li><a href="#/staff/pages">Edit Front Page</a></li>
+		<li><a href="#/staff/mails">Contact Request</a></li>
+	</ul>
+	<a ng-click='logout()'><button class="waves-effect waves-light btn-large">Log Out</button></a>
+</div>
+</nav>
+
 <div ng-controller="allUsersController">
 	<a href="#/staff">Back to Staff Home</a>
 	<div ng-repeat= "user in users">
