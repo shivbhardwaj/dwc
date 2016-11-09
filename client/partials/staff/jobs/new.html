@@ -1,184 +1,216 @@
-<div class="row">
-    <form ng-submit="newJob()" class="col s12">
-    	<div class="row">
-			<h5 class="center-align">Employer Information</h5>
-    	</div>
-    	<hr>
+
+<H3 class="center-align">WORK REQUEST</H3>
+<form ng-submit="createForStaff()" class="col s12">
+      {{ errors }}
+        <div class="row">
+            <h5 class="center-align">Employer Information</h5>
+        </div>
+        <hr>
       <div class="row">
         <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate" ng-model="Job.firstName">
+          <input id="first_name" type="text" class="validate" ng-model="job.firstName" required>
           <label for="first_name">*First Name</label>
+          {{errors.firstName.messages}}
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate" ng-model="Job.lastName">
+          <input id="last_name" type="text" class="validate" ng-model="job.lastName" required>
           <label for="last_name">*Last Name</label>
+          {{errors.lastName.messages}}
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="company_name" type="text" class="validate" ng-model="Job.companyName">
+          <input id="company_name" type="text" class="validate" ng-model="job.companyName">
           <label for="company_name">Company Name (if applicable)</label>
+          {{errors.companyName.messages}}
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="physicalAddress" type="text" class="validate" ng-model="Job.physicalAddress">
+          <input id="physicalAddress" type="text" class="validate" ng-model="job.physicalAddress" required>
           <label for="physicalAddress">*Address</label>
+          {{errors.physicalAddress.messages}}
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input id="city" type="text" class="validate" ng-model="Job.city">
+          <input id="city" type="text" class="validate" ng-model="job.city" required>
           <label for="city">*City</label>
+          {{errors.city.messages}}
         </div>
         <div class="input-field col s6">
-          <input id="zip" type="text" class="validate" ng-model="Job.zip">
+          <input id="zip" type="text" class="validate" ng-model="job.zip" required>
           <label for="zip">*Zip Code</label>
+          {{errors.zip.messages}}
         </div>
       </div>
       <div class="row">
       <div class="input-field col s6">
-          <input id="phoneNumber" type="text" class="validate" ng-model="Job.phoneNumber">
+          <input id="phoneNumber" type="text" class="validate" ng-model="job.phoneNumber" required>
           <label for="phoneNumber">*Phone</label>
+          {{errors.phoneNumber.messages}}
         </div>
         <div class="input-field col s6">
-          <input id="emailAddress" type="email" class="validate" ng-model="Job.emailAddress">
+          <input id="emailAddress" type="email" class="validate" ng-model="job.emailAddress" required>
           <label for="emailAddress">*Email</label>
+          {{errors.emailAddress.messages}}
         </div>
       </div>
       <div class="row">
         <div class="col s12">
-          <div class="input-field inline" ng-model="Job.hearAbout">
+          <div class="input-field inline" ng-model="job.hearAbout">
             <textarea id="howHeard" class="materialize-textarea"></textarea>
-          	<label for="howHeard">How did you hear about us?</label>
+            <label for="howHeard">How did they hear about us?</label>
+            {{errors.hearAbout.messages}}
           </div>
         </div>
       </div>
       <hr>
       <br>
-      	<div class="row">
-			<h5 class="center-align">Job Information</h5>
-    	</div>
-    	<hr>
+        <div class="row">
+            <h5 class="center-align">Job Information</h5>
+        </div>
+        <hr>
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="worksite" type="text" ng-model="Job.workSite">
+          <input id="worksite" type="text" ng-model="job.worksite">
           <label for="worksite">Worksite (if different from above)</label>
+          {{errors.workSite.messages}}
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="jobDescription" type="text" ng-model="Job.workSite">
-          <label for="jobDescription">*Job Description</label>
+          <input id="jobDescription" type="text" ng-model="job.jobDescription" required>
+          <label for="JobDescription">*Job Description</label>
+          {{errors.jobDescription.messages}}
         </div>
       </div>
-      	<div class="row">
-	        <div class="input-field col s4">
-	      		<input id="startDate" type="date" class="datepicker" ng-model="Job.stateDate">
-          		<label for="startDate">*Start Date</label>
-	        </div>
-	        <div class="input-field col s4">
-	      		<select id="startTime" ng-model="Job.startTime">
-	      			<option value="" disabled selected>*Start Time</option>
-				    <option value="12:00am">12:00am</option>
-				    <option value="12:30am">12:30am</option>
-				    <option value="1:00am">1:00am</option>
-				    <option value="1:30am">1:30am</option>
-				    <option value="2:00am">12:00am</option>
-				    <option value="2:30am">2:30am</option>
-				    <option value="3:00am">3:00am</option>
-				    <option value="3:30am">3:30am</option>
-				    <option value="4:00am">4:00am</option>
-				    <option value="4:30am">4:30am</option>
-				    <option value="5:00am">5:00am</option>
-				    <option value="5:30am">5:30am</option>
-				    <option value="6:00am">6:00am</option>
-				    <option value="6:30am">6:30am</option>
-				    <option value="7:00am">7:00am</option>
-				    <option value="7:30am">7:30am</option>
-				    <option value="8:00am">8:00am</option>
-				    <option value="8:30am">8:30am</option>
-				    <option value="9:00am">9:00am</option>
-				    <option value="9:30am">9:30am</option>
-				    <option value="10:00am">10:00am</option>
-				    <option value="10:30am">10:30am</option>
-				    <option value="11:00am">11:00am</option>
-				    <option value="11:30am">11:30am</option>
-				    <option value="12:00pm">12:00pm</option>
-				    <option value="12:30pm">12:30pm</option>
-				    <option value="1:00pm">1:00pm</option>
-				    <option value="1:30pm">1:30pm</option>
-				    <option value="2:00pm">12:00pm</option>
-				    <option value="2:30pm">2:30pm</option>
-				    <option value="3:00pm">3:00pm</option>
-				    <option value="3:30pm">3:30pm</option>
-				    <option value="4:00pm">4:00pm</option>
-				    <option value="4:30pm">4:30pm</option>
-				    <option value="5:00pm">5:00pm</option>
-				    <option value="5:30pm">5:30pm</option>
-				    <option value="6:00pm">6:00pm</option>
-				    <option value="6:30pm">6:30pm</option>
-				    <option value="7:00pm">7:00pm</option>
-				    <option value="7:30pm">7:30pm</option>
-				    <option value="8:00pm">8:00pm</option>
-				    <option value="8:30pm">8:30pm</option>
-				    <option value="9:00pm">9:00pm</option>
-				    <option value="9:30pm">9:30pm</option>
-				    <option value="10:00pm">10:00pm</option>
-				    <option value="10:30pm">10:30pm</option>
-				    <option value="11:00pm">11:00pm</option>
-				    <option value="11:30pm">11:30pm</option>
-			    </select>
-	  		</div>
-	  		<div class="input-field col s4">
-          		<input id="estimatedHours" type="number" class="validate" ng-model="Job.estimatedHours">
-          		<label for="estimatedHours">*Estimated Work Hours</label>
-        	</div>
+        <div class="row">
+            <div class="input-field col s4">
+                <input id="startDate" type="date" class="datepicker" ng-model="job.startDate" required>
+                <label for="startDate">*Start Date</label>
+                {{errors.startDate.messages}}
+            </div>
+            <div class="input-field col s4">
+                <select id="startTime" ng-model="job.startTime" required>
+                    <option value="" disabled selected>*Start Time</option>
+                    <option value="12:00am">12:00am</option>
+                    <option value="12:30am">12:30am</option>
+                    <option value="1:00am">1:00am</option>
+                    <option value="1:30am">1:30am</option>
+                    <option value="2:00am">12:00am</option>
+                    <option value="2:30am">2:30am</option>
+                    <option value="3:00am">3:00am</option>
+                    <option value="3:30am">3:30am</option>
+                    <option value="4:00am">4:00am</option>
+                    <option value="4:30am">4:30am</option>
+                    <option value="5:00am">5:00am</option>
+                    <option value="5:30am">5:30am</option>
+                    <option value="6:00am">6:00am</option>
+                    <option value="6:30am">6:30am</option>
+                    <option value="7:00am">7:00am</option>
+                    <option value="7:30am">7:30am</option>
+                    <option value="8:00am">8:00am</option>
+                    <option value="8:30am">8:30am</option>
+                    <option value="9:00am">9:00am</option>
+                    <option value="9:30am">9:30am</option>
+                    <option value="10:00am">10:00am</option>
+                    <option value="10:30am">10:30am</option>
+                    <option value="11:00am">11:00am</option>
+                    <option value="11:30am">11:30am</option>
+                    <option value="12:00pm">12:00pm</option>
+                    <option value="12:30pm">12:30pm</option>
+                    <option value="1:00pm">1:00pm</option>
+                    <option value="1:30pm">1:30pm</option>
+                    <option value="2:00pm">12:00pm</option>
+                    <option value="2:30pm">2:30pm</option>
+                    <option value="3:00pm">3:00pm</option>
+                    <option value="3:30pm">3:30pm</option>
+                    <option value="4:00pm">4:00pm</option>
+                    <option value="4:30pm">4:30pm</option>
+                    <option value="5:00pm">5:00pm</option>
+                    <option value="5:30pm">5:30pm</option>
+                    <option value="6:00pm">6:00pm</option>
+                    <option value="6:30pm">6:30pm</option>
+                    <option value="7:00pm">7:00pm</option>
+                    <option value="7:30pm">7:30pm</option>
+                    <option value="8:00pm">8:00pm</option>
+                    <option value="8:30pm">8:30pm</option>
+                    <option value="9:00pm">9:00pm</option>
+                    <option value="9:30pm">9:30pm</option>
+                    <option value="10:00pm">10:00pm</option>
+                    <option value="10:30pm">10:30pm</option>
+                    <option value="11:00pm">11:00pm</option>
+                    <option value="11:30pm">11:30pm</option>
+                </select>
+                {{errors.startTime.messages}}
+            </div>
+            <div class="input-field col s4">
+                <input id="estimatedHours" type="number" class="validate" ng-model="job.estimatedHours" required>
+                <label for="estimatedHours">*Estimated Work Hours</label>
+                {{errors.estimatedHours.messages}}
+            </div>
         </div>
         <div class="row">
-        	<div class="input-field col s12">
-          		<input id="skillsNeeded" type="text" class="validate" ng-model="Job.skillsNeeded">
-          		<label for="skillsNeeded">*Job Skills Needed</label>
-        	</div>
+            <div class="input-field col s12">
+                <input id="skillsNeeded" type="text" class="validate" ng-model="job.skillsNeeded" required>
+                <label for="skillsNeeded">*Job Skills Needed</label>
+                {{errors.skillsNeeded.messages}}
+            </div>
         </div>
         <div class="row">
-        	<div class="input-field col s6">
-          		<input id="numberOfWorkers" type="number" class="validate" ng-model="Job.numberOfWorkers">
-          		<label for="numberOfWorkers">*Number of Workers Needed</label>
-        	</div>
-        	<div class="input-field col s6">
-          		<input id="payRate" type="number" class="validate" ng-model="Job.payRate">
-          		<label for="payRate">*Pay Rate</label>
-        	</div>
+            <div class="input-field col s6">
+                <input id="numberOfWorkers" type="number" class="validate" ng-model="job.numberOfWorkers" required>
+                <label for="numberOfWorkers">*Number of Workers Needed</label>
+                {{errors.numberOfWorkers.messages}}
+            </div>
+            <div class="input-field col s6">
+                <input id="payRate" type="number" class="validate" ng-model="job.payRate" required>
+                <label for="payRate">*Pay Rate</label>
+                {{errors.payRate.messages}}
+            </div>
         </div>
-       <div>
-       		<div class="input-field col s6">
-    			<select ng-model="Job.perks" id="perks" multiple >
-				    <option value="" disabled selected>Choose any that apply</option>
-				    <option value="Will provide lunch">Will provide lunch</option>
-				    <option value="Restroom available">Restroom available</option>
-				    <option value="Will bring back to DWC">Will bring back to DWC</option>
-				    <option value="Will pay commute time">Will pay commute time</option>
-				    <option value="Will pay cash">Will pay cash</option>
-		    	</select>
-  			</div>
-  			<div class="input-field col s6">
-    			<select id="englishLevel" class="validate" ng-model="Job.englishLevel">
-				    <option value="" disabled selected>*English Level Needed</option>
-				    <option value="None">None</option>
-				    <option value="Understand only">Understand only</option>
-				    <option value="Understand and speak">Understand and speak</option>
-				    <option value="Understand and speak well">Understand and speak well</option>
-		    	</select>
-  			</div>
-       	</div>
-       	<div class="row">
-       		<button ng-click="newJob()" class="btn waves-effect waves-light col s4 m4 l2 offset-s4 offset-m4 offset-l5" type="submit" name="action">Submit
-    		<i class="material-icons right">send</i>
-  			</button>
-  		</div>
-  	</form>
+       <div class="row">
+            <div class="input-field col s6">
+                <select ng-model="job.perks" id="perks" multiple>
+                    <option value="" disabled selected>Choose any that apply</option>
+                    <option value="Will provide lunch">Will provide lunch</option>
+                    <option value="Restroom available">Restroom available</option>
+                    <option value="Will bring back to DWC">Will bring back to DWC</option>
+                    <option value="Will pay commute time">Will pay commute time</option>
+                    <option value="Will pay cash">Will pay cash</option>
+                </select>
+                {{errors.perks.messages}}
+            </div>
+            <div class="input-field col s6">
+                <select id="englishLevel" class="validate" ng-model="job.englishLevel" required>
+                    <option value="" disabled selected>*English Level Needed</option>
+                    <option value="None">None</option>
+                    <option value="Understand only">Understand only</option>
+                    <option value="Understand and speak">Understand and speak</option>
+                    <option value="Understand and speak well">Understand and speak well</option>
+                </select>
+                {{errors.englishLevel.messages}}
+            </div>
+        </div>
+                <div class="row">
+          <button class="btn waves-effect waves-light col s4 m4 l2 offset-s4 offset-m4 offset-l5" ng-click="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </form>
     
   </div>
+  <hr>
 
+  <script type="text/javascript">
+    $(document).ready(function() {
+    $('select').material_select();
+    $('#how_heard').trigger('autoresize');
+    $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+    });
+  });
+  </script>
