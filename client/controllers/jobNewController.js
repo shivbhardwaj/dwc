@@ -9,4 +9,9 @@ DWCAppModule.controller('jobNewController', ['$scope','jobsFactory', '$location'
             $location.url("/jobs");
         });
         }
+    $scope.createForStaff = function(){
+        jobsFactory.createJobForStaff($scope.job, function(){
+            $location.url("/jobs");
+        });
+        }
 }]);

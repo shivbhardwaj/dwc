@@ -132,7 +132,7 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 			templateUrl: "partials/donate.html",
 		})
 
-		// -------STAFF
+// -------------STAFF
 		.when('/staff/login',
 		{
 			templateUrl: "partials/staff/login.html",
@@ -161,9 +161,9 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 			controller: 'editUserController',
 			templateUrl: 'partials/staff/edit_user.html'
 		})
-		// -------STAFF END
+// -------------STAFF END
 
-		// -------JOBS
+// -------------JOBS
 		.when('/staff/jobs',
 		{
 			templateUrl: "partials/staff/jobs/index.html",
@@ -176,8 +176,8 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 		})
 		.when('/staff/jobs/new',
 		{
-			templateUrl: "partials/staff/jobs/index.html",
-			// controller: 'jobNewController'
+			templateUrl: "partials/staff/jobs/new.html",
+			controller: 'jobNewController'
 		})
 		.when('/staff/jobs/:id/assign',
 		{
@@ -192,7 +192,7 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 		.when('/staff/jobs/:id/edit',
 		{
 			templateUrl: "partials/staff/jobs/edit.html",
-			// controller: 'jobEditController'
+			controller: 'jobEditController'
 		})
 		.when('/staff/jobs/:id',
 		{
@@ -200,9 +200,9 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 			controller: 'jobShowController'
 		})
 
-		// -------JOBS END
+// -------------JOBS END
 
-		// -------PAGES
+// -------------PAGES
 		.when('/staff/pages',
 		{
 			templateUrl: "partials/staff/pages/index.html",
@@ -224,9 +224,9 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 			// controller: 'jobShowController'
 		// })
 
-		// -------PAGES END
+// -------------PAGES END
 
-		// -------MAILS
+// -------------MAILS
 		.when('/staff/mails',
 		{
 			templateUrl: "partials/staff/mails/index.html",
@@ -240,12 +240,16 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 		})
 		
 
-		// -------MAILS END
+// -------------MAILS END
 
-		// -------CATCHALL
+// -------------CATCHALL
 		.otherwise({
 			redirectTo: "/"
 		})
+
+//--------------THE CODE BELOW WILL ALLOW YOU TO REMOVE THE # FROM THE NAVBAR 
+
+
 		// if(window.history && window.history.pushState){
 		// 	$locationProvider.html5Mode(true);
 		// 	//will cause an error $location in HTML5 mode requires a  tag to be present! Unless you set baseUrl tag after head tag like so: <head> <base href="/">
@@ -256,5 +260,8 @@ var DWCAppModule = angular.module("DWC",["ngRoute", "ngMessages", "ngCookies", "
 		//   //        requireBase: false
 		//   // 	});
 		// }
+//--------------END OF ANTI-# 
+
+
 	})
 }());

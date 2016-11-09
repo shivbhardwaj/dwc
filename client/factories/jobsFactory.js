@@ -31,6 +31,20 @@ DWCAppModule.factory('jobsFactory', ['$http', function($http){
             }
         });
     }
+    factory.createJobForStaff = function(newJob, callback){
+
+        $http.post("/jobs", newJob).then(function(returned_data){
+            if(typeof(callback) == 'function'){
+                callback(returned_data.data);
+                if(returned_data.data.errors){
+                    window.location.href = '#/fail'
+                }
+                else{
+                window.location.href = '#/staff/jobs';
+            } 
+            }
+        });
+    }
     factory.updateJob = function(id, updatedJob, callback){        
         $http.put("/jobs/"+id, updatedJob).then(function(returned_data){            
             if(typeof(callback) == 'function'){
@@ -43,6 +57,7 @@ DWCAppModule.factory('jobsFactory', ['$http', function($http){
         $http.delete("/jobs/"+id).then(function(){
             if(typeof(callback) == 'function'){
                 callback();
+                window.location.href = '#/staff/jobs';
             }
         });
     }

@@ -38,3 +38,6 @@
   <br>
   <p>Last Updated By: {{ job.updatedBy }}</p>
 </div>
+<div ng-if="userLevel!=1">
+<a href="#/staff/jobs/{{job._id}}/edit" class="btn waves-effect waves-light" type="assigned">Edit</a>
+</div>

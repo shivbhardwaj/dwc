@@ -10,6 +10,10 @@ DWCAppModule.controller('jobEditController', ['$scope','jobsFactory', '$cookies'
             $scope.jobs = data;
         });
     };
+    $scope.delete = function(job_id){
+        jobsFactory.deleteJob(job_id, function(){
+        });
+    };
 
     jobsFactory.getOneJob(routeParams.id, function(data){
 		  $scope.job = data;
