@@ -4,17 +4,14 @@ DWCAppModule.factory('pagesFactory', ['$http', function($http){
     var page = [];
 
     factory.getAllPages = function(callback){
-        $http.get("/pages").then(function(data){
-            console.log(data);
+        $http.get("/pages").then(function(data){            
             pages = data.data;
             callback(pages);
         });
     }
 
-    factory.getOnePage = function(id, callback){
-        console.log(id);
-        $http.get("/pages/"+id).then(function(data){
-            console.log(data);
+    factory.getOnePage = function(id, callback){        
+        $http.get("/pages/"+id).then(function(data){            
             pages = data.data;
             callback(pages);
         });
@@ -34,18 +31,15 @@ DWCAppModule.factory('pagesFactory', ['$http', function($http){
             }
         });
     }
-    factory.updatePage = function(id, updatedPage, callback){
-        console.log(id);
-        $http.put("/pages/"+id, updatedPage).then(function(returned_data){
-            console.log(returned_data);
+    factory.updatePage = function(id, updatedPage, callback){        
+        $http.put("/pages/"+id, updatedPage).then(function(returned_data){            
             if(typeof(callback) == 'function'){
                 callback(returned_data.data);
                 history.back();
             }
         });
     }
-    factory.deletePage = function(id, callback){
-        console.log(id);
+    factory.deletePage = function(id, callback){        
         $http.delete("/pages/"+id).then(function(){
             if(typeof(callback) == 'function'){
                 callback();

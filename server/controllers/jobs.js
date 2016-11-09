@@ -11,12 +11,9 @@ module.exports = {
             }
         });
     },
-    create: function(req, res) {
-        console.log("gdafzsgfdsgfd")
-        console.log(req.body)
+    create: function(req, res) {                
         var newJob = new Job(
         	{
-                // employer: req.body.employer ,
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
                 companyName: req.body.companyName,
@@ -39,10 +36,8 @@ module.exports = {
             });
         newJob.save(function(err, data) {
             if (err) {
-                res.json(err);
-                console.log('asdf')
-            } else {
-                console.log('asdfsdfdsafsdafdsafdsadfs')
+                res.json(err);                
+            } else {                
                 res.json({ data: data }); // change later to simple success message
             }
         });

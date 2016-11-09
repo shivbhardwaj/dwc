@@ -1,3 +1,17 @@
+
+<div class="row">
+  <div class="right-align" style="margin-right: 3%">
+    <ul class="subnav">
+      <li class="subnav"><a href="#/staff"><button class="waves-effect waves-light"> Dashboard </a></li>	
+      <li class="subnav"><a href="#/staff/jobs"><button class="waves-effect waves-light">All Jobs </a></li>
+      <li class="subnav"><a href="#/staff/jobs/reports"><button class="waves-effect waves-light">Reports </a></li>
+      <li class="subnav"><a href="#/staff/pages"><button class="waves-effect waves-light">Edit Front Page </a></li>
+      <li class="subnav"><a href="#/staff/mails"><button class="waves-effect waves-light">Contact Requests </a></li>
+      <li class="subnav"><a ng-click='logout()'><button class="waves-effect waves-light">Log Out</button></a></li>
+    </ul>
+  </div>
+  </div>
+  
 <form>
 	<div class="input-field">
 	<input type="text" id="searchbox" ng-model="searchText">
@@ -5,21 +19,38 @@
 	</div>
 </form>
 <h1>Completed Tasks</h1>
-<table class="responsive-table" class="bordered">
+<table class="responsive-table bordered">
 		<thead>
 			<tr>
-				<th data-field="date">Date</th>
-				<th data-field="time">Time</th>
-				<th data-field="address">Address</th>
-				<th data-field="numberOfWorkers">Number of Workers</th>
+				<th>Date</th>
+				<th>Employer Name</th>
+				<th>Employer Phone</th>
+				<th>Work Request</th>
+				<th>Workers Assigned</th>
+				<th>Address of Job</th>
+				<th>Start Time</th>
+				<th>Hours</th>
+				<th>Hourly Rate</th>
+				<th>Pay Calculation</th>
+				<th>Review</th>
+				<th>Review Notes</th>
+				<th>Action</th>
 			</tr>
 		</thead>
 			<tbody>
 				<tr ng-repeat="job in jobs | filter:searchText" ng-if="job.review">
 					<td>{{ job.startDate | date:'yyyy-MM-dd' }}</td>
+					<td>{{ job.firstName }} {{ job.lastName }}</td>
+					<td>{{ job.phoneNumber }}</td>
+					<td>{{ job.jobDescription }}</td>
+					<td>{{ job.workersAssigned }}</td>
+					<td>{{ job.workSite ? job.workSite : job.physicalAddress + ', ' + job.city }}</td>
 					<td>{{ job.startTime }}</td>
-					<td>{{ job.physicalAddress }}</td>
-					<td>{{ job.numberOfWorkers }}</td>
+					<td>{{ job.estimatedHours }}</td>
+					<td>${{ job.payRate }}</td>
+					<td>${{ job.payRate*job.estimatedHours }}</td>
+					<td>{{ job.review }}</td>
+					<td>{{ job.reviewNotes }}</td>
 					<td><a href="#/staff/jobs/{{job._id}}" class="btn waves-effect waves-light" type="assigned">Details</a></td>
 
 				</tr>

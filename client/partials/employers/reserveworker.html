@@ -16,12 +16,12 @@
         <hr>
       <div class="row">
         <div class="input-field col s6">
-          <input id="first_name" type="text" class="validate" ng-model="job.firstName">
+          <input id="first_name" type="text" class="validate" ng-model="job.firstName" required>
           <label for="first_name">*First Name</label>
           {{errors.firstName.messages}}
         </div>
         <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate" ng-model="job.lastName">
+          <input id="last_name" type="text" class="validate" ng-model="job.lastName" required>
           <label for="last_name">*Last Name</label>
           {{errors.lastName.messages}}
         </div>
@@ -35,31 +35,31 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="physicalAddress" type="text" class="validate" ng-model="job.physicalAddress">
+          <input id="physicalAddress" type="text" class="validate" ng-model="job.physicalAddress" required>
           <label for="physicalAddress">*Address</label>
           {{errors.physicalAddress.messages}}
         </div>
       </div>
       <div class="row">
         <div class="input-field col s6">
-          <input id="city" type="text" class="validate" ng-model="job.city">
+          <input id="city" type="text" class="validate" ng-model="job.city" required>
           <label for="city">*City</label>
           {{errors.city.messages}}
         </div>
         <div class="input-field col s6">
-          <input id="zip" type="text" class="validate" ng-model="job.zip">
+          <input id="zip" type="text" class="validate" ng-model="job.zip" required>
           <label for="zip">*Zip Code</label>
           {{errors.zip.messages}}
         </div>
       </div>
       <div class="row">
       <div class="input-field col s6">
-          <input id="phoneNumber" type="text" class="validate" ng-model="job.phoneNumber">
+          <input id="phoneNumber" type="text" class="validate" ng-model="job.phoneNumber" required>
           <label for="phoneNumber">*Phone</label>
           {{errors.phoneNumber.messages}}
         </div>
         <div class="input-field col s6">
-          <input id="emailAddress" type="email" class="validate" ng-model="job.emailAddress">
+          <input id="emailAddress" type="email" class="validate" ng-model="job.emailAddress" required>
           <label for="emailAddress">*Email</label>
           {{errors.emailAddress.messages}}
         </div>
@@ -82,26 +82,26 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="worksite" type="text" ng-model="job.workSite">
+          <input id="worksite" type="text" ng-model="job.worksite">
           <label for="worksite">Worksite (if different from above)</label>
           {{errors.workSite.messages}}
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input id="jobDescription" type="text" ng-model="job.jobDescription">
+          <input id="jobDescription" type="text" ng-model="job.jobDescription" required>
           <label for="JobDescription">*Job Description</label>
           {{errors.jobDescription.messages}}
         </div>
       </div>
         <div class="row">
             <div class="input-field col s4">
-                <input id="startDate" type="date" class="datepicker" ng-model="job.startDate">
+                <input id="startDate" type="date" class="datepicker" ng-model="job.startDate" required>
                 <label for="startDate">*Start Date</label>
                 {{errors.startDate.messages}}
             </div>
             <div class="input-field col s4">
-                <select id="startTime" ng-model="job.startTime">
+                <select id="startTime" ng-model="job.startTime" required>
                     <option value="" disabled selected>*Start Time</option>
                     <option value="12:00am">12:00am</option>
                     <option value="12:30am">12:30am</option>
@@ -155,26 +155,26 @@
                 {{errors.startTime.messages}}
             </div>
             <div class="input-field col s4">
-                <input id="estimatedHours" type="number" class="validate" ng-model="job.estimatedHours">
+                <input id="estimatedHours" type="number" class="validate" ng-model="job.estimatedHours" required>
                 <label for="estimatedHours">*Estimated Work Hours</label>
                 {{errors.estimatedHours.messages}}
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input id="skillsNeeded" type="text" class="validate" ng-model="job.skillsNeeded">
+                <input id="skillsNeeded" type="text" class="validate" ng-model="job.skillsNeeded" required>
                 <label for="skillsNeeded">*Job Skills Needed</label>
                 {{errors.skillsNeeded.messages}}
             </div>
         </div>
         <div class="row">
             <div class="input-field col s6">
-                <input id="numberOfWorkers" type="number" class="validate" ng-model="job.numberOfWorkers">
+                <input id="numberOfWorkers" type="number" class="validate" ng-model="job.numberOfWorkers" required>
                 <label for="numberOfWorkers">*Number of Workers Needed</label>
                 {{errors.numberOfWorkers.messages}}
             </div>
             <div class="input-field col s6">
-                <input id="payRate" type="number" class="validate" ng-model="job.payRate">
+                <input id="payRate" type="number" class="validate" ng-model="job.payRate" required>
                 <label for="payRate">*Pay Rate</label>
                 {{errors.payRate.messages}}
             </div>
@@ -192,7 +192,7 @@
                 {{errors.perks.messages}}
             </div>
             <div class="input-field col s6">
-                <select id="englishLevel" class="validate" ng-model="job.englishLevel">
+                <select id="englishLevel" class="validate" ng-model="job.englishLevel" required>
                     <option value="" disabled selected>*English Level Needed</option>
                     <option value="None">None</option>
                     <option value="Understand only">Understand only</option>
