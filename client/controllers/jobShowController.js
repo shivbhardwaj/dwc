@@ -4,7 +4,9 @@ DWCAppModule.controller('jobShowController', ['$scope','jobsFactory', '$cookies'
   $scope.userLevel = $cookies.get("userLevel");
   $scope.lastName = $cookies.get("lastName");
   $scope.emailAddress = $cookies.get("emailAddress");
-
+  if(!logged_in_user){
+    $location.url('/staff/login')
+  }
 
   $scope.show = function(){
       jobsFactory.getOneJob(routeParams.id, function(data){
@@ -17,5 +19,9 @@ DWCAppModule.controller('jobShowController', ['$scope','jobsFactory', '$cookies'
   with ng-submit or ng-click (from the form in the previous assignment).
   Want to all of the jobs when we get back?  We can re-run index.
 */
+$scope.logout = function(){
+  $cookies.remove('logged_user');
+  $location.url('/');
+}
 
 }]);

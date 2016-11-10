@@ -1,12 +1,28 @@
-<div ng-if="userLevel!=1">
-<button href="#" ng-click="delete(job._id)">Delete</button>
-</div>
-<form ng-submit="update()" class="col s12">
+
+
+<div class="row">
+    <div class="right-align" style="margin-right: 3%">
+      <ul class="subnav">
+        <li class="subnav"><a href="#/staff"><button class="waves-effect waves-light"> Dashboard </button></a></li>
+        <li class="subnav"><a href="#/staff/jobs"><button class="waves-effect waves-light">All Jobs </button></a></li>
+        <li class="subnav"><a href="#/staff/jobs/reports"><button class="waves-effect waves-light">Reports </button></a></li>
+        <div ng-if="userLevel!=1"><li class="subnav"><a href="#/staff/pages"><button class="waves-effect waves-light">Edit Front Page</button> </a></li></div>
+        <li class="subnav"><a href="#/staff/mails"><button class="waves-effect waves-light">Contact Requests </button></a></li>
+        <li class="subnav"><a ng-click='logout()'><button class="waves-effect waves-light">Log Out</button></a></li>
+      </ul>
+    </div>
+  </div>
+  <div ng-if="userLevel!=1">
+  <div ng-if="userLevel!=1">
+    <button href="#" ng-click="delete(job._id)">Delete</button>
+  </div>
+  <form ng-submit="update()" class="col s12">
       {{ errors }}
-        <div class="row">
-            <h5 class="center-align">Employer Information</h5>
-        </div>
-        <hr>
+      <div class="row">
+          <h5 class="center-align">Employer Information</h5>
+      </div>
+      <hr>
+
       <div class="row">
         <div class="input-field col s6">
           <input id="first_name" type="text" class="validate" ng-model="job.firstName" required>
@@ -17,6 +33,7 @@
           <input id="last_name" type="text" class="validate" ng-model="job.lastName" required>
           <label for="last_name">*Last Name</label>
           {{errors.lastName.messages}}
+
         </div>
       </div>
       <div class="row">
@@ -232,7 +249,6 @@
     </form>
     
   </div>
-  <hr>
 
   <script type="text/javascript">
     $(document).ready(function() {
@@ -243,4 +259,6 @@
     selectYears: 15 // Creates a dropdown of 15 years to control year
     });
   });
+
   </script>
+

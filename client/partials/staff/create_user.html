@@ -1,14 +1,29 @@
-<form ng-model = "registration" ng-submit = "register()">
-  {{errors}}
-  {{errors.firstName.message}}
-  <div><input type="text" ng-model = "newUser.firstName" placeholder= "First Name"></div>
-  {{errors.lastName.message}}
-  <div><input type="text"  ng-model = "newUser.lastName" placeholder= "Last Name"></div>
-  {{errors.emailAddress.message}}
-  <div><input type="text"  ng-model = "newUser.emailAddress" placeholder= "Email Address"></div>
-  {{errors.password.message}}
-  <div><input type="password"  ng-model = "newUser.password" placeholder= "Password"></div>
-  <div><input type="password" ng-model = "newUser.confirm_password" placeholder= "Confirm Password"></div>
-  <div><input type="submit" value = "Register"></div>
-</form>
-<a href="#/staff">Back to Staff Home</a>
+<div class="row">
+    <div class="right-align" style="margin-right: 3%">
+      <ul class="subnav">
+        <li class="subnav"><a href="#/staff"><button class="waves-effect waves-light"> Dashboard </button></a></li>
+        <li class="subnav"><a href="#/staff/jobs"><button class="waves-effect waves-light">All Jobs </button></a></li>
+        <li class="subnav"><a href="#/staff/jobs/reports"><button class="waves-effect waves-light">Reports </button></a></li>
+        <div ng-if="userLevel!=1"><li class="subnav"><a href="#/staff/pages"><button class="waves-effect waves-light">Edit Front Page</button> </a></li></div>
+        <li class="subnav"><a href="#/staff/mails"><button class="waves-effect waves-light">Contact Requests </button></a></li>
+        <li class="subnav"><a ng-click='logout()'><button class="waves-effect waves-light">Log Out</button></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div ng-if="userLevel==3">
+
+  <form ng-model = "registration" ng-submit = "register()">
+    {{errors}}
+    {{errors.firstName.message}}
+    <div><input type="text" ng-model = "newUser.firstName" placeholder= "First Name"></div>
+    {{errors.lastName.message}}
+    <div><input type="text"  ng-model = "newUser.lastName" placeholder= "Last Name"></div>
+    {{errors.emailAddress.message}}
+    <div><input type="text"  ng-model = "newUser.emailAddress" placeholder= "Email Address"></div>
+    {{errors.password.message}}
+    <div><input type="password"  ng-model = "newUser.password" placeholder= "Password"></div>
+    <div><input type="password" ng-model = "newUser.confirm_password" placeholder= "Confirm Password"></div>
+    <div><input type="submit" value = "Register"></div>
+  </form>
+</div>

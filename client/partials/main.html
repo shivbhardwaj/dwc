@@ -39,21 +39,21 @@
 			<div class="row vertalign">
 					<div class="col s10 offset-s1 m6 l4">
         		<a href= "#/aboutus">
-        			<div class="card-panel" style="background-image: url(./../images/img_left_on_facility.jpg); background-repeat: no-repeat; background-size: cover; padding-top: 35%">
+        			<div class="card-panel z-depth-5" style="background-image: url(./../images/img_left_on_facility.jpg); background-repeat: no-repeat; background-size: cover; padding-top: 35%; border: solid white 10px;">
           				<p class="right-align black-text" >Our new location</p>
         			</div>
         		</a>
       		</div>
 			<div class="col s10 offset-s1 m6 l4">
         		<a href= "#/employers/reserveworker">
-        			<div class="card-panel" style="background-image: url(./../images/hire.jpg); background-repeat: no-repeat;background-position: center; background-size: cover; padding-top: 35%">
+        			<div class="card-panel z-depth-5" style="background-image: url(./../images/hire.jpg); background-repeat: no-repeat;background-position: center; background-size: cover; padding-top: 35%; border: solid white 10px;">
         				<p class="right-align white-text"><span style="opacity: 0">Hire a worker</span></p>
         			</div>
         		</a>
       		</div>
       		<div class="col s10 offset-s1 m6 offset-m3 l4">
         		<a href= "#/volunteer">
-        			<div class="card-panel" style="background-image: url(./../images/volunteer.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; padding-top: 35%">
+        			<div class="card-panel z-depth-5" style="background-image: url(./../images/volunteer.jpg); background-repeat: no-repeat; background-size: cover; background-position: center; padding-top: 35%; border: solid white 10px;">
           				<p class="right-align white-text" >Volunteer</p>
         			</div>
         		</a>
@@ -66,7 +66,7 @@
 				<div class="row">
 					<div ng-repeat-start="page in pages" ng-if="$first" big>
 						<a href="{{ page.frontPageLink }}">
-							<img class="col s12 m12 l10 offset-l1" data-ng-src="{{'data:image/jpg;base64,'+page.frontPageImage}}">
+							<img class="col s12 m12 l10 offset-l1" data-ng-src="{{'data:image/jpg;base64,'+page.frontPageImage}}" style="">
 						</a>
 					</div>
 					<div ng-repeat-end ng-if="!first"></div>

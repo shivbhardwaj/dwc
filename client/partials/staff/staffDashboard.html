@@ -1,17 +1,20 @@
 <h2>Welcome, {{firstName}}!</h2>
 
 <div ng-if="userLevel==3">
-	<a href="#/staff/createUser"><h1>Add New User</h1></a>
-	<a href="#/staff/allUsers"><h1>View All Users</h1></a>
+	<a href="#/staff/createUser"><h1 class="center-align">Add New User</h1></a>
+	<a href="#/staff/allUsers"><h1 class="center-align">View All Users</h1></a>
 </div>
 <br>
 
 <ul>
-	<li><a href="#/staff/jobs"><h1>All Jobs</h1></a></li>
-	<li><a href="#/staff/jobs/new"><h1>New Work Request</h1></a></li>
-	<li><a href="#/staff/jobs/reports"><h1>Reports</h1></a></li>
-	<li><a href="#/staff/pages"><h1>Show Page</h1></a></li>
-  	<li><a href="#/staff/mails"><h1>Contacts</h1></a></li>
+
+	<li><a href="#/staff/jobs"><h1 class="center-align">All Jobs</h1></a></li>
+	<li><a href="#/staff/jobs/new"><h1 class="center-align">New Work Request</h1></a></li>
+	<li><a href="#/staff/jobs/reports"><h1 class="center-align">Reports</h1></a></li>
+	<div ng-if="userLevel!=1"><li><a href="#/staff/pages"><h1 class="center-align">Page Notifications</h1></a></li></div>
+  	<li><a href="#/staff/mails"><h1 class="center-align">Contacts</h1></a></li>
 </ul>
 
+<div class="center-align">
 <a ng-click='logout()'><button class="waves-effect waves-light btn-large">Log Out</button></a>
+</div>
