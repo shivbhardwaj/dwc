@@ -1,14 +1,14 @@
 <div class="row">
-  <div class="right-align" style="margin-right: 3%">
-    <ul class="subnav">
-      <li class="subnav"><a href="#/staff"><button class="waves-effect waves-light"> Dashboard </a></li> 
-      <li class="subnav"><a href="#/staff/jobs"><button class="waves-effect waves-light">All Jobs </a></li>
-      <li class="subnav"><a href="#/staff/jobs/reports"><button class="waves-effect waves-light">Reports </a></li>
-      <li class="subnav"><a href="#/staff/pages"><button class="waves-effect waves-light">Edit Front Page </a></li>
-      <li class="subnav"><a href="#/staff/mails"><button class="waves-effect waves-light">Contact Requests </a></li>
-      <li class="subnav"><a ng-click='logout()'><button class="waves-effect waves-light">Log Out</button></a></li>
-    </ul>
-  </div>
+    <div class="right-align" style="margin-right: 3%">
+      <ul class="subnav">
+        <li class="subnav"><a href="#/staff"><button class="waves-effect waves-light"> Dashboard </button></a></li>
+        <li class="subnav"><a href="#/staff/jobs"><button class="waves-effect waves-light">All Jobs </button></a></li>
+        <li class="subnav"><a href="#/staff/jobs/reports"><button class="waves-effect waves-light">Reports </button></a></li>
+        <div ng-if="userLevel!=1"><li class="subnav"><a href="#/staff/pages"><button class="waves-effect waves-light">Edit Front Page</button> </a></li></div>
+        <li class="subnav"><a href="#/staff/mails"><button class="waves-effect waves-light">Contact Requests </button></a></li>
+        <li class="subnav"><a ng-click='logout()'><button class="waves-effect waves-light">Log Out</button></a></li>
+      </ul>
+    </div>
   </div>
 
 
