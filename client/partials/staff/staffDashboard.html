@@ -6,13 +6,12 @@
 </div>
 <br>
 
-<ul>
-
-	<li><a href="#/staff/jobs"><h1 class="center-align">All Jobs</h1></a></li>
-	<li><a href="#/staff/jobs/new"><h1 class="center-align">New Work Request</h1></a></li>
-	<li><a href="#/staff/jobs/reports"><h1 class="center-align">Reports</h1></a></li>
-	<div ng-if="userLevel!=1"><li><a href="#/staff/pages"><h1 class="center-align">Page Notifications</h1></a></li></div>
-  	<li><a href="#/staff/mails"><h1 class="center-align">Contacts</h1></a></li>
+<ul class="subnav">
+	<li class="subnav"><a href="#/staff/jobs"><button class="waves-effect waves-light">All Jobs </button></a></li>
+	<li class="subnav"><a href="#/staff/jobs/reports"><button class="waves-effect waves-light">Reports </button></a></li>
+	<li class="subnav"><a href="#/staff/mails"><button class="waves-effect waves-light">Contact Requests </button></a></li>
+	<li class="subnav"><div ng-if="userLevel!=1"><a href="#/staff/pages"><button class="waves-effect waves-light">Edit Front Page</button> </a></div></li>
+	<li class="subnav"><a ng-click='logout()'><button class="waves-effect waves-light">Log Out</button></a></li>
 </ul>
 
 <div class="center-align">
