@@ -1,10 +1,23 @@
-DWCAppModule.controller('newUserController', function($scope, $routeParams, $location, userFactory){
-	
+DWCAppModule.controller('newUserController', function($scope, $routeParams, $cookies ,$location, userFactory){
 
-  $scope.register=function(){		
+	var logged_in_user = $cookies.get('logged_user');
+	$scope.firstName = $cookies.get("firstName");
+	$scope.userLevel = $cookies.get("userLevel");
+	$scope.lastName = $cookies.get("lastName");
+	$scope.emailAddress = $cookies.get("emailAddress");
+	if(!logged_in_user){
+		$location.url('/staff/login')
+	}
+
+  $scope.register=function(){
 		userFactory.addUser($scope.newUser, function(userArray){
 			$scope.users=userArray;
 		})
+	}
+
+	$scope.logout = function(){
+		$cookies.remove('logged_user');
+		$location.url('/');
 	}
 })
 

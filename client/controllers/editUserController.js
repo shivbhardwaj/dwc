@@ -1,4 +1,12 @@
-DWCAppModule.controller('editUserController', function($scope, $routeParams, $location, userFactory){
+DWCAppModule.controller('editUserController', function($scope, $cookies, $routeParams, $location, userFactory){
+	var logged_in_user = $cookies.get('logged_user');
+	$scope.firstName = $cookies.get("firstName");
+	$scope.userLevel = $cookies.get("userLevel");
+	$scope.lastName = $cookies.get("lastName");
+	$scope.emailAddress = $cookies.get("emailAddress");
+	if(!logged_in_user){
+		$location.url('/staff/login')
+	}
 
 	console.log('I am able to load my editUserController along with my edit_user partial');
 
@@ -14,4 +22,9 @@ DWCAppModule.controller('editUserController', function($scope, $routeParams, $lo
       $location.path('/staff/allUsers');
     });
   };
+
+	$scope.logout = function(){
+		$cookies.remove('logged_user');
+		$location.url('/');
+	}
 });

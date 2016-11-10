@@ -1,10 +1,9 @@
 DWCAppModule.controller('loginController', function($scope, $location, $cookies, userFactory){
   var logged_in_user = $cookies.get('logged_user');
   $scope.firstName = $cookies.get("firstName");
-  $scope.emailAddress = $cookies.get("emailAddress");
-
   $scope.userLevel = $cookies.get("userLevel");
-
+  $scope.lastName = $cookies.get("lastName");
+  $scope.emailAddress = $cookies.get("emailAddress");
   if(!logged_in_user){
     $location.url('/staff/login')
   }
