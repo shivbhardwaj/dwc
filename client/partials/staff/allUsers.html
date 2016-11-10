@@ -1,22 +1,22 @@
-<div ng-controller="allUsersController">
-<div class="row">
-  <div class="right-align" style="margin-right: 3%">
-    <ul class="subnav">
-      <li class="subnav"><a href="#/staff"><button class="waves-effect waves-light"> Dashboard </a></li>
-      <li class="subnav"><a href="#/staff/jobs"><button class="waves-effect waves-light">All Jobs </a></li>
-      <li class="subnav"><a href="#/staff/jobs/reports"><button class="waves-effect waves-light">Reports </a></li>
-      <li class="subnav"><a href="#/staff/pages"><button class="waves-effect waves-light">Edit Front Page </a></li>
-      <li class="subnav"><a href="#/staff/mails"><button class="waves-effect waves-light">Contact Requests </a></li>
-      <li class="subnav"><a ng-click='logout()'><button class="waves-effect waves-light">Log Out</button></a></li>
-    </ul>
-  </div>
-  </div>
+<div ng-if="userLevel==3">
+  <div class="row">
+    <div class="right-align" style="margin-right: 3%">
+      <ul class="subnav">
+        <li class="subnav"><a href="#/staff"><button class="waves-effect waves-light"> Dashboard </a></li>
+        <li class="subnav"><a href="#/staff/jobs"><button class="waves-effect waves-light">All Jobs </a></li>
+        <li class="subnav"><a href="#/staff/jobs/reports"><button class="waves-effect waves-light">Reports </a></li>
+        <li class="subnav"><a href="#/staff/pages"><button class="waves-effect waves-light">Edit Front Page </a></li>
+        <li class="subnav"><a href="#/staff/mails"><button class="waves-effect waves-light">Contact Requests </a></li>
+        <li class="subnav"><a ng-click='logout()'><button class="waves-effect waves-light">Log Out</button></a></li>
+      </ul>
+    </div>
+    </div>
 
-	<div ng-repeat= "user in users">
-		<h4>First & Last Name: {{user.firstName}} {{user.lastName}}</h4>
-		<h4>User Email: {{user.emailAddress}}</h4>
-		<h4><a href="#/users/{{user._id}}">Show User Record</a></h4>
-		<h4><a href="#/users/{{user._id}}/edit">Edit User Record</a></h4>
-		<hr>
-	</div>
-</div>
+  	<div ng-repeat= "user in users">
+  		<h4>First & Last Name: {{user.firstName}} {{user.lastName}}</h4>
+  		<h4>User Email: {{user.emailAddress}}</h4>
+  		<h4><a href="#/users/{{user._id}}">Show User Record</a></h4>
+  		<h4><a href="#/users/{{user._id}}/edit">Edit User Record</a></h4>
+  		<hr>
+  	</div>
+  </div>

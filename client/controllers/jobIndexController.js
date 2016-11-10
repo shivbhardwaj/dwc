@@ -4,6 +4,7 @@ DWCAppModule.controller('jobIndexController', ['$scope','jobsFactory', '$cookies
   $scope.userLevel = $cookies.get("userLevel");
   $scope.lastName = $cookies.get("lastName");
   $scope.emailAddress = $cookies.get("emailAddress");
+
   if(!logged_in_user){
     $location.url('/staff/login')
   }

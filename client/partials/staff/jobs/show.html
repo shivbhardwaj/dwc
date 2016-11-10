@@ -1,58 +1,56 @@
-
-<div class="row">
-  <div class="right-align" style="margin-right: 3%">
-    <ul class="subnav">
-      <li class="subnav"><a href="#/staff"><button class="waves-effect waves-light"> Dashboard </a></li> 
-      <li class="subnav"><a href="#/staff/jobs"><button class="waves-effect waves-light">All Jobs </a></li>
-      <li class="subnav"><a href="#/staff/jobs/reports"><button class="waves-effect waves-light">Reports </a></li>
-      <li class="subnav"><a href="#/staff/pages"><button class="waves-effect waves-light">Edit Front Page </a></li>
-      <li class="subnav"><a href="#/staff/mails"><button class="waves-effect waves-light">Contact Requests </a></li>
-      <li class="subnav"><a ng-click='logout()'><button class="waves-effect waves-light">Log Out</button></a></li>
-    </ul>
+  <div class="row">
+    <div class="right-align" style="margin-right: 3%">
+      <ul class="subnav">
+        <li class="subnav"><a href="#/staff"><button class="waves-effect waves-light"> Dashboard </a></li>
+        <li class="subnav"><a href="#/staff/jobs"><button class="waves-effect waves-light">All Jobs </a></li>
+        <li class="subnav"><a href="#/staff/jobs/reports"><button class="waves-effect waves-light">Reports </a></li>
+        <li class="subnav"><a href="#/staff/pages"><button class="waves-effect waves-light">Edit Front Page </a></li>
+        <li class="subnav"><a href="#/staff/mails"><button class="waves-effect waves-light">Contact Requests </a></li>
+        <li class="subnav"><a ng-click='logout()'><button class="waves-effect waves-light">Log Out</button></a></li>
+      </ul>
+    </div>
   </div>
+
+  <div>
+    <a href="#/staff"> Go Back </a>
+    <p>First Name: {{ job.firstName }}</p>
+    <p>Last Name: {{ job.lastName }}</p>
+    <p>Company Name: {{ job.companyName }}</p>
+    <p>Address: {{ job.physicalAddress }}</p>
+    <p>City: {{ job.city }}</p>
+    <p>Zip: {{ job.zip }}</p>
+    <p>Phone Number: {{ job.phoneNumber }}</p>
+    <p>Email Address: {{ job.emailAddress }}</p>
+    <hr>
+    <br>
+    <p>How did you hear About Us: {{ job.hearAbout }}</p>
+    <hr>
+    <br>
+    <p>Start Date: {{ job.startDate }}</p>
+    <p>Start Time: {{ job.startTime }}</p>
+    <p>Work Site: {{ job.worksite }}</p>
+    <p>Job Description: {{ job.jobDescription }}</p>
+    <p>Estimated Hours: {{ job.estimatedHours }}</p>
+    <p>Skills Needed: {{ job.skillsNeeded }}</p>
+    <p>Number of Workers: {{ job.numberOfWorkers }}</p>
+    <p>Pay Rate: {{ job.payRate }}</p>
+    <p>Pay Calculation: {{ job.payRate*job.estimatedHours }}</p>
+    <p>Perks: {{ job.perks }}</p>
+    <p>English Level: {{ job.englishLevel }}</p>
+    <hr>
+    <br>
+    <p>Workers Assigned: {{ job.workersAssigned }}</p>
+    <p>Assignment Notes: {{ job.assignmentNotes }}</p>
+    <p>Assigned By: {{ job.assignedBy }}</p>
+    <hr>
+    <br>
+    <p>Review Rating: {{ job.review }}</p>
+    <p>Reviewers Notes: {{ job.reviewNotes }}</p>
+    <p>Reviewed By: {{ job.reviewedBy }}</p>
+    <hr>
+    <br>
+    <p>Last Updated By: {{ job.updatedBy }}</p>
   </div>
-
-
-<div>
-<a href="#/staff"> Go Back </a>
-  <p>First Name: {{ job.firstName }}</p>
-  <p>Last Name: {{ job.lastName }}</p>
-  <p>Company Name: {{ job.companyName }}</p>
-  <p>Address: {{ job.physicalAddress }}</p>
-  <p>City: {{ job.city }}</p>
-  <p>Zip: {{ job.zip }}</p>
-  <p>Phone Number: {{ job.phoneNumber }}</p>
-  <p>Email Address: {{ job.emailAddress }}</p>
-  <hr>
-  <br>
-  <p>How did you hear About Us: {{ job.hearAbout }}</p>
-  <hr>
-  <br>
-  <p>Start Date: {{ job.startDate }}</p>
-  <p>Start Time: {{ job.startTime }}</p>
-  <p>Work Site: {{ job.worksite }}</p>
-  <p>Job Description: {{ job.jobDescription }}</p>
-  <p>Estimated Hours: {{ job.estimatedHours }}</p>
-  <p>Skills Needed: {{ job.skillsNeeded }}</p>
-  <p>Number of Workers: {{ job.numberOfWorkers }}</p>
-  <p>Pay Rate: {{ job.payRate }}</p>
-  <p>Pay Calculation: {{ job.payRate*job.estimatedHours }}</p>
-  <p>Perks: {{ job.perks }}</p>
-  <p>English Level: {{ job.englishLevel }}</p>
-  <hr>
-  <br>
-  <p>Workers Assigned: {{ job.workersAssigned }}</p>
-  <p>Assignment Notes: {{ job.assignmentNotes }}</p>
-  <p>Assigned By: {{ job.assignedBy }}</p>
-  <hr>
-  <br>
-  <p>Review Rating: {{ job.review }}</p>
-  <p>Reviewers Notes: {{ job.reviewNotes }}</p>
-  <p>Reviewed By: {{ job.reviewedBy }}</p>
-  <hr>
-  <br>
-  <p>Last Updated By: {{ job.updatedBy }}</p>
-</div>
-<div ng-if="userLevel!=1">
-<a href="#/staff/jobs/{{job._id}}/edit" class="btn waves-effect waves-light" type="assigned">Edit</a>
-</div>
+  <div ng-if="userLevel!=1">
+    <a href="#/staff/jobs/{{job._id}}/edit" class="btn waves-effect waves-light" type="assigned">Edit</a>
+  </div>
