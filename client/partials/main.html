@@ -66,7 +66,7 @@
 				<div class="row">
 					<div ng-repeat-start="page in pages" ng-if="$first" big>
 						<a href="{{ page.frontPageLink }}">
-							<img class="col s12 m12 l10 offset-l1" data-ng-src="{{'data:image/jpg;base64,'+page.frontPageImage}}">
+							<img class="col s12 m12 l10 offset-l1" data-ng-src="{{'data:image/jpg;base64,'+page.frontPageImage}}" style="">
 						</a>
 					</div>
 					<div ng-repeat-end ng-if="!first"></div>
