@@ -11,7 +11,6 @@
       </ul>
     </div>
   </div>
-<div ng-if="userLevel==3">
   <h4><a href="#/staff/allUsers">All User Records</a></h4>
   <h4><a href="#/users/{{user._id}}">Show User Record</a></h4>
   <form ng-submit="updateUser()" class="col s12">
@@ -32,7 +31,7 @@
     </div>
     <div class="input-field col s6">
       <select id="userLevel" ng-model="user.userLevel">User Level
-          <option value="" disabled selected>User Level</option>
+          <option value="" disabled>User Level</option>
           <option value="1">1 - Staff</option>
           <option value="2">2 - Supervisor</option>
           <option value="3">3 - Admin</option>
@@ -43,7 +42,7 @@
       <i class="material-icons right">send</i>
     </button>
   </form>
-</div>
+
 
   <script type="text/javascript">
     $(document).ready(function() {

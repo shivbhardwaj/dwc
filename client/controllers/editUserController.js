@@ -8,8 +8,6 @@ DWCAppModule.controller('editUserController', function($scope, $cookies, $routeP
 		$location.url('/staff/login')
 	}
 
-	console.log('I am able to load my editUserController along with my edit_user partial');
-
   var userID=$routeParams.id;
   console.log('this is routeParams.id ', $routeParams.id);
   userFactory.getUser(userID, function(data){

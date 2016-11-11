@@ -9,7 +9,6 @@ DWCAppModule.controller('jobEditController', ['$scope','jobsFactory', '$cookies'
     $location.url('/staff/login')
   }
 
-
   $scope.update = function(){
     jobsFactory.updateJob(routeParams.id, $scope.job, function(data){
         $scope.jobs = data;
@@ -22,7 +21,11 @@ DWCAppModule.controller('jobEditController', ['$scope','jobsFactory', '$cookies'
 
   jobsFactory.getOneJob(routeParams.id, function(data){
 	  $scope.job = data;
+    console.log('this is getOneJob in jobEdit controller');
+    console.log('this is the job we retreieved ', $scope.data);
   });
+
+
 
   $scope.logout = function(){
 		$cookies.remove('logged_user');
