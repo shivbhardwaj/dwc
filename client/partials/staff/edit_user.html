@@ -30,7 +30,7 @@
       {{errors.emailAddress.messages}}
     </div>
     <div class="input-field col s6">
-      <select id="userLevel" ng-model="user.userLevel">User Level
+      <select id="userLevel" ng-model="user.userLevel">
           <option value="" disabled>User Level</option>
           <option value="1">1 - Staff</option>
           <option value="2">2 - Supervisor</option>
@@ -38,9 +38,7 @@
     	</select>
       {{errors.userLevel.messages}}
     </div>
-    <button class="btn waves-effect waves-light col s4 m4 l2 offset-s4 offset-m4 offset-l5" ng-click="submit" name="action">Update
-      <i class="material-icons right">send</i>
-    </button>
+    <button class="btn waves-effect waves-light col s4 m4 l2 offset-s4 offset-m4 offset-l5" ng-click="submit" name="action">Update<i class="material-icons right">send</i></button>
   </form>
 
 
